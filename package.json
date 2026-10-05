@@ -11,10 +11,10 @@
     "sfxcode <tom@sfxcode.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/sfxcode/formkit-primevue",
+  "homepage": "https://github.com/sfxcode/formkit-openvue",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sfxcode/formkit-primevue.git"
+    "url": "git+https://github.com/sfxcode/formkit-openvue.git"
   },
   "exports": {
     ".": {
