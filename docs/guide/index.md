@@ -1,6 +1,6 @@
 # FormKit OpenVue
 
-**formkit-openvue** combines the [OpenVue](https://openvue.dev/) component framework with the validation power of [Formkit](https://formkit.com/) in your Vue/Nuxt application.
+**formkit-openvue** combines the [OpenVue](https://openvue.dev/) component framework with the validation power of [Formkit](https://formkit.com/) in your Vue application.
 
 The main motivation for this project is to use Formkit Validation by Schema with form elements provided by OpenVue.
 

@@ -140,8 +140,6 @@ Some samples for common tasks are available
 
 [Demo Application](https://formkit-openvue.netlify.app/)
 
-[Nuxt 3 OpenVue Starter](https://github.com/sfxcode/nuxt3-primevue-starter) and [Vite OpenVue Starter](https://github.com/sfxcode/vite-primevue-starter) with Formkit support available (OpenVue based).
-
 ## Supported Inputs for OpenVue
 
 - AutoComplete

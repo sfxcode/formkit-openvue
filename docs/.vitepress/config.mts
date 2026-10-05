@@ -105,7 +105,6 @@ function sidebarGuide() {
       collapsible: true,
       items: [
         { text: 'Composables', link: '/advanced/composables' },
-        { text: 'Nuxt', link: '/advanced/nuxt' },
         { text: 'Schema', link: '/advanced/schema' },
         { text: 'Plugins', link: '/advanced/plugins' },
         { text: 'I18n', link: '/advanced/i18n' },
