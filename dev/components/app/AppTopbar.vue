@@ -141,13 +141,13 @@ const items = ref([
     <Toolbar>
       <template #start>
         <router-link to="/" class="">
-          <span class="text-3xl">Formkit PrimeVue Demo</span>
+          <span class="text-3xl">Formkit OpenVue Demo</span>
         </router-link>
       </template>  <template #center>
         <div class="text-lg">
           <span class="text-yellow-600 font-bold">New: </span>
           <router-link to="/inputs/repeater" class="">
-            <span class="">PrimeRepeater</span>
+            <span class="">FormRepeater</span>
           </router-link>
         </div>
       </template>  <template #end>

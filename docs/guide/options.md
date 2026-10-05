@@ -16,7 +16,7 @@ const stringArray = ['refresh', 'hourly', 'daily']
 const schema
 = [
     {
-    $formkit: 'primeDropdown',
+    $formkit: 'formDropdown',
     name: 'selectString',
     label: 'Simple String Array Dropdown',
     options: stringArray,
@@ -39,7 +39,7 @@ const cities = [
 
 const schema = [
     {
-    $formkit: 'primeDropdown',
+    $formkit: 'formDropdown',
     name: 'selectObjectByLabel',
     label: 'Select Object Dropdown',
     optionLabel: 'name',
@@ -61,7 +61,7 @@ const options = [
 
 const schema = [
     {
-    $formkit: 'primeDropdown',
+    $formkit: 'formDropdown',
     name: 'selectValue',
     label: 'Cookie notice Dropdown',
     value: 'hourly',

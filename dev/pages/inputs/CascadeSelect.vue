@@ -1,7 +1,7 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'placeholder, options, filter, optionLabel, optionValue, multiple'
+const formAttributes = 'placeholder, options, filter, optionLabel, optionValue, multiple'
 
 const options = ref([
   {
@@ -81,7 +81,7 @@ const options = ref([
 const schema
   = [
     {
-      $formkit: 'primeCascadeSelect',
+      $formkit: 'formCascadeSelect',
       name: 'city',
       label: 'Cascade Select',
       optionLabel: 'cname',
@@ -97,9 +97,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       header="CascadeSelect" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

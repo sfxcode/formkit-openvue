@@ -15,7 +15,7 @@ const schema = reactive(
     addElement('h2', ['Register ', '$email']),
     addElement('h3', 'Header Text H3'),
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'email',
       label: 'Email',
       help: 'This will be used for your account.',
@@ -23,14 +23,14 @@ const schema = reactive(
       outerClass: 'col-6',
     },
     {
-      $formkit: 'primeTextarea',
+      $formkit: 'formTextarea',
       name: 'myText',
       label: 'Text',
       validation: '',
       rows: '3',
     },
     {
-      $formkit: 'primePassword',
+      $formkit: 'formPassword',
       name: 'password',
       label: 'Password',
       help: 'Enter your new password.',
@@ -39,7 +39,7 @@ const schema = reactive(
       outerClass: 'col-6',
     },
     {
-      $formkit: 'primePassword',
+      $formkit: 'formPassword',
       name: 'password_confirm',
       label: 'Confirm password',
       help: 'Enter your new password again.',
@@ -48,13 +48,13 @@ const schema = reactive(
       outerClass: 'col-6',
     },
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       name: 'eu_citizen',
       id: 'eu',
       prefix: 'Are you a european citizen?',
     },
     {
-      $formkit: 'primeSelect',
+      $formkit: 'formSelect',
       if: '$get(eu).value', // 👀 Oooo, conditionals!
       name: 'cookie_notice',
       label: 'Cookie notice frequency',
@@ -72,7 +72,7 @@ const data = ref({ email: 'tom@sfxcode.com' })
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       header="Formkit Demo" :schema="schema" :data="data"
     />
   </div>

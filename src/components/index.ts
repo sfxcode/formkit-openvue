@@ -1,49 +1,49 @@
+import FormAutoComplete from './FormAutoComplete.vue'
+import FormCascadeSelect from './FormCascadeSelect.vue'
+import FormCheckbox from './FormCheckbox.vue'
+import FormColorPicker from './FormColorPicker.vue'
+import FormDatePicker from './FormDatePicker.vue'
+import FormInputMask from './FormInputMask.vue'
+import FormInputNumber from './FormInputNumber.vue'
+import FormInputText from './FormInputText.vue'
 import FormKitDataEdit from './FormKitDataEdit.vue'
 import FormKitDataView from './FormKitDataView.vue'
-import PrimeAutoComplete from './PrimeAutoComplete.vue'
-import PrimeCascadeSelect from './PrimeCascadeSelect.vue'
-import PrimeCheckbox from './PrimeCheckbox.vue'
-import PrimeColorPicker from './PrimeColorPicker.vue'
-import PrimeDatePicker from './PrimeDatePicker.vue'
-import PrimeInputMask from './PrimeInputMask.vue'
-import PrimeInputNumber from './PrimeInputNumber.vue'
-import PrimeInputText from './PrimeInputText.vue'
-import PrimeKnob from './PrimeKnob.vue'
-import PrimeListbox from './PrimeListbox.vue'
-import PrimeMultiSelect from './PrimeMultiSelect.vue'
-import PrimePassword from './PrimePassword.vue'
-import PrimeRadioButton from './PrimeRadioButton.vue'
-import PrimeRating from './PrimeRating.vue'
-import PrimeSelect from './PrimeSelect.vue'
-import PrimeSelectButton from './PrimeSelectButton.vue'
-import PrimeSlider from './PrimeSlider.vue'
-import PrimeTextarea from './PrimeTextarea.vue'
-import PrimeToggleButton from './PrimeToggleButton.vue'
-import PrimeInputSwitch from './PrimeToggleSwitch.vue'
-import PrimeTreeSelect from './PrimeTreeSelect.vue'
+import FormKnob from './FormKnob.vue'
+import FormListbox from './FormListbox.vue'
+import FormMultiSelect from './FormMultiSelect.vue'
+import FormPassword from './FormPassword.vue'
+import FormRadioButton from './FormRadioButton.vue'
+import FormRating from './FormRating.vue'
+import FormSelect from './FormSelect.vue'
+import FormSelectButton from './FormSelectButton.vue'
+import FormSlider from './FormSlider.vue'
+import FormTextarea from './FormTextarea.vue'
+import FormToggleButton from './FormToggleButton.vue'
+import FormInputSwitch from './FormToggleSwitch.vue'
+import FormTreeSelect from './FormTreeSelect.vue'
 
 export {
+  FormAutoComplete,
+  FormCascadeSelect,
+  FormCheckbox,
+  FormColorPicker,
+  FormDatePicker,
+  FormInputMask,
+  FormInputNumber,
+  FormInputSwitch,
+  FormInputText,
   FormKitDataEdit,
   FormKitDataView,
-  PrimeAutoComplete,
-  PrimeCascadeSelect,
-  PrimeCheckbox,
-  PrimeColorPicker,
-  PrimeDatePicker,
-  PrimeInputMask,
-  PrimeInputNumber,
-  PrimeInputSwitch,
-  PrimeInputText,
-  PrimeKnob,
-  PrimeListbox,
-  PrimeMultiSelect,
-  PrimePassword,
-  PrimeRadioButton,
-  PrimeRating,
-  PrimeSelect,
-  PrimeSelectButton,
-  PrimeSlider,
-  PrimeTextarea,
-  PrimeToggleButton,
-  PrimeTreeSelect,
+  FormKnob,
+  FormListbox,
+  FormMultiSelect,
+  FormPassword,
+  FormRadioButton,
+  FormRating,
+  FormSelect,
+  FormSelectButton,
+  FormSlider,
+  FormTextarea,
+  FormToggleButton,
+  FormTreeSelect,
 }

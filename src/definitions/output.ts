@@ -1,15 +1,15 @@
 import type { FormKitTypeDefinition } from '@formkit/core'
 import { createInput } from '@formkit/vue'
-import PrimeOutputBoolean from '../components/PrimeOutputBoolean.vue'
-import PrimeOutputDate from '../components/PrimeOutputDate.vue'
-import PrimeOutputDuration from '../components/PrimeOutputDuration.vue'
-import PrimeOutputLink from '../components/PrimeOutputLink.vue'
-import PrimeOutputList from '../components/PrimeOutputList.vue'
-import PrimeOutputNumber from '../components/PrimeOutputNumber.vue'
-import PrimeOutputReference from '../components/PrimeOutputReference.vue'
-import PrimeOutputText from '../components/PrimeOutputText.vue'
+import FormOutputBoolean from '../components/FormOutputBoolean.vue'
+import FormOutputDate from '../components/FormOutputDate.vue'
+import FormOutputDuration from '../components/FormOutputDuration.vue'
+import FormOutputLink from '../components/FormOutputLink.vue'
+import FormOutputList from '../components/FormOutputList.vue'
+import FormOutputNumber from '../components/FormOutputNumber.vue'
+import FormOutputReference from '../components/FormOutputReference.vue'
+import FormOutputText from '../components/FormOutputText.vue'
 
-export const primeOutputTextDefinition: FormKitTypeDefinition = createInput(PrimeOutputText, {
+export const formOutputTextDefinition: FormKitTypeDefinition = createInput(FormOutputText, {
   props: [
     'prefix',
     'suffix',
@@ -26,7 +26,7 @@ export const primeOutputTextDefinition: FormKitTypeDefinition = createInput(Prim
   ],
 })
 
-export const primeOutputDateDefinition: FormKitTypeDefinition = createInput(PrimeOutputDate, {
+export const formOutputDateDefinition: FormKitTypeDefinition = createInput(FormOutputDate, {
   props: [
     'prefix',
     'suffix',
@@ -39,7 +39,7 @@ export const primeOutputDateDefinition: FormKitTypeDefinition = createInput(Prim
   ],
 })
 
-export const primeOutputNumberDefinition: FormKitTypeDefinition = createInput(PrimeOutputNumber, {
+export const formOutputNumberDefinition: FormKitTypeDefinition = createInput(FormOutputNumber, {
   props: [
     'prefix',
     'suffix',
@@ -50,10 +50,10 @@ export const primeOutputNumberDefinition: FormKitTypeDefinition = createInput(Pr
     'iconPrefixTooltip',
     'iconSuffixTooltip',
   ],
-  family: 'PrimeOutput',
+  family: 'FormOutput',
 })
 
-export const primeOutputLinkDefinition: FormKitTypeDefinition = createInput(PrimeOutputLink, {
+export const formOutputLinkDefinition: FormKitTypeDefinition = createInput(FormOutputLink, {
   props: [
     'prefix',
     'suffix',
@@ -65,11 +65,11 @@ export const primeOutputLinkDefinition: FormKitTypeDefinition = createInput(Prim
     'iconPrefixTooltip',
     'iconSuffixTooltip',
   ],
-  family: 'PrimeOutput',
+  family: 'FormOutput',
 })
 
-export const primeOutputReferenceDefinition: FormKitTypeDefinition = createInput(
-  PrimeOutputReference,
+export const formOutputReferenceDefinition: FormKitTypeDefinition = createInput(
+  FormOutputReference,
   {
     props: [
       'prefix',
@@ -85,11 +85,11 @@ export const primeOutputReferenceDefinition: FormKitTypeDefinition = createInput
       'iconPrefixTooltip',
       'iconSuffixTooltip',
     ],
-    family: 'PrimeOutput',
+    family: 'FormOutput',
   },
 )
 
-export const primeOutputBooleanDefinition: FormKitTypeDefinition = createInput(PrimeOutputBoolean, {
+export const formOutputBooleanDefinition: FormKitTypeDefinition = createInput(FormOutputBoolean, {
   props: [
     'prefix',
     'suffix',
@@ -102,11 +102,11 @@ export const primeOutputBooleanDefinition: FormKitTypeDefinition = createInput(P
     'iconPrefixTooltip',
     'iconSuffixTooltip',
   ],
-  family: 'PrimeOutput',
+  family: 'FormOutput',
 })
 
-export const primeOutputDurationDefinition: FormKitTypeDefinition = createInput(
-  PrimeOutputDuration,
+export const formOutputDurationDefinition: FormKitTypeDefinition = createInput(
+  FormOutputDuration,
   {
     props: [
       'prefix',
@@ -118,11 +118,11 @@ export const primeOutputDurationDefinition: FormKitTypeDefinition = createInput(
       'iconPrefixTooltip',
       'iconSuffixTooltip',
     ],
-    family: 'PrimeOutput',
+    family: 'FormOutput',
   },
 )
 
-export const primeOutputListDefinition: FormKitTypeDefinition = createInput(PrimeOutputList, {
+export const formOutputListDefinition: FormKitTypeDefinition = createInput(FormOutputList, {
   props: [
     'prefix',
     'suffix',
@@ -141,5 +141,5 @@ export const primeOutputListDefinition: FormKitTypeDefinition = createInput(Prim
     'optionValue',
     'convertValue',
   ],
-  family: 'PrimeOutput',
+  family: 'FormOutput',
 })

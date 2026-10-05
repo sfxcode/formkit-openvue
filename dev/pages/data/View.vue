@@ -7,30 +7,30 @@ const outputSchema = ref(
   [
     addElement('div', [
       {
-        $formkit: 'primeOutputText',
+        $formkit: 'formOutputText',
         name: 'name',
         label: 'Name',
         class: 'text-[var(--p-primary-color)]',
       },
       {
-        $formkit: 'primeOutputNumber',
+        $formkit: 'formOutputNumber',
         name: 'number',
         label: 'Number',
         format: 'short',
       },
       {
-        $formkit: 'primeOutputDate',
+        $formkit: 'formOutputDate',
         name: 'date',
         label: 'Date',
         format: 'rangeYear',
       },
       {
-        $formkit: 'primeOutputText',
+        $formkit: 'formOutputText',
         name: 'text1',
         label: 'Text',
       },
       {
-        $formkit: 'primeOutputText',
+        $formkit: 'formOutputText',
         name: 'text2',
         label: 'Text',
         validation: 'required',
@@ -51,11 +51,11 @@ function updateData() {
 </script>
 
 <template>
-  <PrimeData header="FormKitDataView Demo">
+  <OpenVueData header="FormKitDataView Demo">
     <Button label="changeData (using v-model)" size="small" class="mb-4" @click="updateData" />
     <div class="flex gap-2 mb-4">
       Horizontal  <ToggleSwitch v-model="horizontal" />
     </div>
     <FormKitDataView id="FormKitDataViewId" v-model="data" :schema="outputSchema" debug-data debug-schema :form-class="horizontal ? 'form-horizontal' : ''" />
-  </PrimeData>
+  </OpenVueData>
 </template>

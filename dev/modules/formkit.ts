@@ -4,12 +4,12 @@ import { createAutoAnimatePlugin, createMultiStepPlugin } from '@formkit/addons'
 
 import { de, en } from '@formkit/i18n'
 import { defaultConfig, plugin } from '@formkit/vue'
-import { primeInputs, primeOutputs } from 'my-library/definitions'
-import { addPrimeAsteriskPlugin } from '../../src/plugins'
+import { formInputs, formOutputs } from 'my-library/definitions'
+import { addFormAsteriskPlugin } from '../../src/plugins'
 import '@formkit/addons/css/multistep'
 
-export function addPrimeLabelPlugin(node: FormKitNode): void {
-  if (!node.props.type.startsWith('prime'))
+export function addFormLabelPlugin(node: FormKitNode): void {
+  if (!/^form[A-Z]/.test(node.props.type))
     return
 
   node.on('created', () => {
@@ -19,7 +19,7 @@ export function addPrimeLabelPlugin(node: FormKitNode): void {
         sectionsSchema.label = {
           children: [
             {
-              $cmp: 'PrimeLabel',
+              $cmp: 'OpenVueLabel',
               props: {
                 label: '$label',
                 help: '$help',
@@ -41,7 +41,7 @@ export const install: UserModule = ({ app }) => {
     locales: { de, en },
     // Define the active locale
     locale: 'en',
-    inputs: { ...primeInputs, ...primeOutputs },
+    inputs: { ...formInputs, ...formOutputs },
     plugins: [
       createAutoAnimatePlugin(
         {
@@ -55,10 +55,10 @@ export const install: UserModule = ({ app }) => {
           // default:
           global: ['outer', 'inner'],
           form: ['form'],
-          primeRepeater: ['input'],
+          formRepeater: ['input'],
         },
       ),
-      addPrimeAsteriskPlugin,
+      addFormAsteriskPlugin,
       createMultiStepPlugin(),
     ],
   }))

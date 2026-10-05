@@ -18,14 +18,14 @@ const schema = reactive(
       children: ['Register ', '$email'],
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'email',
       label: 'Email',
       help: 'This will be used for your account.',
       validation: 'required|email',
     },
     {
-      $formkit: 'primeTextarea',
+      $formkit: 'formTextarea',
       name: 'comment',
       label: 'Text',
       validation: '',

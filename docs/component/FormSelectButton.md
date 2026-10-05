@@ -1,0 +1,52 @@
+# FormSelectButton
+
+A FormKit wrapper for OpenVue's SelectButton component.
+
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/selectbutton)
+
+## Usage
+```vue
+<FormKit type="formSelectButton" :options="options" option-label="label" option-value="value" v-model="selected" />
+```
+
+### Object-based Example
+```vue
+<script setup>
+const selectOptions = [
+  { label: 'yes', value: 'YES' },
+  { label: 'no', value: 'NO' },
+  { label: 'maybe', value: 'MAYBE' },
+]
+const selectOptions2 = [
+  { label: 'Email', value: 'mail' },
+  { label: 'Phone', value: 'phone' },
+  { label: 'Chat', value: 'chat' },
+]
+const schema = [
+  { $formkit: 'formSelectButton', label: 'SelectButton', name: 'selectButton', options: selectOptions, optionLabel: 'label', optionValue: 'value', value: 'MAYBE', unselectable: false },
+  { $formkit: 'formSelectButton', label: 'Contact options', name: 'selectButtonMultiple', optionLabel: 'label', optionValue: 'value', options: selectOptions2, multiple: true },
+]
+const data = {}
+</script>
+
+<template>
+  <FormKit :schema="schema" :data="data" />
+</template>
+```
+
+## Props
+| Name         | Type      | Description |
+|--------------|-----------|-------------|
+| options      | array     | List of options |
+| optionLabel  | string    | Field for label |
+| optionValue  | string    | Field for value |
+| optionDisabled | boolean | Disable option |
+| multiple     | boolean   | Enable multiple selection |
+| dataKey      | string    | Unique key for options |
+| pt           | object    | Pass-through options |
+| ptOptions    | object    | Pass-through options |
+| unstyled     | boolean   | Disable default styles |
+| size         | string    | Input size |
+| ...          | ...       | See OpenVue docs for all props |
+
+See [OpenVue SelectButton docs](https://openvue.dev/selectbutton) for more details.

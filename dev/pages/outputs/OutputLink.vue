@@ -1,22 +1,22 @@
 <script setup lang='ts'>
-const primeAttributes = ''
+const formAttributes = ''
 const customAttributes = 'iconPrefix, prefix, suffix, iconSuffix, iconPrefixTooltip, iconSuffixTooltip'
 
 const schema
   = [
     {
-      $formkit: 'primeOutputLink',
+      $formkit: 'formOutputLink',
       name: 'link1',
       label: 'External Link',
     },
     {
-      $formkit: 'primeOutputLink',
+      $formkit: 'formOutputLink',
       name: 'link2',
       label: 'Ensure protocol and use custom title',
       title: 'Click me',
     },
     {
-      $formkit: 'primeOutputLink',
+      $formkit: 'formOutputLink',
       name: 'link1',
       label: 'Icon Tooltips',
       help: 'Hover the icons to see the tooltips',
@@ -28,14 +28,14 @@ const schema
 
   ]
 
-const data = { link1: 'https://github.com/sfxcode', link2: 'sfxcode.github.io/formkit-primevue' }
+const data = { link1: 'https://github.com/sfxcode', link2: 'sfxcode.github.io/formkit-openvue' }
 </script>
 
 <template>
   <div class="">
-    <PrimeOutput
-      header="PrimeOutputLink" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueOutput
+      header="FormOutputLink" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

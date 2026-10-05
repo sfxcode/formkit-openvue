@@ -42,9 +42,9 @@
       "import": "./dist/plugins/index.mjs",
       "require": "./dist/plugins/index.js"
     },
-    "./dist/sass/formkit-primevue.scss": {
-      "import": "./dist/sass/formkit-primevue.scss",
-      "require": "./dist/sass/formkit-primevue.scss"
+    "./dist/sass/formkit-openvue.scss": {
+      "import": "./dist/sass/formkit-openvue.scss",
+      "require": "./dist/sass/formkit-openvue.scss"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",

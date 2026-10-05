@@ -1,7 +1,7 @@
 import { useFormKitSchema } from './useFormKitSchema'
 
 /**
- * @deprecated This function is deprecated. Use primeRepeater instead. It will be removed in a future version.
+ * @deprecated This function is deprecated. Use formRepeater instead. It will be removed in a future version.
  */
 export function useFormKitRepeater() {
   const { addElement, addComponent, addElementsInOuterDiv } = useFormKitSchema()

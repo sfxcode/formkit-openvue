@@ -25,7 +25,7 @@ const schema = reactive([
         },
         children: [
           {
-            $formkit: 'primeInputText',
+            $formkit: 'formInputText',
             name: 'email',
             label: 'Email',
             help: 'This will be used for your account.',
@@ -40,7 +40,7 @@ const schema = reactive([
         label: 'Step 2',
         children: [
           {
-            $formkit: 'primeTextarea',
+            $formkit: 'formTextarea',
             name: 'myText',
             label: 'Text',
             validation: '',
@@ -55,14 +55,14 @@ const schema = reactive([
         children: [
 
           {
-            $formkit: 'primeInputText',
+            $formkit: 'formInputText',
             name: 'name',
             label: 'Basic',
             validation: 'required',
 
           },
           {
-            $formkit: 'primeInputText',
+            $formkit: 'formInputText',
             id: 'icon',
             name: 'todo',
             label: 'Todo',
@@ -86,7 +86,7 @@ function update() {
 
 <template>
   <div class="ml-2">
-    <PrimeInput
+    <OpenVueInput
       :key="key"
       header="MultiStep" :schema="schema" :data="data"
     >
@@ -95,7 +95,7 @@ function update() {
         <div>   <ToggleSwitch v-model="tab" @change="update" /></div>
       </div>
       <h4>Mode: {{ mode }} </h4>
-    </PrimeInput>
+    </OpenVueInput>
   </div>
 </template>
 

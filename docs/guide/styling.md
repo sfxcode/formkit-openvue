@@ -4,7 +4,7 @@ OpenVue has a lot of styling possiblities and the structure of a formkit form gi
 
 ## Basic Styling
 
-Basic styling is provided with the **formkit-primevue.scss** file.
+Basic styling is provided with the **formkit-openvue.scss** file.
 
 Features:
 
@@ -20,14 +20,14 @@ Make sure to add a class selector for **p-invalid**.
 
 ## Grid
 
-**formkit-primevue.scss** defines a simple grid system based on flex with a 12 columns layout.
+**formkit-openvue.scss** defines a simple grid system based on flex with a 12 columns layout.
 
 For example to place 2 elements side by side give both of them the **outerClass** value **col-6**.
 
 ```ts
 const formkitItems = [
   {
-    $formkit: 'primePassword',
+    $formkit: 'formPassword',
     name: 'password',
     label: 'Password',
     help: 'Enter your new password.',
@@ -36,7 +36,7 @@ const formkitItems = [
     outerClass: 'col-6',
   },
   {
-    $formkit: 'primePassword',
+    $formkit: 'formPassword',
     name: 'password_confirm',
     label: 'Confirm password',
     help: 'Enter your new password again.',
@@ -51,8 +51,8 @@ const formkitItems = [
 
 - All components are wrapped in a div with a **p-formkit** class
 - Use *outerClass*, *wrapperClass*, *innerClass* to add additional styleclasses to formkit generated classes
-- Most Prime Components have access to class / styles attributes
-- Some Components have addtional properties for the rendered inputs (eg: optionClass, labelClass in primeRadioButton)
+- Most Form Components have access to class / styles attributes
+- Some Components have addtional properties for the rendered inputs (eg: optionClass, labelClass in formRadioButton)
 - PT and PTOptions are available ([https://github.com/openvi-foundation/openvue](https://github.com/openvi-foundation/openvue))
 - [Styling](https://formkit-openvue.netlify.app/demo/styling), [Grid](https://formkit-openvue.netlify.app/demo/grid) and [PT](https://formkit-openvue.netlify.app/demo/passThrough) demo available
 
@@ -65,13 +65,13 @@ You can apply custom classes or direct style attributes to your FormKit OpenVue 
 ```js
 const schema = [
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'name',
     label: 'Styling by class',
     class: 'stylingSampleClass',
   },
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'name2',
     label: 'Styling by style attribute',
     style: { color: 'gray', fontWeight: 700 },
@@ -98,13 +98,13 @@ You can target the outer or inner wrapper of a component for more granular styli
 ```js
 const schema = [
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'name',
     label: 'Styling outer class',
     outerClass: 'stylingOuterClass',
   },
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'name2',
     label: 'Styling inner class',
     innerClass: 'stylingSampleClass',
@@ -130,13 +130,13 @@ Use the grid system by assigning `outerClass` values like `col-6`, `col-8`, etc.
 ```js
 const schema = [
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'name',
     label: 'col-8',
     outerClass: 'col-8',
   },
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'name2',
     label: 'col-4',
     outerClass: 'col-4',
@@ -153,13 +153,13 @@ Combine grid classes and custom layout for horizontal forms:
 ```js
 const schema = [
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'email',
     label: 'Email',
     outerClass: 'col-6',
   },
   {
-    $formkit: 'primePassword',
+    $formkit: 'formPassword',
     name: 'password',
     label: 'Password',
     outerClass: 'col-5',
@@ -183,13 +183,13 @@ const pt_content_style_class = {
 }
 const schema = [
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'name',
     label: 'PassThrough with style',
     pt: pt_content,
   },
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'name2',
     label: 'PassThrough with tailwind like style class',
     pt: pt_content_style_class,

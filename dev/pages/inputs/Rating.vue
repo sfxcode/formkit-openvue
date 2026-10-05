@@ -1,24 +1,24 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'stars, cancel, onIcon, officon, cancelIcon'
+const formAttributes = 'stars, cancel, onIcon, officon, cancelIcon'
 
 const schema
   = [
     {
-      $formkit: 'primeRating',
+      $formkit: 'formRating',
       label: 'Select Rating',
       name: 'rating',
     },
     {
-      $formkit: 'primeRating',
+      $formkit: 'formRating',
       label: 'Select Rating',
       name: 'ratingDisabled',
       value: 3,
       disabled: true,
     },
     {
-      $formkit: 'primeRating',
+      $formkit: 'formRating',
       label: 'Select Rating',
       name: 'ratingCancel',
       value: 7,
@@ -32,9 +32,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeRating" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormRating" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

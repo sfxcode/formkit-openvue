@@ -1,10 +1,10 @@
 <script setup lang='ts'>
-const primeAttributes = 'dateFormat, showIcon, icon, .... (see documentation)'
+const formAttributes = 'dateFormat, showIcon, icon, .... (see documentation)'
 
 const schema
   = [
     {
-      $formkit: 'primeDatePicker',
+      $formkit: 'formDatePicker',
       id: 'basic',
       name: 'basic',
       label: 'Basic',
@@ -12,7 +12,7 @@ const schema
       validation: 'required',
     },
     {
-      $formkit: 'primeDatePicker',
+      $formkit: 'formDatePicker',
       name: 'styled',
       label: 'Styled',
       style: { background: 'gray' },
@@ -20,7 +20,7 @@ const schema
       showIcon: true,
     },
     {
-      $formkit: 'primeDatePicker',
+      $formkit: 'formDatePicker',
       name: 'icon',
       label: 'Custom Icon',
       dateFormat: 'yy-mm-dd',
@@ -28,14 +28,14 @@ const schema
       icon: 'oi oi-question',
     },
     {
-      $formkit: 'primeDatePicker',
+      $formkit: 'formDatePicker',
       name: 'range',
       label: 'Date Range - Manual Input Disabled',
       selectionMode: 'range',
       manualInput: false,
     },
     {
-      $formkit: 'primeDatePicker',
+      $formkit: 'formDatePicker',
       name: 'multiple',
       label: 'Multiple Dates - Manual Input Disabled',
       selectionMode: 'multiple',
@@ -49,9 +49,9 @@ const data = {}
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeDatePicker" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormDatePicker" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

@@ -14,17 +14,17 @@ Make sure all components of OpenVue you want to use are enabled in your configur
 
 ### Formkit Config
 
-Add a formkit.config.ts to your root dir and register primeInputs for FormKit.
+Add a formkit.config.ts to your root dir and register formInputs for FormKit.
 
 Sample:
 
 ```ts
 // formkit.config.ts
 import type { DefaultConfigOptions } from '@formkit/vue'
-import { primeInputs } from '@sfxcode/formkit-openvue'
+import { formInputs } from '@sfxcode/formkit-openvue'
 
 const config: DefaultConfigOptions = {
-  inputs: primeInputs
+  inputs: formInputs
 }
 
 export default config
@@ -59,28 +59,28 @@ const schema = reactive(
       children: 'Header Text H3',
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'email',
       label: 'Email',
       help: 'This will be used for your account.',
       validation: 'required|email',
     },
     {
-      $formkit: 'primeTextarea',
+      $formkit: 'formTextarea',
       name: 'myText',
       label: 'Text',
       validation: '',
       rows: '3',
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'password',
       label: 'Password',
       help: 'Enter your new password.',
       validation: 'required|length:5,16',
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'password_confirm',
       label: 'Confirm password',
       help: 'Enter your new password again.',
@@ -88,13 +88,13 @@ const schema = reactive(
       validationLabel: 'password confirmation',
     },
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       name: 'eu_citizen',
       id: 'eu',
       label: 'Are you a european citizen?',
     },
     {
-      $formkit: 'primeDropdown',
+      $formkit: 'formDropdown',
       if: '$get(eu).value', // 👀 Oooo, conditionals!
       name: 'cookie_notice',
       label: 'Cookie notice frequency',

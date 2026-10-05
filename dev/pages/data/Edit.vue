@@ -19,7 +19,7 @@ const schema = reactive(
     addElement('h2', ['Register ', '$email']),
     addElement('h3', 'Header Text H3'),
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'email',
       label: 'Email',
       help: 'This will be used for your account.',
@@ -28,19 +28,19 @@ const schema = reactive(
       iconSuffix: 'oi oi-bullseye',
     },
     {
-      $formkit: 'primeTextarea',
+      $formkit: 'formTextarea',
       name: 'myText',
       label: 'Text',
       validation: '',
       rows: '3',
     },
     {
-      $formkit: 'primeDatePicker',
+      $formkit: 'formDatePicker',
       name: 'date',
       label: 'Date',
     },
     {
-      $formkit: 'primeOutputLink',
+      $formkit: 'formOutputLink',
       name: 'field',
       value: 'https://www.google.de',
       label: 'Output Link',
@@ -51,7 +51,7 @@ const schema = reactive(
     },
     addElement('h3', 'Password demo'),
     {
-      $formkit: 'primePassword',
+      $formkit: 'formPassword',
       name: 'password',
       label: 'Password',
       help: 'Enter your new password.',
@@ -60,7 +60,7 @@ const schema = reactive(
       outerClass: 'col-6',
     },
     {
-      $formkit: 'primePassword',
+      $formkit: 'formPassword',
       name: 'password_confirm',
       label: 'Confirm password',
       help: 'Enter your new password again.',
@@ -70,14 +70,14 @@ const schema = reactive(
     },
     addElement('h3', 'Conditional Demo'),
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       name: 'eu_citizen',
       id: 'eu',
       suffix: 'Are you a european citizen?',
       outerClass: 'col-6',
     },
     {
-      $formkit: 'primeSelect',
+      $formkit: 'formSelect',
       if: '$get(eu).value', // 👀 Oooo, conditionals!
       name: 'cookie_notice',
       label: 'Cookie notice frequency',
@@ -99,7 +99,7 @@ async function submitHandler(data: any) {
 </script>
 
 <template>
-  <PrimeData header="FormKitDataEdit Demo">
+  <OpenVueData header="FormKitDataEdit Demo">
     <div class="flex gap-2 mb-4">
       <div>Show Reset Button</div>
       <Checkbox v-model="showReset" binary />
@@ -122,5 +122,5 @@ async function submitHandler(data: any) {
       @data-saved="submitHandler"
       @on-reset="() => { console.log('Form Reset') }"
     />
-  </PrimeData>
+  </OpenVueData>
 </template>

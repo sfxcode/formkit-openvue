@@ -1,16 +1,16 @@
 <script setup lang='ts'>
-const primeAttributes = 'placeholder, feedback, mediumRegex, strongRegex, promptLabel, weakLabel, mediumLabel, strongLabel, toggleMask'
+const formAttributes = 'placeholder, feedback, mediumRegex, strongRegex, promptLabel, weakLabel, mediumLabel, strongLabel, toggleMask'
 const schema
   = [
     {
-      $formkit: 'primePassword',
+      $formkit: 'formPassword',
       name: 'password',
       label: 'Password',
       help: 'Enter your new password',
       feedback: true,
     },
     {
-      $formkit: 'primePassword',
+      $formkit: 'formPassword',
       name: 'password_confirm',
       label: 'Confirm password',
       help: 'Enter your new password again.',
@@ -25,9 +25,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimePassword" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormPassword" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

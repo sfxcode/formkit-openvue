@@ -1,39 +1,39 @@
 <script setup lang='ts'>
-const primeAttributes = ''
+const formAttributes = ''
 const customAttributes = 'iconPrefix, prefix, suffix, iconSuffix, iconPrefixTooltip, iconSuffixTooltip'
 
 const schema
   = [
     {
-      $formkit: 'primeOutputBoolean',
+      $formkit: 'formOutputBoolean',
       name: 'trueValue',
       label: 'Default',
     },
     {
-      $formkit: 'primeOutputBoolean',
+      $formkit: 'formOutputBoolean',
       name: 'trueValue',
       prefix: 'Boolean Value:',
     },
     {
-      $formkit: 'primeOutputBoolean',
+      $formkit: 'formOutputBoolean',
       name: 'falseValue',
       label: 'False Example',
     },
 
     {
-      $formkit: 'primeOutputBoolean',
+      $formkit: 'formOutputBoolean',
       name: 'trueValue',
       label: 'True with custom Text',
       trueValue: 'Sure',
     },
     {
-      $formkit: 'primeOutputBoolean',
+      $formkit: 'formOutputBoolean',
       name: 'falseValue',
       label: 'False with custom Text',
       falseValue: 'Never',
     },
     {
-      $formkit: 'primeOutputBoolean',
+      $formkit: 'formOutputBoolean',
       name: 'trueValue',
       label: 'Conditional true - only Icon',
       if: '$trueValue',
@@ -41,7 +41,7 @@ const schema
       iconSuffix: 'oi oi-check',
     },
     {
-      $formkit: 'primeOutputBoolean',
+      $formkit: 'formOutputBoolean',
       name: 'falseValue',
       label: 'Conditional false - only Icon',
       if: '!$falseValue',
@@ -49,7 +49,7 @@ const schema
       iconSuffix: 'oi oi-minus',
     },
     {
-      $formkit: 'primeOutputBoolean',
+      $formkit: 'formOutputBoolean',
       name: 'trueValue',
       label: 'Icon Tooltips',
       help: 'Hover the icons to see the tooltips',
@@ -65,9 +65,9 @@ const data = { trueValue: true, falseValue: false }
 
 <template>
   <div class="">
-    <PrimeOutput
-      header="PrimeOutputBoolean" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueOutput
+      header="FormOutputBoolean" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

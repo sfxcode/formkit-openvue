@@ -1,9 +1,9 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
 
-const primeOutputNames = ['Edit', 'View']
+const formOutputNames = ['Edit', 'View']
 
-const names = ref(primeOutputNames.sort((a, b) => a.localeCompare(b)))
+const names = ref(formOutputNames.sort((a, b) => a.localeCompare(b)))
 </script>
 
 <template>

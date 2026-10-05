@@ -1,36 +1,36 @@
 <script setup lang='ts'>
-const primeAttributes = 'trueValue, falseValue'
+const formAttributes = 'trueValue, falseValue'
 const customAttributes = 'prefix, suffix'
 
 const schema
   = [
     {
-      $formkit: 'primeToggleSwitch',
+      $formkit: 'formToggleSwitch',
       id: 'basic',
       name: 'basic',
       label: 'Basic',
     },
     {
-      $formkit: 'primeToggleSwitch',
+      $formkit: 'formToggleSwitch',
       name: 'eu_citizen',
       id: 'eu',
       suffix: 'Are you a european citizen: ',
     },
     {
-      $formkit: 'primeToggleSwitch',
+      $formkit: 'formToggleSwitch',
       name: 'confirmation',
       id: 'confirm',
       prefix: 'Are you sure ?',
       wrapperClass: 'flex items-center',
     },
     {
-      $formkit: 'primeToggleSwitch',
+      $formkit: 'formToggleSwitch',
       name: 'readonly',
       label: 'readonly',
       readonly: true,
     },
     {
-      $formkit: 'primeToggleSwitch',
+      $formkit: 'formToggleSwitch',
       name: 'custom',
       label: 'custom values',
       trueValue: 'A',
@@ -43,9 +43,9 @@ const data = { readonly: true }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeToggleSwitch" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueInput
+      header="FormToggleSwitch" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

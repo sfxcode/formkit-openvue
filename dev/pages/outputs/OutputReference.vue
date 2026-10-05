@@ -1,31 +1,31 @@
 <script setup lang='ts'>
-const primeAttributes = ''
+const formAttributes = ''
 const customAttributes = 'iconPrefix, prefix, suffix, iconSuffix, iconPrefixTooltip, iconSuffixTooltip'
 
 const schema
   = [
     {
-      $formkit: 'primeOutputReference',
+      $formkit: 'formOutputReference',
       name: 'externalId',
       label: 'External Link',
       reference: 'https://github.com/sfxcode/{{value}}',
     },
     {
-      $formkit: 'primeOutputReference',
+      $formkit: 'formOutputReference',
       name: 'externalValue',
       label: 'External Link with custom title',
       title: 'Show on GitHub',
       reference: 'https://github.com/sfxcode/{{valueNameNotImportant}}',
     },
     {
-      $formkit: 'primeOutputReference',
+      $formkit: 'formOutputReference',
       name: 'internalLink',
       label: 'Internal Link',
       internal: true,
       reference: '/outputs/{{value}}',
     },
     {
-      $formkit: 'primeOutputReference',
+      $formkit: 'formOutputReference',
       name: 'internalLink',
       label: 'Internal Link with custom title',
       internal: true,
@@ -33,7 +33,7 @@ const schema
       reference: '/outputs/{{value}}',
     },
     {
-      $formkit: 'primeOutputReference',
+      $formkit: 'formOutputReference',
       name: 'externalId',
       label: 'Icon Tooltips',
       help: 'Hover the icons to see the tooltips',
@@ -46,14 +46,14 @@ const schema
 
   ]
 
-const data = { externalId: 42, externalValue: 'formkit-primevue', internalLink: 'outputLink' }
+const data = { externalId: 42, externalValue: 'formkit-openvue', internalLink: 'outputLink' }
 </script>
 
 <template>
   <div class="">
-    <PrimeOutput
-      header="PrimeOutputReference" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueOutput
+      header="FormOutputReference" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

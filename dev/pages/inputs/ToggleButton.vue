@@ -1,23 +1,23 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'onLabel, offLabel, onIcon, offIcon'
+const formAttributes = 'onLabel, offLabel, onIcon, offIcon'
 
 const schema
   = [
     {
-      $formkit: 'primeToggleButton',
+      $formkit: 'formToggleButton',
       label: 'ToggleButton',
       name: 'toggleButton',
     },
     {
-      $formkit: 'primeToggleButton',
+      $formkit: 'formToggleButton',
       label: 'Second ToggleButton',
       name: 'toggleButtonRight',
       iconPos: 'right',
     },
     {
-      $formkit: 'primeToggleButton',
+      $formkit: 'formToggleButton',
       label: 'Custom ToggleButton',
       name: 'toggleButtonCustom',
       iconPos: 'right',
@@ -33,9 +33,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeToggleButton" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormToggleButton" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

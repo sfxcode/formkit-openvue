@@ -1,7 +1,7 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'placeholder, options, showClear, filter, optionLabel, optionValue'
+const formAttributes = 'placeholder, options, showClear, filter, optionLabel, optionValue'
 
 const options = [
   { label: 'Every page load', value: 'refresh' },
@@ -22,7 +22,7 @@ const stringArray = ['refresh', 'hourly', 'daily']
 const schema
   = [
     {
-      $formkit: 'primeSelect',
+      $formkit: 'formSelect',
       name: 'selectValue',
       label: 'Cookie notice Select',
       value: 'hourly',
@@ -32,20 +32,20 @@ const schema
       help: 'Cookie notice frequency ?',
     },
     {
-      $formkit: 'primeSelect',
+      $formkit: 'formSelect',
       name: 'selectObjectByLabel',
       label: 'Select Object',
       optionLabel: 'name',
       options: cities,
     },
     {
-      $formkit: 'primeSelect',
+      $formkit: 'formSelect',
       name: 'selectString',
       label: 'Simple String Array Select',
       options: stringArray,
     },
     {
-      $formkit: 'primeSelect',
+      $formkit: 'formSelect',
       name: 'styled',
       label: 'Styled',
       value: 'hourly',
@@ -61,7 +61,7 @@ const schema
       disabled: true,
     },
     {
-      $formkit: 'primeSelect',
+      $formkit: 'formSelect',
       name: 'custom',
       label: 'With Clear and Filter',
       showClear: true,
@@ -79,9 +79,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeSelect" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormSelect" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

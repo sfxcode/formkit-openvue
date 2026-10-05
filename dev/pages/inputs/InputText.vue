@@ -1,18 +1,18 @@
 <script setup lang='ts'>
-const primeAttributes = 'placeholder'
+const formAttributes = 'placeholder'
 const customAttributes = 'iconPrefix, iconSuffix'
 
 const schema
   = [
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'name',
       label: 'Basic',
       validation: 'required',
       help: 'Some Help Text',
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'telephone',
       placeholder: 'telephone',
       help: 'Input Type: tel',
@@ -20,7 +20,7 @@ const schema
       inputType: 'tel',
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       id: 'icon',
       name: 'iconLeft',
       label: 'Icon Left',
@@ -29,7 +29,7 @@ const schema
       iconPrefix: 'oi oi-check',
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'iconRight',
       label: 'Icon Right (Disabled) - smize: small',
       help: 'Right Icon Demo',
@@ -45,9 +45,9 @@ const data = { name: 'Harry Potter', iconLeft: 'Some Text ...', iconRight: 'Anot
 
 <template>
   <div class="">
-    <PrimeInput
-      header="PrimeInputText" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueInput
+      header="FormInputText" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-const primeAttributes = 'length, integerOnly, mask, variant'
+const formAttributes = 'length, integerOnly, mask, variant'
 const schema
   = [
     {
-      $formkit: 'primeInputOtp',
+      $formkit: 'formInputOtp',
       name: 'firstInput',
       label: 'Input OTP',
       length: 6,
@@ -12,7 +12,7 @@ const schema
       variant: 'outlined',
     },
     {
-      $formkit: 'primeInputOtp',
+      $formkit: 'formInputOtp',
       name: 'secondInput',
       label: 'Input OTP',
       length: 3,
@@ -24,9 +24,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeInputNumber" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormInputNumber" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const primeAttributes = ''
+const formAttributes = ''
 const customAttributes = 'iconPrefix, prefix, suffix, iconSuffix, iconPrefixTooltip, iconSuffixTooltip'
 
 function prefixClicked() {
@@ -9,17 +9,17 @@ function prefixClicked() {
 const schema
   = [
     {
-      $formkit: 'primeOutputDuration',
+      $formkit: 'formOutputDuration',
       name: 'duration1',
       label: 'Duration',
     },
     {
-      $formkit: 'primeOutputDuration',
+      $formkit: 'formOutputDuration',
       name: 'duration2',
       label: 'Another Duration',
     },
     {
-      $formkit: 'primeOutputDuration',
+      $formkit: 'formOutputDuration',
       name: 'duration3',
       label: 'Another Duration',
       iconPrefix: 'oi oi-check',
@@ -27,7 +27,7 @@ const schema
       onIconPrefixClicked: prefixClicked,
     },
     {
-      $formkit: 'primeOutputDuration',
+      $formkit: 'formOutputDuration',
       name: 'duration3',
       label: 'Icon Right with Tooltip',
       iconSuffix: 'oi oi-clock',
@@ -41,9 +41,9 @@ const data = { duration1: '142', duration2: '4h35m', duration3: '3:47' }
 
 <template>
   <div class="">
-    <PrimeOutput
-      header="PrimeOutputDuration" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueOutput
+      header="FormOutputDuration" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

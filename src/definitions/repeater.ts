@@ -33,7 +33,7 @@ function addDragHandle(handleClass: string = '', iconClass: string = '', render:
   }, render)
 }
 
-export const primeRepeaterDefinition: FormKitTypeDefinition = createInput(
+export const formRepeaterDefinition: FormKitTypeDefinition = createInput(
   addElement('div', [
     addList('$listName', [
       addInsertButton('$insertButtonLabel', 'oi oi-plus', '$insertButtonClass', '$insertButtonSize', '$node.children.length == 0 || $alwaysDisplayInsertButton'),

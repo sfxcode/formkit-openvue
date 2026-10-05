@@ -18,10 +18,10 @@ async function submitHandler() {
 </script>
 
 <template>
-  <PrimeData header="Slot Demo">
+  <OpenVueData header="Slot Demo">
     <FormKitDataEdit :data="data" :debug-data="true" @data-saved="submitHandler">
       <FormKit
-        type="primeSelect"
+        type="formSelect"
         name="option"
         validation="required"
         label="Option"
@@ -46,7 +46,7 @@ async function submitHandler() {
         </template>
       </FormKit>
     </FormKitDataEdit>
-  </PrimeData>
+  </OpenVueData>
 </template>
 
 <style lang='scss' scoped>

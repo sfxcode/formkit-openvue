@@ -13,11 +13,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./components/app/AppFooter.vue')['default']
     AppTopbar: typeof import('./components/app/AppTopbar.vue')['default']
-    PrimeData: typeof import('./components/demo/PrimeData.vue')['default']
-    PrimeInput: typeof import('./components/demo/PrimeInput.vue')['default']
-    PrimeLabel: typeof import('./components/demo/PrimeLabel.vue')['default']
-    PrimeOutput: typeof import('./components/demo/PrimeOutput.vue')['default']
-    PrimeSchemaEditor: typeof import('./components/demo/PrimeSchemaEditor.vue')['default']
+    OpenVueData: typeof import('./components/demo/OpenVueData.vue')['default']
+    OpenVueInput: typeof import('./components/demo/OpenVueInput.vue')['default']
+    OpenVueLabel: typeof import('./components/demo/OpenVueLabel.vue')['default']
+    OpenVueOutput: typeof import('./components/demo/OpenVueOutput.vue')['default']
+    OpenVueSchemaEditor: typeof import('./components/demo/OpenVueSchemaEditor.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

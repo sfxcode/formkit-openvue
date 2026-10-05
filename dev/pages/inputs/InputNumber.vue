@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-const primeAttributes = 'placeholder, useGrouping, minFractionDigits, maxFractionDigits, locale, mode, currency, prefix, suffix, showButtons, buttonLayout, step'
+const formAttributes = 'placeholder, useGrouping, minFractionDigits, maxFractionDigits, locale, mode, currency, prefix, suffix, showButtons, buttonLayout, step'
 const schema
   = [
     {
-      $formkit: 'primeInputNumber',
+      $formkit: 'formInputNumber',
       name: 'firstNumber',
       label: 'Input Number',
       value: 1234,
@@ -12,7 +12,7 @@ const schema
       minFractionDigits: 2,
     },
     {
-      $formkit: 'primeInputNumber',
+      $formkit: 'formInputNumber',
       name: 'secondNumber',
       label: 'Input Number',
       value: 999,
@@ -21,7 +21,7 @@ const schema
       minFractionDigits: 0,
     },
     {
-      $formkit: 'primeInputNumber',
+      $formkit: 'formInputNumber',
       name: 'fixedNumber',
       label: 'Input Number',
       value: 1234,
@@ -31,14 +31,14 @@ const schema
     },
     // Case with Min Value
     {
-      $formkit: 'primeInputNumber',
+      $formkit: 'formInputNumber',
       name: 'numberInputWithMinNumber',
       label: 'Number Input with Min Value',
       min: 10,
     },
     // Extensive case
     {
-      $formkit: 'primeInputNumber',
+      $formkit: 'formInputNumber',
       name: 'customizedInputNumber',
       label: 'Customized Input Number',
       placeholder: 'Enter currency',
@@ -60,9 +60,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeInputNumber" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormInputNumber" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

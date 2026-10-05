@@ -1,7 +1,7 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'placeholder, options, filter, optionLabel, optionValue'
+const formAttributes = 'placeholder, options, filter, optionLabel, optionValue'
 
 const options = [
   { label: 'Every page load', value: 'refresh' },
@@ -12,7 +12,7 @@ const options = [
 const schema
   = [
     {
-      $formkit: 'primeMultiSelect',
+      $formkit: 'formMultiSelect',
       name: 'cookie_notice',
       label: 'Cookie notice MultiSelect',
       optionLabel: 'label',
@@ -21,7 +21,7 @@ const schema
       help: 'Cookie notice frequency ?',
     },
     {
-      $formkit: 'primeMultiSelect',
+      $formkit: 'formMultiSelect',
       name: 'styled',
       label: 'Styled',
       style: { background: 'gray' },
@@ -36,7 +36,7 @@ const schema
       disabled: true,
     },
     {
-      $formkit: 'primeMultiSelect',
+      $formkit: 'formMultiSelect',
       name: 'custom',
       label: 'With Multiple Select and Filter',
       filter: true,
@@ -53,9 +53,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       header="MultiSelect" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

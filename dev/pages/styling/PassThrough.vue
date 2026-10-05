@@ -10,13 +10,13 @@ const pt_content_style_class = {
 const schema
   = [
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'name',
       label: 'PassThrough with style',
       pt: pt_content,
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'name2',
       label: 'PassThrough with tailwind like style class',
       pt: pt_content_style_class,
@@ -28,7 +28,7 @@ const data = { name: 'Some Text in Green', name2: 'Some Text in Red' }
 
 <template>
   <div class="">
-    <PrimeInput
+    <OpenVueInput
       header="Pass Through" :schema="schema" :data="data"
     />
   </div>

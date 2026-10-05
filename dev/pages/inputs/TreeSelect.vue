@@ -1,7 +1,7 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'placeholder, options'
+const formAttributes = 'placeholder, options'
 
 const options = ref([
   {
@@ -45,7 +45,7 @@ const options = ref([
 const schema
   = [
     {
-      $formkit: 'primeTreeSelect',
+      $formkit: 'formTreeSelect',
       name: 'treeSelectValue',
       label: 'Tree Select',
       selectionMode: 'multiple',
@@ -59,9 +59,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       header="TreeSelect" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

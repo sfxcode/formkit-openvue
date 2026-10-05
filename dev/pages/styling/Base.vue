@@ -2,7 +2,7 @@
 const schema
   = [
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'name',
       label: 'Styling by class',
       help: 'Required.',
@@ -10,7 +10,7 @@ const schema
       class: 'stylingSampleClass',
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'name2',
       label: 'Styling by class',
       help: 'Required.',
@@ -25,7 +25,7 @@ const data = { name: 'Some Text in Green', name2: 'Some bold Text in Gray' }
 
 <template>
   <div class="">
-    <PrimeInput
+    <OpenVueInput
       header="Styling" :schema="schema" :data="data"
     >
       <div class="pb-8">
@@ -36,7 +36,7 @@ const data = { name: 'Some Text in Green', name2: 'Some bold Text in Gray' }
           In this demo elements with the p-formkit class use the parent width.
         </span>
       </div>
-    </PrimeInput>
+    </OpenVueInput>
   </div>
 </template>
 

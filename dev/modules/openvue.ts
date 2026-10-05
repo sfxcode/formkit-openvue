@@ -1,8 +1,8 @@
 import type { UserModule } from '@/types'
 import Aura from '@openvue/themes/aura'
-import { usePrimeInputs } from 'my-library'
+import { useFormInputs } from 'my-library'
 import { Fieldset } from 'openvue'
-import PrimeVue from 'openvue/config'
+import OpenVue from 'openvue/config'
 import ConfirmationService from 'openvue/confirmationservice'
 
 import MegaMenu from 'openvue/megamenu'
@@ -21,7 +21,7 @@ import Toast from 'openvue/toast'
 import ToastService from 'openvue/toastservice'
 import Toolbar from 'openvue/toolbar'
 import Tooltip from 'openvue/tooltip'
-import PrimeLabel from '../components/demo/PrimeLabel.vue'
+import OpenVueLabel from '../components/demo/OpenVueLabel.vue'
 import '@openvue/openicons/openicons.css'
 
 export const install: UserModule = ({ app }) => {
@@ -30,7 +30,7 @@ export const install: UserModule = ({ app }) => {
   app.directive('tooltip', Tooltip)
 
   // input components
-  const { registerInputs } = usePrimeInputs()
+  const { registerInputs } = useFormInputs()
   registerInputs(app)
 
   // other components
@@ -44,9 +44,9 @@ export const install: UserModule = ({ app }) => {
   app.component('Toast', Toast)
   app.component('Toolbar', Toolbar)
 
-  app.component('PrimeLabel', PrimeLabel)
+  app.component('OpenVueLabel', OpenVueLabel)
 
-  app.use(PrimeVue, {
+  app.use(OpenVue, {
     theme: {
       preset: Aura,
       options: {

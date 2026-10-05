@@ -1,9 +1,9 @@
 export function useInputEditor() {
-  const primeInputWithOptionNames = ['CascadeSelect', 'Listbox', 'MultiSelect', 'RadioButton', 'Select', 'SelectButton', 'TreeSelect']
+  const formInputWithOptionNames = ['CascadeSelect', 'Listbox', 'MultiSelect', 'RadioButton', 'Select', 'SelectButton', 'TreeSelect']
 
-  const primeInputNames = [...primeInputWithOptionNames, 'AutoComplete', 'Checkbox', 'ColorPicker', 'DatePicker', 'Editor', 'InputMask', 'InputNumber', 'InputOtp', 'InputText', 'Knob', 'Password', 'Rating', 'Slider', 'Textarea', 'ToggleButton', 'ToggleSwitch'].sort()
+  const formInputNames = [...formInputWithOptionNames, 'AutoComplete', 'Checkbox', 'ColorPicker', 'DatePicker', 'Editor', 'InputMask', 'InputNumber', 'InputOtp', 'InputText', 'Knob', 'Password', 'Rating', 'Slider', 'Textarea', 'ToggleButton', 'ToggleSwitch'].sort()
 
-  const primeOutputNames = ['OutputBoolean', 'OutputDate', 'OutputDuration', 'OutputLink', 'OutputList', 'OutputNumber', 'OutputReference', 'OutputText']
+  const formOutputNames = ['OutputBoolean', 'OutputDate', 'OutputDuration', 'OutputLink', 'OutputList', 'OutputNumber', 'OutputReference', 'OutputText']
 
   function editorDataToSchema(data: any): any {
     if (!data)
@@ -12,14 +12,14 @@ export function useInputEditor() {
     const formkitInput = data?._dollar_formkit
     let tempData: Record<string, any> = {}
 
-    if (data.prime && Array.isArray(data.prime) && data.prime.length > 0) {
-      const mapped = data.prime
-        .filter((entry: any) => entry && typeof entry === 'object' && 'prime_key' in entry && 'prime_value' in entry)
-        .map((entry: { prime_key: string, prime_value: any }) => {
-          const key: string = entry.prime_key || ''
-          let value: any = entry.prime_value
+    if (data.form && Array.isArray(data.form) && data.form.length > 0) {
+      const mapped = data.form
+        .filter((entry: any) => entry && typeof entry === 'object' && 'form_key' in entry && 'form_value' in entry)
+        .map((entry: { form_key: string, form_value: any }) => {
+          const key: string = entry.form_key || ''
+          let value: any = entry.form_value
           // some inputs require numbers
-          if (formkitInput === 'primeInputOtp' && key === 'length' && value !== undefined) {
+          if (formkitInput === 'formInputOtp' && key === 'length' && value !== undefined) {
             value = Number(value)
           }
           return [key, value] as [string, any]
@@ -54,7 +54,7 @@ export function useInputEditor() {
       innerClass = `${innerClass} ${data.innerClass}`.trim()
 
     const undefinedObject = {
-      prime: undefined,
+      form: undefined,
       schemaResultFormKey: undefined,
       _dollar_formkit: undefined,
       slots: undefined,
@@ -62,8 +62,8 @@ export function useInputEditor() {
     }
 
     const useOptions = formkitInput
-      ? primeInputWithOptionNames
-          .map(s => `prime${s}`)
+      ? formInputWithOptionNames
+          .map(s => `form${s}`)
           .includes(formkitInput)
       : false
 
@@ -146,7 +146,7 @@ export function useInputEditor() {
         })
         return `${key}: ${result.substring(0, result.length - 2)}]`
       }
-      else if (key === 'primeInputOtp') {
+      else if (key === 'formInputOtp') {
         return `${key}: ${value}`
       }
       else {
@@ -178,8 +178,8 @@ export function useInputEditor() {
   }
 
   return {
-    primeInputNames,
-    primeOutputNames,
+    formInputNames,
+    formOutputNames,
     editorDataToSchema,
     editorDataToJson,
     editorDataToCode: editorDataToObject,

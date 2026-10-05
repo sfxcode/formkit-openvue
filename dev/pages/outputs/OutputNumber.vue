@@ -1,17 +1,17 @@
 <script setup lang='ts'>
-const primeAttributes = ''
+const formAttributes = ''
 const customAttributes = 'iconPrefix, prefix, suffix, iconSuffix, iconPrefixTooltip, iconSuffixTooltip'
 
 const schema
   = [
     {
-      $formkit: 'primeOutputNumber',
+      $formkit: 'formOutputNumber',
       name: 'mumber1',
       format: 'decimal',
       label: 'Basic',
     },
     {
-      $formkit: 'primeOutputNumber',
+      $formkit: 'formOutputNumber',
       name: 'number2',
       label: 'Icon Left',
       help: '',
@@ -19,7 +19,7 @@ const schema
       iconPrefixTooltip: 'Verified value',
     },
     {
-      $formkit: 'primeOutputNumber',
+      $formkit: 'formOutputNumber',
       name: 'number3',
       format: 'currency',
       label: 'Icon Right',
@@ -36,9 +36,9 @@ const data = { mumber1: 12.2, number2: 42.0, number3: 20000 }
 
 <template>
   <div class="">
-    <PrimeOutput
-      header="PrimeOutputNumber" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueOutput
+      header="FormOutputNumber" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

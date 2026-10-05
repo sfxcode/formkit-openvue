@@ -12,13 +12,13 @@ onMounted(() => {
 const schema
   = [
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       label: 'Name',
       name: 'name',
       outerClass: 'col-6 mb-2',
     },
     {
-      $formkit: 'primeRepeater',
+      $formkit: 'formRepeater',
       name: 'attacks',
       label: 'Attacks',
       help: 'Attacks List Demo - Use Buttons to clone, move and delete',
@@ -46,14 +46,14 @@ const schema
       newItem: createDefaultValue(),
       children: [
         {
-          $formkit: 'primeInputText',
+          $formkit: 'formInputText',
           label: 'Name',
           name: 'name',
           outerClass: 'col-span-5',
           validation: 'required',
         },
         {
-          $formkit: 'primeInputText',
+          $formkit: 'formInputText',
           label: 'Damage',
           name: 'damage',
           outerClass: 'col-span-3 col-start-6',
@@ -65,7 +65,7 @@ const schema
 
 <template>
   <div v-if="data" class="mt-1">
-    <PrimeInput
+    <OpenVueInput
       header="Repeater" :schema="schema" :data="data"
     />
   </div>

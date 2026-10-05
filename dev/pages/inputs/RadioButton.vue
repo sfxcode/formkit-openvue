@@ -1,11 +1,11 @@
 <script setup lang='ts'>
-const primeAttributes = 'options, optionLabel, optionValue'
+const formAttributes = 'options, optionLabel, optionValue'
 const customAttributes = 'optionClass'
 
 const schema
   = [
     {
-      $formkit: 'primeRadioButton',
+      $formkit: 'formRadioButton',
       id: 'basic',
       label: 'Select',
       name: 'basic',
@@ -18,7 +18,7 @@ const schema
       ],
     },
     {
-      $formkit: 'primeRadioButton',
+      $formkit: 'formRadioButton',
       id: 'answer',
       label: 'Select Answer',
       name: 'answer',
@@ -40,10 +40,10 @@ const data = { basic: 'refresh' }
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       class="space-x-2 items-center"
-      header="PrimeRadioButton" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+      header="FormRadioButton" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

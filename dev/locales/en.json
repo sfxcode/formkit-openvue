@@ -4,7 +4,7 @@
   "save": "Save",
   "search": "Search",
   "formkit": {
-    "prime": {
+    "form": {
       "true": "Yes",
       "false": "No"
     }

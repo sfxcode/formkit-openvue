@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-const primeAttributes = 'placeholder, rows'
+const formAttributes = 'placeholder, rows'
 const schema
   = [
     {
-      $formkit: 'primeTextarea',
+      $formkit: 'formTextarea',
       id: 'basic',
       name: 'name',
       placeholder: 'Basic',
@@ -12,21 +12,21 @@ const schema
       validation: 'required',
     },
     {
-      $formkit: 'primeTextarea',
+      $formkit: 'formTextarea',
       name: 'name',
       label: '5 Rows',
       rows: 5,
       autoResize: true,
     },
     {
-      $formkit: 'primeTextarea',
+      $formkit: 'formTextarea',
       name: 'name',
       placeholder: 'Styled',
       style: { background: 'gray' },
       class: 'customClass',
     },
     {
-      $formkit: 'primeTextarea',
+      $formkit: 'formTextarea',
       name: 'name',
       placeholder: 'Read Only',
       readonly: true,
@@ -39,9 +39,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeTextarea" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormTextarea" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

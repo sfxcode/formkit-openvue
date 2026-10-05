@@ -1,0 +1,52 @@
+# FormInputNumber
+
+A FormKit wrapper for OpenVue's InputNumber component.
+
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/inputnumber)
+
+## Usage
+```vue
+<FormKit type="formInputNumber" v-model="value" />
+```
+
+### Object-based Example
+```vue
+<script setup>
+const schema = [
+  { $formkit: 'formInputNumber', name: 'firstNumber', label: 'Input Number', value: 1234, validation: 'max:10000', useGrouping: true, minFractionDigits: 2 },
+  { $formkit: 'formInputNumber', name: 'secondNumber', label: 'Input Number', value: 999, validation: 'min:900', useGrouping: false, minFractionDigits: 0 },
+  { $formkit: 'formInputNumber', name: 'fixedNumber', label: 'Input Number', value: 1234, class: 'customClass', style: { background: 'gray' }, readonly: true },
+  { $formkit: 'formInputNumber', name: 'numberInputWithMinNumber', label: 'Number Input with Min Value', min: 10 },
+  { $formkit: 'formInputNumber', name: 'customizedInputNumber', label: 'Customized Input Number', placeholder: 'Enter currency', useGrouping: true, minFractionDigits: 2, maxFractionDigits: 4, mode: 'currency', currency: 'USD', locale: 'en-US', showButtons: true, buttonLayout: 'horizontal', step: 0.01 },
+]
+const data = {}
+</script>
+
+<template>
+  <FormKit :schema="schema" :data="data" />
+</template>
+```
+
+## Props
+| Name              | Type      | Description |
+|-------------------|-----------|-------------|
+| useGrouping       | boolean   | Use grouping separators |
+| min               | number    | Minimum value |
+| max               | number    | Maximum value |
+| minFractionDigits | number    | Minimum fraction digits |
+| maxFractionDigits | number    | Maximum fraction digits |
+| locale            | string    | Locale for formatting |
+| mode              | string    | Input mode (decimal, currency) |
+| currency          | string    | Currency code |
+| prefix            | string    | Prefix text |
+| suffix            | string    | Suffix text |
+| showButtons       | boolean   | Show increment/decrement buttons |
+| buttonLayout      | string    | Button layout |
+| step              | number    | Step increment |
+| pt                | object    | Pass-through options |
+| ptOptions         | object    | Pass-through options |
+| unstyled          | boolean   | Disable default styles |
+| placeholder       | string    | Placeholder text |
+| size              | string    | Input size |
+
+See [OpenVue InputNumber docs](https://openvue.dev/inputnumber) for more details.

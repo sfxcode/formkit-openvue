@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const primeAttributes = 'N/A'
+const formAttributes = 'N/A'
 const customAttributes = 'insertButtonLabel, insertButtonClass, insertButtonSize, alwaysDisplayInsertButton, newItem, listClass, listItemClass, groupClass, hideButtonGroup, hideMoveButtons, buttonGroupClass, buttonGroupItemClass, buttonSize, displayCloneButton, displayAddButton, displayDeleteButton, displayDragHandle, dragHandleClass, dragHandleIconClass'
 
 function createDefaultValue(): object {
@@ -9,14 +9,14 @@ function createDefaultValue(): object {
 const schema
   = [
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       label: 'Character Name',
       name: 'characterName',
       outerClass: 'col-12 mb-2',
       validation: 'required',
     },
     {
-      $formkit: 'primeRepeater',
+      $formkit: 'formRepeater',
       name: 'attacks',
       label: 'Attacks List',
       help: 'Add, clone, move, and delete attacks using the buttons',
@@ -39,14 +39,14 @@ const schema
       newItem: createDefaultValue(),
       children: [
         {
-          $formkit: 'primeInputText',
+          $formkit: 'formInputText',
           label: 'Name',
           name: 'name',
           outerClass: 'col-span-5',
           validation: 'required',
         },
         {
-          $formkit: 'primeInputText',
+          $formkit: 'formInputText',
           label: 'Damage',
           name: 'damage',
           outerClass: 'col-span-3 col-start-6',
@@ -54,7 +54,7 @@ const schema
       ],
     },
     {
-      $formkit: 'primeRepeater',
+      $formkit: 'formRepeater',
       name: 'inventory',
       label: 'Inventory (Minimal Buttons but large)',
       help: 'Repeater with only add and delete buttons',
@@ -73,13 +73,13 @@ const schema
       newItem: { item: '', quantity: 1 },
       children: [
         {
-          $formkit: 'primeInputText',
+          $formkit: 'formInputText',
           label: 'Item',
           name: 'item',
           outerClass: 'col-span-8',
         },
         {
-          $formkit: 'primeInputNumber',
+          $formkit: 'formInputNumber',
           label: 'Quantity',
           name: 'quantity',
           outerClass: 'col-span-4',
@@ -104,9 +104,9 @@ const data = {
 
 <template>
   <div class="">
-    <PrimeInput
-      header="PrimeRepeater" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueInput
+      header="FormRepeater" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

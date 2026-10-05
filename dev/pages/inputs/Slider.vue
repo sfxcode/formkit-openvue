@@ -1,12 +1,12 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'min, max, step, range, orientation'
+const formAttributes = 'min, max, step, range, orientation'
 
 const schema
   = [
     {
-      $formkit: 'primeSlider',
+      $formkit: 'formSlider',
       name: 'slider',
       label: 'Use Slider',
       class: 'mt-2 w-72',
@@ -17,7 +17,7 @@ const schema
       validation: 'min:20|max:80',
     },
     {
-      $formkit: 'primeSlider',
+      $formkit: 'formSlider',
       name: 'sliderVertical',
       label: 'Use Slider',
       min: 1,
@@ -32,9 +32,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeSlider" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormSlider" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

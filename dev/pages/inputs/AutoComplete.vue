@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const primeAttributes = 'placeholder, multiple, typeahead, optionLabel, size, minLength, fluid'
+const formAttributes = 'placeholder, multiple, typeahead, optionLabel, size, minLength, fluid'
 
 const list = ['Hello', 'Hero', 'House', 'World']
 
@@ -20,7 +20,7 @@ const userList = [
 const schema
   = [
     {
-      $formkit: 'primeAutoComplete',
+      $formkit: 'formAutoComplete',
       id: 'basic',
       name: 'basic',
       complete: search,
@@ -28,7 +28,7 @@ const schema
       label: 'Basic AutoComplete - Use [h]ello',
     },
     {
-      $formkit: 'primeAutoComplete',
+      $formkit: 'formAutoComplete',
       id: 'async',
       name: 'async',
       complete: asyncSearch,
@@ -39,7 +39,7 @@ const schema
       fluid: true,
     },
     {
-      $formkit: 'primeAutoComplete',
+      $formkit: 'formAutoComplete',
       id: 'basic',
       name: 'id',
       dropdown: true,
@@ -48,7 +48,7 @@ const schema
       optionLabel: 'name',
     },
     {
-      $formkit: 'primeAutoComplete',
+      $formkit: 'formAutoComplete',
       id: 'chips',
       name: 'chips',
       multiple: true,
@@ -56,7 +56,7 @@ const schema
       label: 'Chips Replacement',
     },
     {
-      $formkit: 'primeAutoComplete',
+      $formkit: 'formAutoComplete',
       id: 'chips2',
       name: 'chips2',
       multiple: true,
@@ -71,9 +71,9 @@ const data = { id: { id: '1', name: 'Tom', value: '123' } }
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       header="AutoComplete" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

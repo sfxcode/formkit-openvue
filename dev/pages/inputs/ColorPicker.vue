@@ -1,17 +1,17 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'placeholder, separator, allowDuplicate, max, addOnBlur'
+const formAttributes = 'placeholder, separator, allowDuplicate, max, addOnBlur'
 
 const schema
   = [
     {
-      $formkit: 'primeColorPicker',
+      $formkit: 'formColorPicker',
       label: 'Select Color',
       name: 'color',
     },
     {
-      $formkit: 'primeColorPicker',
+      $formkit: 'formColorPicker',
       name: 'styled',
       label: 'Styled + Disabled',
       style: { background: 'gray' },
@@ -19,7 +19,7 @@ const schema
       disabled: true,
     },
     {
-      $formkit: 'primeColorPicker',
+      $formkit: 'formColorPicker',
       name: 'inline',
       label: 'Inline - Format RGB',
       inline: true,
@@ -32,9 +32,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeColorPicker" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormColorPicker" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-const primeAttributes = 'placeholder, mask, slotChar, autoClear, unmask'
+const formAttributes = 'placeholder, mask, slotChar, autoClear, unmask'
 const schema
   = [
     {
-      $formkit: 'primeInputMask',
+      $formkit: 'formInputMask',
       name: 'myInputMask',
       label: 'Input Mask',
       validation: 'required',
@@ -12,7 +12,7 @@ const schema
       placeholder: '##-######',
     },
     {
-      $formkit: 'primeInputMask',
+      $formkit: 'formInputMask',
       name: 'custom',
       label: 'Input Mask',
       mask: '(999) 999-9999',
@@ -20,7 +20,7 @@ const schema
       iconSuffix: 'oi oi-check',
     },
     {
-      $formkit: 'primeInputMask',
+      $formkit: 'formInputMask',
       name: 'phone',
       label: 'Phone',
       mask: '+1 (999) 999-9999',
@@ -35,9 +35,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeInputMask" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormInputMask" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

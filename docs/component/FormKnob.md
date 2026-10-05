@@ -1,0 +1,44 @@
+# FormKnob
+
+A FormKit wrapper for OpenVue's Knob component.
+
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/knob)
+
+## Usage
+```vue
+<FormKit type="formKnob" v-model="value" />
+```
+
+### Object-based Example
+```vue
+<script setup>
+const schema = [
+  { $formkit: 'formKnob', name: 'knob', label: 'Use Knob', value: 50, validation: 'min:20|max:80' },
+  { $formkit: 'formKnob', name: 'custom', label: 'Customized Knob', min: 42, max: 98, step: 4, value: 58, showValue: false },
+]
+const data = {}
+</script>
+
+<template>
+  <FormKit :schema="schema" :data="data" />
+</template>
+```
+
+## Props
+| Name         | Type      | Description |
+|--------------|-----------|-------------|
+| pt           | object    | Pass-through options |
+| ptOptions    | object    | Pass-through options |
+| unstyled     | boolean   | Disable default styles |
+| min          | number    | Minimum value |
+| max          | number    | Maximum value |
+| step         | number    | Step increment |
+| size         | number    | Knob size |
+| strokeWidth  | number    | Stroke width |
+| showValue    | boolean   | Show value inside knob |
+| valueColor   | string    | Value color |
+| rangeColor   | string    | Range color |
+| textColor    | string    | Text color |
+| valueTemplate| string    | Value template |
+
+See [OpenVue Knob docs](https://openvue.dev/knob) for more details.

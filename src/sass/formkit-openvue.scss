@@ -109,7 +109,7 @@ $grid-breakpoints: (
     }
   }
 
-  // Used in Prime RadioButton
+  // Used in FormRadioButton
   .p-formkit-options {
     display: flex;
     flex-wrap: wrap;
@@ -229,7 +229,7 @@ $grid-breakpoints: (
     }
 
     // specific checkbox stylings
-    .formkit-outer[data-type="primeCheckbox"] {
+    .formkit-outer[data-type="formCheckbox"] {
       //padding-left: 0;
 
       .formkit-wrapper {
@@ -399,7 +399,7 @@ $grid-breakpoints: (
       }
 
       &.form-horizontal-checkbox-indent {
-        .formkit-outer[data-type="primeCheckbox"] {
+        .formkit-outer[data-type="formCheckbox"] {
           @include media-breakpoint-up(md) {
             padding-left: calc((4 / 12) * 100%);
           }
@@ -434,7 +434,7 @@ $grid-breakpoints: (
           }
         }
 
-        div[data-type="primeCheckbox"] {
+        div[data-type="formCheckbox"] {
           .formkit-inner {
             margin-left: auto;
 

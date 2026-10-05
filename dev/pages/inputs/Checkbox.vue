@@ -1,39 +1,39 @@
 <script setup lang='ts'>
-const primeAttributes = 'binary (dfault = true), trueValue, falseValue'
+const formAttributes = 'binary (dfault = true), trueValue, falseValue'
 const customAttributes = 'prefix, suffix'
 
 const schema
   = [
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       id: 'basic',
       name: 'basic',
       label: 'Basic',
     },
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       id: 'eu',
       prefix: 'Are you a european citizen: ',
     },
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       id: 'taxes',
       suffix: 'Taxes includes ',
     },
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       name: 'readonly',
       label: 'readonly',
       readonly: true,
     },
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       name: 'indeterminate',
       label: 'indeterminate',
       indeterminate: true,
     },
     {
-      $formkit: 'primeCheckbox',
+      $formkit: 'formCheckbox',
       name: 'custom',
       label: 'custom values',
       trueValue: 'A',
@@ -46,9 +46,9 @@ const data = { readonly: true }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeCheckbox" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes" :custom-attributes="customAttributes"
+    <OpenVueInput
+      header="FormCheckbox" :schema="schema" :data="data"
+      :form-attributes="formAttributes" :custom-attributes="customAttributes"
     />
   </div>
 </template>

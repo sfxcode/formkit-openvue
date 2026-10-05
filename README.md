@@ -4,13 +4,52 @@ OpenVue based [FormKit Inputs](https://sfxcode.github.io/formkit-openvue/guide/i
 
 Main focus of this project is to provide configuration based forms with validation.
 
-In addition, you can use the same pattern for **data output** from **schema** using [PrimeOutputs](https://sfxcode.github.io/formkit-openvue/guide/outputs.html).
+In addition, you can use the same pattern for **data output** from **schema** using [FormOutputs](https://sfxcode.github.io/formkit-openvue/guide/outputs.html).
 
 ## OpenVue Versions
 
 Actual OpenVue Version of the main branch is *1.0.0.*
 
 This package replaces the former PrimeVue based `@sfxcode/formkit-primevue`. It uses the open source [OpenVue](https://github.com/openvi-foundation/openvue) components (`openvue`, `@openvue/themes`, `@openvue/openicons`) instead of PrimeVue.
+
+## Migration from PrimeVue
+
+Migrating from `@sfxcode/formkit-primevue` to `@sfxcode/formkit-openvue`:
+
+1. Replace the package and the UI framework
+
+   ```bash
+   pnpm remove @sfxcode/formkit-primevue primevue @primeuix/themes primeicons
+   pnpm add @sfxcode/formkit-openvue openvue @openvue/themes @openvue/openicons
+   ```
+
+2. Update the imports (including `/components`, `/composables` and the scss file)
+
+   ```typescript
+   // before
+   import { primeInputs, primeOutputs } from '@sfxcode/formkit-primevue'
+   // after
+   import { formInputs, formOutputs } from '@sfxcode/formkit-openvue'
+   ```
+
+3. Rename the input and output types in your schemas: the `prime` prefix is now `form`
+
+   | PrimeVue                      | OpenVue                      |
+   |-------------------------------|------------------------------|
+   | `type: 'primeInputText'`      | `type: 'formInputText'`      |
+   | `type: 'primeSelect'`         | `type: 'formSelect'`         |
+   | `type: 'primeOutputText'`     | `type: 'formOutputText'`     |
+   | `primeInputs`, `primeOutputs` | `formInputs`, `formOutputs`  |
+   | `usePrimeInputs()`            | `useFormInputs()`            |
+   | `PrimeInputText` (component)  | `FormInputText` (component)  |
+
+   A search and replace of `prime` followed by an uppercase letter (`prime[A-Z]` -> `form`, `Prime[A-Z]` -> `Form`) covers most of it.
+
+4. Replace PrimeVue with OpenVue in your app setup: use the `openvue` components, themes and `@openvue/openicons` (instead of PrimeIcons) and register them as you did with PrimeVue.
+
+5. Update custom CSS: selectors like `[data-type="primeCheckbox"]` become `[data-type="formCheckbox"]`.
+
+Also rename the `primeAttributes` prop to `formAttributes` (`prime-attributes` to `form-attributes` in templates). Rename the i18n keys `formkit.prime.true` / `formkit.prime.false` to `formkit.form.true` / `formkit.form.false`. Not changed: the `p-formkit` wrapper class. The stylesheet is now `formkit-openvue.scss` (update imports of `dist/sass/formkit-primevue.scss`).
 
 ## Build
 
@@ -32,13 +71,13 @@ Add *formkit.config.ts*
 
 ```typescript
 import { defaultConfig, plugin } from '@formkit/vue'
-import { primeInputs } from '@sfxcode/formkit-openvue'
+import { formInputs } from '@sfxcode/formkit-openvue'
 
 app.use(plugin, defaultConfig({
   locales: { de, en },
   // Define the active locale
   locale: 'en',
-  inputs: primeInputs, 
+  inputs: formInputs, 
 }))
 ```
 
@@ -46,13 +85,13 @@ or if using also the output part
 
 ```typescript
 import { defaultConfig, plugin } from '@formkit/vue'
-import { primeInputs, primeOutputs } from '@sfxcode/formkit-openvue'
+import { formInputs, formOutputs } from '@sfxcode/formkit-openvue'
 
 app.use(plugin, defaultConfig({
   locales: { de, en },
   // Define the active locale
   locale: 'en',
-    inputs: { ...primeInputs, ...primeOutputs },
+    inputs: { ...formInputs, ...formOutputs },
 }))
 ```
 
@@ -86,7 +125,7 @@ Prefixing of the OpenVue component names is not supported.
 
 ### Basic Styling
 
-Basic styling is provided with the [formkit-primevue.scss](https://github.com/sfxcode/formkit-openvue/blob/main/src/sass/formkit-primevue.scss) file or the corresponding css file in the package.
+Basic styling is provided with the [formkit-openvue.scss](https://github.com/sfxcode/formkit-openvue/blob/main/src/sass/formkit-openvue.scss) file or the corresponding css file in the package.
 
 Features:
 

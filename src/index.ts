@@ -30,19 +30,19 @@ import type { SelectProps } from 'openvue/select'
 import type { SelectButtonProps } from 'openvue/selectbutton'
 import type { TreeSelectProps } from 'openvue/treeselect'
 import { FormKitDataEdit, FormKitDataView } from './components'
-import { useFormKitRepeater, useFormKitSchema, useInputEditor, useInputEditorSchema, usePrimeInputs } from './composables'
-import { primeInputs, primeOutputs } from './definitions'
+import { useFormInputs, useFormKitRepeater, useFormKitSchema, useInputEditor, useInputEditorSchema } from './composables'
+import { formInputs, formOutputs } from './definitions'
 
 export {
+  formInputs,
   FormKitDataEdit,
   FormKitDataView,
-  primeInputs,
-  primeOutputs,
+  formOutputs,
+  useFormInputs,
   useFormKitRepeater,
   useFormKitSchema,
   useInputEditor,
   useInputEditorSchema,
-  usePrimeInputs,
 }
 
 /**
@@ -52,134 +52,134 @@ type MergeSlots<A, B> = A & Omit<B, keyof A>
 
 declare module '@formkit/inputs' {
   interface FormKitInputProps<Props extends FormKitInputs<Props>> {
-    primeAutoComplete: {
-      type: 'primeAutoComplete'
+    formAutoComplete: {
+      type: 'formAutoComplete'
     }
-    primeInputText: {
-      type: 'primeInputText'
+    formInputText: {
+      type: 'formInputText'
     }
-    primeInputNumber: {
-      type: 'primeInputNumber'
+    formInputNumber: {
+      type: 'formInputNumber'
     }
-    primeInputMask: {
-      type: 'primeInputMask'
+    formInputMask: {
+      type: 'formInputMask'
     }
-    primePassword: {
-      type: 'primePassword'
+    formPassword: {
+      type: 'formPassword'
     }
-    primeCheckbox: {
-      type: 'primeCheckbox'
+    formCheckbox: {
+      type: 'formCheckbox'
     }
-    primeToggleSwitch: {
-      type: 'primeToggleSwitch'
+    formToggleSwitch: {
+      type: 'formToggleSwitch'
     }
-    primeTextarea: {
-      type: 'primeTextarea'
+    formTextarea: {
+      type: 'formTextarea'
     }
-    primeSelect: {
-      type: 'primeSelect'
+    formSelect: {
+      type: 'formSelect'
       options?: SelectProps['options']
     }
-    primeMultiSelect: {
-      type: 'primeMultiSelect'
+    formMultiSelect: {
+      type: 'formMultiSelect'
       options?: MultiSelectProps['options']
     }
-    primeDatePicker: {
-      type: 'primeDatePicker'
+    formDatePicker: {
+      type: 'formDatePicker'
     }
-    primeSlider: {
-      type: 'primeSlider'
+    formSlider: {
+      type: 'formSlider'
     }
-    primeKnob: {
-      type: 'primeKnob'
+    formKnob: {
+      type: 'formKnob'
     }
-    primeRating: {
-      type: 'primeRating'
+    formRating: {
+      type: 'formRating'
     }
-    primeRadioButton: {
-      type: 'primeRadioButton'
+    formRadioButton: {
+      type: 'formRadioButton'
     }
-    primeColorPicker: {
-      type: 'primeColorPicker'
+    formColorPicker: {
+      type: 'formColorPicker'
     }
-    primeToggleButton: {
-      type: 'primeToggleButton'
+    formToggleButton: {
+      type: 'formToggleButton'
     }
-    primeListbox: {
-      type: 'primeListbox'
+    formListbox: {
+      type: 'formListbox'
       options?: ListboxProps['options']
     }
-    primeSelectButton: {
-      type: 'primeSelectButton'
+    formSelectButton: {
+      type: 'formSelectButton'
       options?: SelectButtonProps['options']
     }
-    primeCascadeSelect: {
-      type: 'primeCascadeSelect'
+    formCascadeSelect: {
+      type: 'formCascadeSelect'
       options?: CascadeSelectProps['options']
     }
-    primeTreeSelect: {
-      type: 'primeTreeSelect'
+    formTreeSelect: {
+      type: 'formTreeSelect'
       options?: TreeSelectProps['options']
     }
-    primeInputOtp: {
-      type: 'primeInputOtp'
+    formInputOtp: {
+      type: 'formInputOtp'
     }
-    primeOutputText: {
-      type: 'primeOutputText'
+    formOutputText: {
+      type: 'formOutputText'
     }
-    primeOutputLink: {
-      type: 'primeOutputLink'
+    formOutputLink: {
+      type: 'formOutputLink'
     }
-    primeOutputReference: {
-      type: 'primeOutputReference'
+    formOutputReference: {
+      type: 'formOutputReference'
     }
-    primeOutputNumber: {
-      type: 'primeOutputNumber'
+    formOutputNumber: {
+      type: 'formOutputNumber'
     }
-    primeOutputDate: {
-      type: 'primeOutputDate'
+    formOutputDate: {
+      type: 'formOutputDate'
     }
-    primeOutputBoolean: {
-      type: 'primeOutputBoolean'
+    formOutputBoolean: {
+      type: 'formOutputBoolean'
     }
-    primeOutputDuration: {
-      type: 'primeOutputDuration'
+    formOutputDuration: {
+      type: 'formOutputDuration'
     }
-    primeOutputList: {
-      type: 'primeOutputList'
+    formOutputList: {
+      type: 'formOutputList'
     }
   }
 
   interface FormKitInputSlots<Props extends FormKitInputs<Props>> {
-    primeAutoComplete: MergeSlots<FormKitBaseSlots<Props>, AutoCompleteSlots>
-    primeCascadeSelect: MergeSlots<FormKitBaseSlots<Props>, CascadeSelectSlots>
-    primeCheckbox: MergeSlots<FormKitBaseSlots<Props>, CheckboxSlots>
-    primeColorPicker: MergeSlots<FormKitBaseSlots<Props>, ColorPickerSlots>
-    primeDatePicker: MergeSlots<FormKitBaseSlots<Props>, DatePickerSlots>
-    primeInputMask: MergeSlots<FormKitBaseSlots<Props>, InputMaskSlots>
-    primeInputNumber: MergeSlots<FormKitBaseSlots<Props>, InputNumberSlots>
-    primeInputOtp: MergeSlots<FormKitBaseSlots<Props>, InputOtpSlots>
-    primeInputText: MergeSlots<FormKitBaseSlots<Props>, InputTextSlots>
-    primeKnob: MergeSlots<FormKitBaseSlots<Props>, KnobSlots>
-    primeListbox: MergeSlots<FormKitBaseSlots<Props>, ListboxSlots>
-    primeMultiSelect: MergeSlots<FormKitBaseSlots<Props>, MultiSelectSlots>
-    primeOutputBoolean: FormKitBaseSlots<Props>
-    primeOutputDate: FormKitBaseSlots<Props>
-    primeOutputDuration: FormKitBaseSlots<Props>
-    primeOutputLink: FormKitBaseSlots<Props>
-    primeOutputList: FormKitBaseSlots<Props>
-    primeOutputNumber: FormKitBaseSlots<Props>
-    primeOutputReference: FormKitBaseSlots<Props>
-    primeOutputText: FormKitBaseSlots<Props>
-    primePassword: MergeSlots<FormKitBaseSlots<Props>, PasswordSlots>
-    primeRadioButton: MergeSlots<FormKitBaseSlots<Props>, RadioButtonSlots>
-    primeRating: MergeSlots<FormKitBaseSlots<Props>, RatingSlots>
-    primeSelect: MergeSlots<FormKitBaseSlots<Props>, SelectSlots>
-    primeSelectButton: MergeSlots<FormKitBaseSlots<Props>, SelectButtonSlots>
-    primeSlider: MergeSlots<FormKitBaseSlots<Props>, SliderSlots>
-    primeTextarea: MergeSlots<FormKitBaseSlots<Props>, TextareaSlots>
-    primeToggleButton: MergeSlots<FormKitBaseSlots<Props>, ToggleButtonSlots>
-    primeToggleSwitch: MergeSlots<FormKitBaseSlots<Props>, ToggleSwitchSlots>
-    primeTreeSelect: MergeSlots<FormKitBaseSlots<Props>, TreeSelectSlots>
+    formAutoComplete: MergeSlots<FormKitBaseSlots<Props>, AutoCompleteSlots>
+    formCascadeSelect: MergeSlots<FormKitBaseSlots<Props>, CascadeSelectSlots>
+    formCheckbox: MergeSlots<FormKitBaseSlots<Props>, CheckboxSlots>
+    formColorPicker: MergeSlots<FormKitBaseSlots<Props>, ColorPickerSlots>
+    formDatePicker: MergeSlots<FormKitBaseSlots<Props>, DatePickerSlots>
+    formInputMask: MergeSlots<FormKitBaseSlots<Props>, InputMaskSlots>
+    formInputNumber: MergeSlots<FormKitBaseSlots<Props>, InputNumberSlots>
+    formInputOtp: MergeSlots<FormKitBaseSlots<Props>, InputOtpSlots>
+    formInputText: MergeSlots<FormKitBaseSlots<Props>, InputTextSlots>
+    formKnob: MergeSlots<FormKitBaseSlots<Props>, KnobSlots>
+    formListbox: MergeSlots<FormKitBaseSlots<Props>, ListboxSlots>
+    formMultiSelect: MergeSlots<FormKitBaseSlots<Props>, MultiSelectSlots>
+    formOutputBoolean: FormKitBaseSlots<Props>
+    formOutputDate: FormKitBaseSlots<Props>
+    formOutputDuration: FormKitBaseSlots<Props>
+    formOutputLink: FormKitBaseSlots<Props>
+    formOutputList: FormKitBaseSlots<Props>
+    formOutputNumber: FormKitBaseSlots<Props>
+    formOutputReference: FormKitBaseSlots<Props>
+    formOutputText: FormKitBaseSlots<Props>
+    formPassword: MergeSlots<FormKitBaseSlots<Props>, PasswordSlots>
+    formRadioButton: MergeSlots<FormKitBaseSlots<Props>, RadioButtonSlots>
+    formRating: MergeSlots<FormKitBaseSlots<Props>, RatingSlots>
+    formSelect: MergeSlots<FormKitBaseSlots<Props>, SelectSlots>
+    formSelectButton: MergeSlots<FormKitBaseSlots<Props>, SelectButtonSlots>
+    formSlider: MergeSlots<FormKitBaseSlots<Props>, SliderSlots>
+    formTextarea: MergeSlots<FormKitBaseSlots<Props>, TextareaSlots>
+    formToggleButton: MergeSlots<FormKitBaseSlots<Props>, ToggleButtonSlots>
+    formToggleSwitch: MergeSlots<FormKitBaseSlots<Props>, ToggleSwitchSlots>
+    formTreeSelect: MergeSlots<FormKitBaseSlots<Props>, TreeSelectSlots>
   }
 }

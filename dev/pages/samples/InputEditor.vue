@@ -7,7 +7,7 @@ const { addListGroupFunctions } = useFormKitRepeater()
 
 const data = reactive(schemaToEditorData(
   {
-    $formkit: 'primeInputText',
+    $formkit: 'formInputText',
     name: 'field',
     options: [{ label: 'Option 1', value: 'option1' }, { label: 'Option 2', value: 'option2' }],
   },
@@ -18,8 +18,8 @@ addListGroupFunctions(data)
 
 <template>
   <div class="ml-2">
-    <PrimeSchemaEditor
-      header="Prime Input Editor" :schema="editorSchema()" :data="data"
+    <OpenVueSchemaEditor
+      header="Form Input Editor" :schema="editorSchema()" :data="data"
     />
   </div>
 </template>

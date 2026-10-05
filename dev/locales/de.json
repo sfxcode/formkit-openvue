@@ -4,7 +4,7 @@
   "save": "Speichern",
   "search": "Suchen",
   "formkit": {
-    "prime": {
+    "form": {
       "true": "Ja",
       "false": "Nein"
     }

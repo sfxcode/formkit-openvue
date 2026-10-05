@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
 const data = ref({
   cities: ['PRS', 'BER'],
@@ -46,7 +46,7 @@ const departmentOptions = [
 
 const schema = [
   {
-    $formkit: 'primeListbox',
+    $formkit: 'formListbox',
     name: 'cities',
     label: 'City Transfer - With Filter & Transfer All',
     help: 'Select and move cities between lists with buttons or drag and drop. Use filter to search.',
@@ -65,7 +65,7 @@ const schema = [
     validation: 'required|min:2',
   },
   {
-    $formkit: 'primeListbox',
+    $formkit: 'formListbox',
     name: 'countries',
     label: 'Country Transfer - Basic (No Transfer All)',
     help: 'Simple transfer without transfer all buttons, drag and drop disabled',
@@ -82,7 +82,7 @@ const schema = [
   },
 
   {
-    $formkit: 'primeListbox',
+    $formkit: 'formListbox',
     name: 'departments',
     label: 'Department Transfer - Simple Strings',
     help: 'Transfer list with simple string options (no object mapping)',
@@ -98,7 +98,7 @@ const schema = [
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       header="Listbox Transfer Mode Examples"
       :schema="schema"
       :data="data"

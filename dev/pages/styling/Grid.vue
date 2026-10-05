@@ -4,7 +4,7 @@ import { FormKitDataEdit, FormKitDataView } from 'my-library-components'
 const schema
   = [
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'name',
       label: 'col-8',
       help: 'Required.',
@@ -12,13 +12,13 @@ const schema
       outerClass: 'col-8',
     },
     {
-      $formkit: 'primeInputText',
+      $formkit: 'formInputText',
       name: 'name2',
       label: 'col-4',
       outerClass: 'col-4',
     },
     {
-      $formkit: 'primeInputNumber',
+      $formkit: 'formInputNumber',
       name: 'name3',
       label: 'col-4',
       outerClass: 'col-4',
@@ -30,7 +30,7 @@ const schema
 const outputSchema
   = [
     {
-      $formkit: 'primeOutputText',
+      $formkit: 'formOutputText',
       name: 'name',
       label: 'col-9',
       help: 'Required.',
@@ -38,13 +38,13 @@ const outputSchema
       outerClass: 'col-9',
     },
     {
-      $formkit: 'primeOutputText',
+      $formkit: 'formOutputText',
       name: 'name2',
       label: 'col-4',
       outerClass: 'col-4',
     },
     {
-      $formkit: 'primeOutputNumber',
+      $formkit: 'formOutputNumber',
       name: 'name3',
       label: 'col-4',
       outerClass: 'col-4',

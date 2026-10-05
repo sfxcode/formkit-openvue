@@ -1,3 +1,4 @@
+import { useFormInputs } from './useFormInputs'
 import { useFormKitInput } from './useFormKitInput'
 import { useFormKitRepeater } from './useFormKitRepeater'
 import { useFormKitSchema } from './useFormKitSchema'
@@ -5,9 +6,9 @@ import { useFormKitSection } from './useFormKitSection'
 import { useInputEditor } from './useInputEditor'
 import { useInputEditorSchema } from './useInputEditorSchema'
 import { useOutputDuration } from './useOutputDuration'
-import { usePrimeInputs } from './usePrimeInputs'
 
 export {
+  useFormInputs,
   useFormKitInput,
   useFormKitRepeater,
   useFormKitSchema,
@@ -15,5 +16,4 @@ export {
   useInputEditor,
   useInputEditorSchema,
   useOutputDuration,
-  usePrimeInputs,
 }

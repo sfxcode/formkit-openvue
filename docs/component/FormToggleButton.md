@@ -1,0 +1,41 @@
+# FormToggleButton
+
+A FormKit wrapper for OpenVue's ToggleButton component.
+
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/togglebutton)
+
+## Usage
+```vue
+<FormKit type="formToggleButton" v-model="value" />
+```
+
+### Object-based Example
+```vue
+<script setup>
+const schema = [
+  { $formkit: 'formToggleButton', label: 'ToggleButton', name: 'toggleButton' },
+  { $formkit: 'formToggleButton', label: 'Second ToggleButton', name: 'toggleButtonRight', iconPos: 'right' },
+  { $formkit: 'formToggleButton', label: 'Custom ToggleButton', name: 'toggleButtonCustom', iconPos: 'right', onIcon: 'oi oi-plus', offIcon: 'oi oi-minus', onLabel: 'plus', offLabel: 'minus' },
+]
+const data = {}
+</script>
+
+<template>
+  <FormKit :schema="schema" :data="data" />
+</template>
+```
+
+## Props
+| Name         | Type      | Description |
+|--------------|-----------|-------------|
+| pt           | object    | Pass-through options |
+| ptOptions    | object    | Pass-through options |
+| unstyled     | boolean   | Disable default styles |
+| onLabel      | string    | Label for ON state |
+| offLabel     | string    | Label for OFF state |
+| onIcon       | string    | Icon for ON state |
+| offIcon      | string    | Icon for OFF state |
+| iconPos      | string    | Icon position |
+| size         | string    | Input size |
+
+See [OpenVue ToggleButton docs](https://openvue.dev/togglebutton) for more details.

@@ -1,19 +1,19 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'min, max, step, size, strokeWidth, showValue, valueColor, rangeColor, textColor, valueTemplate'
+const formAttributes = 'min, max, step, size, strokeWidth, showValue, valueColor, rangeColor, textColor, valueTemplate'
 
 const schema
   = [
     {
-      $formkit: 'primeKnob',
+      $formkit: 'formKnob',
       name: 'knob',
       label: 'Use Knob',
       value: 50,
       validation: 'min:20|max:80',
     },
     {
-      $formkit: 'primeKnob',
+      $formkit: 'formKnob',
       name: 'custom',
       label: 'Customized Knob',
       min: 42,
@@ -29,9 +29,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
-      header="PrimeKnob" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+    <OpenVueInput
+      header="FormKnob" :schema="schema" :data="data"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

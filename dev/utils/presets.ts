@@ -1,42 +1,42 @@
 export const blueprint = {
-  $formkit: 'primeInputText',
+  $formkit: 'formInputText',
   name: 'field',
   options: [{ label: 'Option 1', value: 'option1' }, { label: 'Option 2', value: 'option2' }],
 }
 
 export const formkitPreset = [{
-  $formkit: 'primeInputText',
+  $formkit: 'formInputText',
   name: 'email',
   label: 'Email',
   help: 'This will be used for your account.',
   validation: 'required|email',
 }, {
-  $formkit: 'primeTextarea',
+  $formkit: 'formTextarea',
   name: 'myText',
   label: 'Text',
   validation: '',
   rows: '3',
 }, {
-  $formkit: 'primePassword',
+  $formkit: 'formPassword',
   name: 'password',
   label: 'Password',
   help: 'Enter your new password.',
   validation: 'required|length:5,16',
   feedback: true,
 }, {
-  $formkit: 'primePassword',
+  $formkit: 'formPassword',
   name: 'password_confirm',
   label: 'Confirm password',
   help: 'Enter your new password again.',
   validation: 'required|confirm',
   validationLabel: 'password confirmation',
 }, {
-  $formkit: 'primeCheckbox',
+  $formkit: 'formCheckbox',
   name: 'eu_citizen',
   id: 'eu',
   label: 'Are you a european citizen?',
 }, {
-  $formkit: 'primeSelect',
+  $formkit: 'formSelect',
   if: '$get(eu).value', // 👀 Oooo, conditionals!
   name: 'cookie_notice',
   label: 'Cookie notice frequency',

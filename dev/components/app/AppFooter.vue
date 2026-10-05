@@ -4,7 +4,7 @@ const version = ref(import.meta.env.VITE_APP_VERSION)
 
 <template>
   <div class="mt-8 layout-footer text-center text-gray-700">
-    <span class="font-medium ml-2">Formkit (2.0.x) - PrimeVue (4.5.x) - FormKit-PrimeVue-Version {{ version }} - sfxcode 2026</span>
+    <span class="font-medium ml-2">Formkit (2.0.x) - OpenVue (4.5.x) - FormKit-OpenVue-Version {{ version }} - sfxcode 2026</span>
   </div>
 </template>
 

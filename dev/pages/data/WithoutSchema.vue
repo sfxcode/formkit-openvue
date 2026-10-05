@@ -18,16 +18,16 @@ async function submitHandler() {
 </script>
 
 <template>
-  <PrimeData header="FormKitDataEdit without Schema Demo">
+  <OpenVueData header="FormKitDataEdit without Schema Demo">
     <FormKitDataEdit :data="data" :debug-data="true" @data-saved="submitHandler">
       <FormKit
-        type="primeInputText"
+        type="formInputText"
         name="name"
         validation="required"
         label="Name"
       />
       <FormKit
-        type="primeSelect"
+        type="formSelect"
         name="option"
         validation="required"
         label="Option"
@@ -45,7 +45,7 @@ async function submitHandler() {
         <Button type="submit" label="Save" icon="oi oi-check" icon-pos="right" @submit="submitHandler" />
       </template>
     </FormKitDataEdit>
-  </PrimeData>
+  </OpenVueData>
 </template>
 
 <style lang='scss' scoped>

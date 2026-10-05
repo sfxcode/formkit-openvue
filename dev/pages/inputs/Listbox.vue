@@ -1,7 +1,7 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'placeholder, options, filter, optionLabel, optionValue, multiple, displayMode, transferLeftHeaderText, transferRightHeaderText, transferAll, transferDragDrop'
+const formAttributes = 'placeholder, options, filter, optionLabel, optionValue, multiple, displayMode, transferLeftHeaderText, transferRightHeaderText, transferAll, transferDragDrop'
 
 const options = [
   { label: 'Every page load', value: 'refresh' },
@@ -23,7 +23,7 @@ const cityOptions = [
 const schema
   = [
     {
-      $formkit: 'primeListbox',
+      $formkit: 'formListbox',
       name: 'cookie_notice',
       label: 'Cookie notice',
       value: 'hourly',
@@ -33,7 +33,7 @@ const schema
       help: 'Cookie notice frequency ?',
     },
     {
-      $formkit: 'primeListbox',
+      $formkit: 'formListbox',
       name: 'styled',
       label: 'Styled and Disabled',
       value: 'hourly',
@@ -49,7 +49,7 @@ const schema
       disabled: true,
     },
     {
-      $formkit: 'primeListbox',
+      $formkit: 'formListbox',
       name: 'custom',
       label: 'With Multiple Select and Filter',
       multiple: true,
@@ -61,7 +61,7 @@ const schema
       validation: 'required',
     },
     {
-      $formkit: 'primeListbox',
+      $formkit: 'formListbox',
       name: 'selectedCities',
       label: '🔄 Transfer Mode - Select Your Cities',
       help: 'Move cities between lists using buttons or drag and drop. See /samples/ListboxTransfer for more examples!',
@@ -86,9 +86,9 @@ const data = { selectedCities: ['PRS', 'BER'] }
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       header="Listbox" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

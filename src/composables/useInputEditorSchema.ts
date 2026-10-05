@@ -5,11 +5,11 @@ import { useInputEditor } from './useInputEditor'
 export function useInputEditorSchema() {
   const { addList, addListGroup } = useFormKitSchema()
   const { addInsertButton, addGroupButtons } = useFormKitRepeater()
-  const { primeInputNames, primeOutputNames } = useInputEditor()
+  const { formInputNames, formOutputNames } = useInputEditor()
 
-  function primeInputOptions(list: string[]) {
+  function formInputOptions(list: string[]) {
     return list.map((name: string) => {
-      return { label: name, value: `prime${name}` }
+      return { label: name, value: `form${name}` }
     })
   }
 
@@ -29,14 +29,14 @@ export function useInputEditorSchema() {
     { label: 'Submit', value: 'submit' },
   ]
 
-  function editorSchema(inputOptions: any[] = primeInputOptions([...primeInputNames, ...primeOutputNames])) {
+  function editorSchema(inputOptions: any[] = formInputOptions([...formInputNames, ...formOutputNames])) {
     return [
       {
-        $formkit: 'primeSelect',
+        $formkit: 'formSelect',
         id: 'inputSelection',
         name: '_dollar_formkit',
         label: 'Prime Input',
-        value: 'primeInputText',
+        value: 'formInputText',
         optionLabel: 'label',
         optionValue: 'value',
         options: inputOptions,
@@ -46,7 +46,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         name: 'name',
         label: 'Field Name',
         validation: 'required',
@@ -56,7 +56,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeSelectButton',
+        $formkit: 'formSelectButton',
         id: 'selectButton',
         name: 'selectButton',
         options: selectOptions,
@@ -68,7 +68,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showBasic\'',
         name: 'label',
         label: 'Input Label',
@@ -76,7 +76,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showBasic\'',
         name: 'help',
         label: 'Input Help',
@@ -84,7 +84,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showBasic\'',
         name: 'value',
         label: 'Input Value',
@@ -93,7 +93,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showBasic\'',
         name: 'format',
         label: 'Value Format',
@@ -102,7 +102,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showBasic\'',
         name: 'id',
         label: 'Input ID',
@@ -111,7 +111,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showBasic\'',
         name: 'key',
         label: 'Input Key',
@@ -120,7 +120,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showBasic\'',
         name: 'tabindex',
         label: 'Tab Index',
@@ -129,7 +129,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeCheckbox',
+        $formkit: 'formCheckbox',
         if: '$get(selectButton).value === \'showBasic\'',
         name: 'preserve',
         label: 'Preserve',
@@ -140,7 +140,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'class',
         label: 'Input StyleClass',
@@ -149,7 +149,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'style',
         label: 'Input Style',
@@ -158,7 +158,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'if',
         label: 'Should Render (if-Expression)',
@@ -166,7 +166,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'iconPrefix',
         label: 'Prefix Icon',
@@ -175,7 +175,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'prefix',
         label: 'Prefix',
@@ -184,7 +184,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'suffix',
         label: 'Suffix',
@@ -193,7 +193,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'iconSuffix',
         label: 'Suffix Icon',
@@ -202,7 +202,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeCheckbox',
+        $formkit: 'formCheckbox',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'disabled',
         label: 'Input Disabled',
@@ -212,7 +212,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeCheckbox',
+        $formkit: 'formCheckbox',
         if: '$get(selectButton).value === \'showDisplay\'',
         name: 'readonly',
         label: 'Input Read Only',
@@ -222,7 +222,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showStyle\'',
         name: 'outerClass',
         label: 'Outer Class',
@@ -230,7 +230,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showStyle\'',
         name: 'wrapperClass',
         label: 'Wrapper Class',
@@ -238,7 +238,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showStyle\'',
         name: 'innerClass',
         label: 'Inner Class',
@@ -246,7 +246,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showValidation\'',
         name: 'validation',
         label: 'Field Validation',
@@ -255,7 +255,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeSelect',
+        $formkit: 'formSelect',
         if: '$get(selectButton).value === \'showValidation\'',
         name: 'validation-visibility',
         label: 'Field Validation Visibility',
@@ -267,7 +267,7 @@ export function useInputEditorSchema() {
         preserve: true,
       },
       {
-        $formkit: 'primeInputText',
+        $formkit: 'formInputText',
         if: '$get(selectButton).value === \'showValidation\'',
         name: 'validation-label',
         label: 'Field Validation Label',
@@ -280,13 +280,13 @@ export function useInputEditorSchema() {
         addListGroup(
           [
             {
-              $formkit: 'primeInputText',
+              $formkit: 'formInputText',
               label: 'Label',
               name: 'label',
               outerClass: 'col-4',
             },
             {
-              $formkit: 'primeInputText',
+              $formkit: 'formInputText',
               label: 'Value',
               name: 'value',
               outerClass: 'col-4',
@@ -295,20 +295,20 @@ export function useInputEditorSchema() {
           ],
         ),
       ], true, '$get(selectButton).value === \'showOptions\'', { key: 'schema_options', preserve: true }),
-      addList('prime', [
+      addList('form', [
         addInsertButton('Add PrimeVue Attribute'),
         addListGroup(
           [
             {
-              $formkit: 'primeInputText',
+              $formkit: 'formInputText',
               label: 'PrimeVue Key',
-              name: 'prime_key',
+              name: 'form_key',
               outerClass: 'col-3',
             },
             {
-              $formkit: 'primeInputText',
+              $formkit: 'formInputText',
               label: 'Value',
-              name: 'prime_value',
+              name: 'form_value',
               outerClass: 'col-3',
             },
             addGroupButtons(),
@@ -318,5 +318,5 @@ export function useInputEditorSchema() {
     ]
   }
 
-  return { editorSchema, primeInputOptions }
+  return { editorSchema, formInputOptions }
 }

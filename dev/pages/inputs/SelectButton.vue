@@ -1,7 +1,7 @@
 <script setup lang='ts'>
-import PrimeInput from '@/components/demo/PrimeInput.vue'
+import OpenVueInput from '@/components/demo/OpenVueInput.vue'
 
-const primeAttributes = 'options, optionLabel, optionValue, optionDisabled, multiple, unselectable, dataKey'
+const formAttributes = 'options, optionLabel, optionValue, optionDisabled, multiple, unselectable, dataKey'
 
 const selectOptions = [
   { label: 'yes', value: 'YES' },
@@ -18,7 +18,7 @@ const selectOptions2 = [
 const schema
   = [
     {
-      $formkit: 'primeSelectButton',
+      $formkit: 'formSelectButton',
       label: 'SelectButton',
       name: 'selectButton',
       options: selectOptions,
@@ -28,7 +28,7 @@ const schema
       unselectable: false,
     },
     {
-      $formkit: 'primeSelectButton',
+      $formkit: 'formSelectButton',
       label: 'Contact options',
       name: 'selectButtonMultiple',
       optionLabel: 'label',
@@ -43,9 +43,9 @@ const data = { }
 
 <template>
   <div>
-    <PrimeInput
+    <OpenVueInput
       header="SelectButton" :schema="schema" :data="data"
-      :prime-attributes="primeAttributes"
+      :form-attributes="formAttributes"
     />
   </div>
 </template>

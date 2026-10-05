@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { primeRepeaterDefinition } from '../../src/definitions/repeater'
+import { formRepeaterDefinition } from '../../src/definitions/repeater'
 
 function createRepeaterNode(context: Record<string, any> = {}, props: Record<string, any> = {}) {
   let createdHook: (() => void) | undefined
@@ -14,14 +14,14 @@ function createRepeaterNode(context: Record<string, any> = {}, props: Record<str
     },
   }
 
-  const repeaterFeature = (primeRepeaterDefinition as any).features?.[0]
+  const repeaterFeature = (formRepeaterDefinition as any).features?.[0]
   repeaterFeature(node)
   createdHook?.()
 
   return node
 }
 
-describe('primeRepeaterDefinition', () => {
+describe('formRepeaterDefinition', () => {
   it('enables drag handlers when drag handle is displayed', () => {
     const node = createRepeaterNode({ draggable: true, displayDragHandle: true }, { id: 'attack-list' })
 
