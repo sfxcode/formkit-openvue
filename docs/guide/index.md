@@ -17,7 +17,6 @@ Navigate the guide to learn about all features and usage:
 - [Styling](styling.md): Styling your forms and components, including advanced customization.
 - [Examples](examples.md): Practical code examples and usage patterns.
 - [Usage](usage.md): General usage tips and best practices.
-- [History](history.md): Changelog and project history.
 
 ## Formkit Schema
 

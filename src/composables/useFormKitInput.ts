@@ -15,8 +15,8 @@ export function useFormKitInput(context: any) {
   function isGlobalUnstyledMode(): boolean {
     let result = false
     try {
-      const primevue = usePrimeVue()
-      result = primevue?.config?.unstyled || false
+      const openvue = usePrimeVue()
+      result = openvue?.config?.unstyled || false
     }
     // eslint-disable-next-line unused-imports/no-unused-vars
     catch (e) {

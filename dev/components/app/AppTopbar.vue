@@ -29,13 +29,13 @@ const items = ref([
         {
           label: 'Edit',
           items: [
-            { label: 'InputText', icon: 'oi oi-fw pi-pencil', route: '/inputs/inputText' },
-            { label: 'Textarea', icon: 'oi oi-fw pi-align-left', route: '/inputs/textArea' },
-            { label: 'InputNumber', icon: 'oi oi-fw pi-hashtag', route: '/inputs/inputNumber' },
-            { label: 'InputOtp', icon: 'oi oi-fw pi-shield', route: '/inputs/inputOtp' },
-            { label: 'InputMask', icon: 'oi oi-fw pi-id-card', route: '/inputs/inputMask' },
-            { label: 'DatePicker', icon: 'oi oi-fw pi-calendar', route: '/inputs/datePicker' },
-            { label: 'Password', icon: 'oi oi-fw pi-lock', route: '/inputs/password' },
+            { label: 'InputText', icon: 'oi oi-fw oi-pencil', route: '/inputs/inputText' },
+            { label: 'Textarea', icon: 'oi oi-fw oi-align-left', route: '/inputs/textArea' },
+            { label: 'InputNumber', icon: 'oi oi-fw oi-hashtag', route: '/inputs/inputNumber' },
+            { label: 'InputOtp', icon: 'oi oi-fw oi-shield', route: '/inputs/inputOtp' },
+            { label: 'InputMask', icon: 'oi oi-fw oi-id-card', route: '/inputs/inputMask' },
+            { label: 'DatePicker', icon: 'oi oi-fw oi-calendar', route: '/inputs/datePicker' },
+            { label: 'Password', icon: 'oi oi-fw oi-lock', route: '/inputs/password' },
           ],
         },
       ],
@@ -43,14 +43,14 @@ const items = ref([
         {
           label: 'Select',
           items: [
-            { label: 'CascadeSelect', icon: 'oi oi-fw pi-share-alt', route: '/inputs/cascadeSelect' },
-            { label: 'Select', icon: 'oi oi-fw pi-chevron-down', route: '/inputs/select' },
-            { label: 'Listbox', icon: 'oi oi-fw pi-list', route: '/inputs/listbox' },
-            { label: 'MultiSelect', icon: 'oi oi-fw pi-check-square', route: '/inputs/multiSelect' },
-            { label: 'RadioButton', icon: 'oi oi-fw pi-circle', route: '/inputs/radioButton' },
-            { label: 'SelectButton', icon: 'oi oi-fw pi-stop', route: '/inputs/selectButton' },
-            { label: 'ToggleButton', icon: 'oi oi-fw pi-toggle-on', route: '/inputs/toggleButton' },
-            { label: 'TreeSelect', icon: 'oi oi-fw pi-sitemap', route: '/inputs/treeSelect' },
+            { label: 'CascadeSelect', icon: 'oi oi-fw oi-share-alt', route: '/inputs/cascadeSelect' },
+            { label: 'Select', icon: 'oi oi-fw oi-chevron-down', route: '/inputs/select' },
+            { label: 'Listbox', icon: 'oi oi-fw oi-list', route: '/inputs/listbox' },
+            { label: 'MultiSelect', icon: 'oi oi-fw oi-check-square', route: '/inputs/multiSelect' },
+            { label: 'RadioButton', icon: 'oi oi-fw oi-circle', route: '/inputs/radioButton' },
+            { label: 'SelectButton', icon: 'oi oi-fw oi-stop', route: '/inputs/selectButton' },
+            { label: 'ToggleButton', icon: 'oi oi-fw oi-bolt', route: '/inputs/toggleButton' },
+            { label: 'TreeSelect', icon: 'oi oi-fw oi-sitemap', route: '/inputs/treeSelect' },
           ],
         },
       ],
@@ -58,8 +58,8 @@ const items = ref([
         {
           label: 'Check',
           items: [
-            { label: 'Checkbox', icon: 'oi oi-fw pi-check-square', route: '/inputs/checkBox' },
-            { label: 'ToggleSwitch', icon: 'oi oi-fw pi-power-off', route: '/inputs/toggleSwitch' },
+            { label: 'Checkbox', icon: 'oi oi-fw oi-check-square', route: '/inputs/checkBox' },
+            { label: 'ToggleSwitch', icon: 'oi oi-fw oi-power-off', route: '/inputs/toggleSwitch' },
           ],
         },
       ],
@@ -67,12 +67,12 @@ const items = ref([
         {
           label: 'Misc',
           items: [
-            { label: 'AutoComplete', icon: 'oi oi-fw pi-search', route: '/inputs/autoComplete' },
-            { label: 'ColorPicker', icon: 'oi oi-fw pi-palette', route: '/inputs/colorPicker' },
-            { label: 'Knob', icon: 'oi oi-fw pi-sync', route: '/inputs/knob' },
-            { label: 'Slider', icon: 'oi oi-fw pi-sliders-h', route: '/inputs/slider' },
-            { label: 'Rating', icon: 'oi oi-fw pi-star', route: '/inputs/rating' },
-            { label: 'Repeater', icon: 'oi oi-fw pi-list', route: '/inputs/repeater' },
+            { label: 'AutoComplete', icon: 'oi oi-fw oi-search', route: '/inputs/autoComplete' },
+            { label: 'ColorPicker', icon: 'oi oi-fw oi-palette', route: '/inputs/colorPicker' },
+            { label: 'Knob', icon: 'oi oi-fw oi-sync', route: '/inputs/knob' },
+            { label: 'Slider', icon: 'oi oi-fw oi-sliders-h', route: '/inputs/slider' },
+            { label: 'Rating', icon: 'oi oi-fw oi-star', route: '/inputs/rating' },
+            { label: 'Repeater', icon: 'oi oi-fw oi-list', route: '/inputs/repeater' },
           ],
         },
       ],
@@ -87,14 +87,14 @@ const items = ref([
         {
           label: 'Output Components',
           items: [
-            { label: 'Output Text', icon: 'oi oi-fw pi-align-left', route: '/outputs/outputText' },
-            { label: 'Output Number', icon: 'oi oi-fw pi-hashtag', route: '/outputs/outputNumber' },
-            { label: 'Output Date', icon: 'oi oi-fw pi-calendar', route: '/outputs/outputDate' },
-            { label: 'Output Link', icon: 'oi oi-fw pi-link', route: '/outputs/outputLink' },
-            { label: 'Output List', icon: 'oi oi-fw pi-list', route: '/outputs/outputList' },
-            { label: 'Output Boolean', icon: 'oi oi-fw pi-check', route: '/outputs/outputBoolean' },
-            { label: 'Output Duration', icon: 'oi oi-fw pi-clock', route: '/outputs/outputDuration' },
-            { label: 'Output Reference', icon: 'oi oi-fw pi-bookmark', route: '/outputs/outputReference' },
+            { label: 'Output Text', icon: 'oi oi-fw oi-align-left', route: '/outputs/outputText' },
+            { label: 'Output Number', icon: 'oi oi-fw oi-hashtag', route: '/outputs/outputNumber' },
+            { label: 'Output Date', icon: 'oi oi-fw oi-calendar', route: '/outputs/outputDate' },
+            { label: 'Output Link', icon: 'oi oi-fw oi-link', route: '/outputs/outputLink' },
+            { label: 'Output List', icon: 'oi oi-fw oi-list', route: '/outputs/outputList' },
+            { label: 'Output Boolean', icon: 'oi oi-fw oi-check', route: '/outputs/outputBoolean' },
+            { label: 'Output Duration', icon: 'oi oi-fw oi-clock', route: '/outputs/outputDuration' },
+            { label: 'Output Reference', icon: 'oi oi-fw oi-bookmark', route: '/outputs/outputReference' },
           ],
         },
       ],
@@ -102,11 +102,11 @@ const items = ref([
         {
           label: 'Styling',
           items: [
-            { label: 'Basic', icon: 'oi oi-fw pi-palette', route: '/styling/base' },
-            { label: 'Pass Through', icon: 'oi oi-fw pi-arrow-right-arrow-left', route: '/styling/passThrough' },
-            { label: 'FormKit Class', icon: 'oi oi-fw pi-code', route: '/styling/class' },
-            { label: 'Grid', icon: 'oi oi-fw pi-th-large', route: '/styling/grid' },
-            { label: 'Horizontal', icon: 'oi oi-fw pi-arrows-h', route: '/styling/horizontal' },
+            { label: 'Basic', icon: 'oi oi-fw oi-palette', route: '/styling/base' },
+            { label: 'Pass Through', icon: 'oi oi-fw oi-arrow-right-arrow-left', route: '/styling/passThrough' },
+            { label: 'FormKit Class', icon: 'oi oi-fw oi-code', route: '/styling/class' },
+            { label: 'Grid', icon: 'oi oi-fw oi-th-large', route: '/styling/grid' },
+            { label: 'Horizontal', icon: 'oi oi-fw oi-arrows-h', route: '/styling/horizontal' },
           ],
         },
       ],
@@ -114,19 +114,19 @@ const items = ref([
         {
           label: 'Data',
           items: [
-            { label: 'Edit', icon: 'oi oi-fw pi-pencil', route: '/data/edit' },
-            { label: 'View', icon: 'oi oi-fw pi-eye', route: '/data/view' },
-            { label: 'Without Schema', icon: 'oi oi-fw pi-file', route: '/data/withoutSchema' },
-            { label: 'Slots', icon: 'oi oi-fw pi-box', route: '/data/slots' },
+            { label: 'Edit', icon: 'oi oi-fw oi-pencil', route: '/data/edit' },
+            { label: 'View', icon: 'oi oi-fw oi-eye', route: '/data/view' },
+            { label: 'Without Schema', icon: 'oi oi-fw oi-file', route: '/data/withoutSchema' },
+            { label: 'Slots', icon: 'oi oi-fw oi-box', route: '/data/slots' },
           ],
         },
         {
           label: 'Samples',
           items: [
-            { label: 'Repeater', icon: 'oi oi-fw pi-list', route: '/samples/repeater' },
-            { label: 'Input Editor', icon: 'oi oi-fw pi-code', route: '/samples/inputEditor' },
-            { label: 'MultiStep', icon: 'oi oi-fw pi-forward', route: '/samples/multiStep' },
-            { label: 'Listbox Transfer', icon: 'oi oi-fw pi-arrow-right-arrow-left', route: '/samples/listboxTransfer' },
+            { label: 'Repeater', icon: 'oi oi-fw oi-list', route: '/samples/repeater' },
+            { label: 'Input Editor', icon: 'oi oi-fw oi-code', route: '/samples/inputEditor' },
+            { label: 'MultiStep', icon: 'oi oi-fw oi-forward', route: '/samples/multiStep' },
+            { label: 'Listbox Transfer', icon: 'oi oi-fw oi-arrow-right-arrow-left', route: '/samples/listboxTransfer' },
           ],
         },
       ],
@@ -152,7 +152,7 @@ const items = ref([
         </div>
       </template>  <template #end>
         <Button label="FormKit" class="mr-2" @click="redirectToFormKit" />
-        <Button icon="oi oi-prime" label="OpenVue" class="mr-2" @click="redirectToOpenVue" />
+        <Button icon="oi oi-globe" label="OpenVue" class="mr-2" @click="redirectToOpenVue" />
         <Button icon="oi oi-book" label="Docs" class="mr-2" @click="redirectToDocs" />
         <Button icon="oi oi-github" @click="redirectToGithub" />
       </template>

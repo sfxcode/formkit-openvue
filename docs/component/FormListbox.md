@@ -147,7 +147,7 @@ The Transfer List feature allows users to move items between two lists (source a
 - **Remove All**: Remove all items from target (when `transferAll` is enabled)
 - **Filtering**: Both lists support filtering
 - **Drag and Drop**: Drag one or many selected options between lists
-- **Icons**: Uses PrimeIcons (angle-right, angle-double-right, angle-left, angle-double-left)
+- **Icons**: Uses OpenIcons (angle-right, angle-double-right, angle-left, angle-double-left)
 - **Customizable Styling**: Control button appearance and container classes
 - **Accessibility**: Built-in ARIA labels and keyboard navigation support
 

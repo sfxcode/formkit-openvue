@@ -19,7 +19,7 @@ export function useInputEditorSchema() {
     { label: 'Style', value: 'showStyle' },
     { label: 'Validation', value: 'showValidation' },
     { label: 'Options', value: 'showOptions' },
-    { label: 'Prime', value: 'showPrime' },
+    { label: 'OpenVue', value: 'showOpenVue' },
   ]
 
   const validationOptions = [
@@ -35,7 +35,7 @@ export function useInputEditorSchema() {
         $formkit: 'formSelect',
         id: 'inputSelection',
         name: '_dollar_formkit',
-        label: 'Prime Input',
+        label: 'OpenVue Input',
         value: 'formInputText',
         optionLabel: 'label',
         optionValue: 'value',
@@ -296,12 +296,12 @@ export function useInputEditorSchema() {
         ),
       ], true, '$get(selectButton).value === \'showOptions\'', { key: 'schema_options', preserve: true }),
       addList('form', [
-        addInsertButton('Add PrimeVue Attribute'),
+        addInsertButton('Add OpenVue Attribute'),
         addListGroup(
           [
             {
               $formkit: 'formInputText',
-              label: 'PrimeVue Key',
+              label: 'OpenVue Key',
               name: 'form_key',
               outerClass: 'col-3',
             },
@@ -314,7 +314,7 @@ export function useInputEditorSchema() {
             addGroupButtons(),
           ],
         ),
-      ], true, '$get(selectButton).value === \'showPrime\'', { key: 'schema_prime', preserve: true }),
+      ], true, '$get(selectButton).value === \'showOpenVue\'', { key: 'schema_openvue', preserve: true }),
     ]
   }
 

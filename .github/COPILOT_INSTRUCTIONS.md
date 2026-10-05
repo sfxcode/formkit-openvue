@@ -140,30 +140,30 @@
 - Add stories for all components in the `stories/` directory using Histoire's `<Story>` and `<Variant>` blocks.
 - Use the `context` prop for output components to match FormKit conventions.
 
-## PrimeVue Best Practices
-- Follow PrimeVue theming system with CSS variables for customization.
-- Use PrimeVue's built-in accessibility features (ARIA attributes, keyboard navigation).
-- Leverage PrimeVue's responsive design patterns and breakpoint system.
-- Use PrimeVue composables (`useToast`, `useConfirm`) for global services.
-- Ensure proper event handling with PrimeVue components in FormKit context.
-- Use PrimeVue's `pt` (pass-through) props for fine-grained component customization.
-- Configure PrimeVue globally in plugin registration with proper TypeScript types.
+## OpenVue Best Practices
+- Follow OpenVue theming system with CSS variables for customization.
+- Use OpenVue's built-in accessibility features (ARIA attributes, keyboard navigation).
+- Leverage OpenVue's responsive design patterns and breakpoint system.
+- Use OpenVue composables (`useToast`, `useConfirm`) for global services.
+- Ensure proper event handling with OpenVue components in FormKit context.
+- Use OpenVue's `pt` (pass-through) props for fine-grained component customization.
+- Configure OpenVue globally in plugin registration with proper TypeScript types.
 - Use unstyled mode for complete styling control when needed.
-- Implement proper theme switching (light/dark) with PrimeVue themes.
-- Test PrimeVue components thoroughly as they integrate with FormKit validation.
+- Implement proper theme switching (light/dark) with OpenVue themes.
+- Test OpenVue components thoroughly as they integrate with FormKit validation.
 
 ## FormKit
-This project integrates FormKit (https://formkit.com/) with PrimeVue components to create powerful, accessible forms.
+This project integrates FormKit (https://formkit.com/) with OpenVue components to create powerful, accessible forms.
 
 ### Core Concepts
 - **FormKit Schema**: Use schema-based form rendering for dynamic and flexible forms. Schema is a JSON-serializable format that defines form structure.
 - **FormKit Context**: The core of FormKit's reactivity system. Every input has a context object that contains node data, props, handlers, and state.
 - **FormKit Nodes**: The foundation of FormKit's architecture. Each form element is represented as a node in a tree structure.
-- **Input Types**: FormKit provides many built-in input types (text, email, number, etc.) and this project extends them with PrimeVue-based inputs.
+- **Input Types**: FormKit provides many built-in input types (text, email, number, etc.) and this project extends them with OpenVue-based inputs.
 
 ### Component Development
-- Define custom PrimeVue-based FormKit inputs in `src/components/` directory (e.g., `PrimeInputText.vue`, `PrimeSelect.vue`).
-- Define custom output components for displaying data in `src/components/` (e.g., `PrimeOutputText.vue`, `PrimeOutputNumber.vue`).
+- Define custom OpenVue-based FormKit inputs in `src/components/` directory (e.g., `FormInputText.vue`, `FormSelect.vue`).
+- Define custom output components for displaying data in `src/components/` (e.g., `FormOutputText.vue`, `FormOutputNumber.vue`).
 - Use composables like `useFormKitInput`, `useFormKitSection`, and `useFormKitSchema` for reusable logic.
 - Access FormKit context using the `context` prop in custom components.
 - Use `context.node` to access the FormKit node and its properties (value, props, children, etc.).
@@ -198,14 +198,14 @@ This project integrates FormKit (https://formkit.com/) with PrimeVue components 
 ### Styling and Theming
 - FormKit uses section-based styling (outer, wrapper, inner, input, label, help, messages, etc.).
 - Use `classes` prop or config to customize section classes.
-- Integrate with PrimeVue's theming system for consistent UI.
+- Integrate with OpenVue's theming system for consistent UI.
 - Use SCSS for custom styles and ensure they work with both light and dark themes.
 
 ### Plugins and Extensions
 - Keep FormKit configuration and plugin registration in dedicated modules (e.g., `dev/modules/formkit.ts`).
 - Create plugins to extend FormKit functionality (custom inputs, validation rules, etc.).
 - Use `createInput` helper for registering custom input types with proper schema.
-- Register PrimeVue inputs with proper type definitions and TypeScript support.
+- Register OpenVue inputs with proper type definitions and TypeScript support.
 - Implement plugins for cross-cutting concerns (logging, analytics, persistence).
 - Use node hooks (`hook:input`, `hook:commit`) for lifecycle interception.
 - Create reusable plugin factories for common patterns.

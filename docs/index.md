@@ -14,7 +14,7 @@ hero:
       link: /guide/
 
 features:
-- title: "Formkit-PrimeVue"
+- title: "Formkit-OpenVue"
   details: OpenVue support for the FormKit validation Framework. OpenVue inputs are prepared for seamless FormKit integration.
 - title: "OpenVue"
   details: Next Generation Vue UI Component Library. Rich set of open source native components for Vue.

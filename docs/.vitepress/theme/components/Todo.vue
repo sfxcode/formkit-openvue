@@ -4,7 +4,7 @@
 <template>
   <div>
     <div class="mt-8 flex gap-2">
-      <div class="pi-info-circle text-2xl mb-2 text-[color:var(--vp-c-brand)]" />
+      <div class="oi oi-info-circle text-2xl mb-2 text-[color:var(--vp-c-brand)]" />
       <div class="text-2xl">
         TODO
       </div>
