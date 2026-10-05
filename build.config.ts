@@ -10,7 +10,7 @@ export default defineBuildConfig({
   ],
   hooks: {
     'mkdist:done': () => {
-      const compiledSass = sass.compile('./src/sass/formkit-primevue.scss', { style: 'compressed', loadPaths: ['./node_modules/'] })
+      const compiledSass = sass.compile('./src/sass/formkit-openvue.scss', { style: 'compressed', loadPaths: ['./node_modules/'] })
 
       fs.writeFileSync(
         'dist/style.css',
@@ -20,8 +20,8 @@ export default defineBuildConfig({
 
       fs.mkdirSync('dist/sass')
       fs.copyFileSync(
-        'src/sass/formkit-primevue.scss',
-        'dist/sass/formkit-primevue.scss',
+        'src/sass/formkit-openvue.scss',
+        'dist/sass/formkit-openvue.scss',
 
       )
     },

@@ -1,18 +1,18 @@
 <script setup lang='ts'>
 function redirectToGithub() {
-  window.open('https://github.com/sfxcode/formkit-primevue', '_blank')
+  window.open('https://github.com/sfxcode/formkit-openvue', '_blank')
 }
 
 function redirectToFormKit() {
   window.open('https://formkit.com/', '_blank')
 }
 
-function redirectToPrimeVue() {
-  window.open('https://primevue.org', '_blank')
+function redirectToOpenVue() {
+  window.open('https://openvue.dev/', '_blank')
 }
 
 function redirectToDocs() {
-  window.open('https://sfxcode.github.io/formkit-primevue/', '_blank')
+  window.open('https://sfxcode.github.io/formkit-openvue/', '_blank')
 }
 
 const items = ref([
@@ -152,7 +152,7 @@ const items = ref([
         </div>
       </template>  <template #end>
         <Button label="FormKit" class="mr-2" @click="redirectToFormKit" />
-        <Button icon="oi oi-prime" label="PrimeVue" class="mr-2" @click="redirectToPrimeVue" />
+        <Button icon="oi oi-prime" label="OpenVue" class="mr-2" @click="redirectToOpenVue" />
         <Button icon="oi oi-book" label="Docs" class="mr-2" @click="redirectToDocs" />
         <Button icon="oi oi-github" @click="redirectToGithub" />
       </template>
