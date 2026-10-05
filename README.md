@@ -97,22 +97,6 @@ app.use(plugin, defaultConfig({
 
 Important: output elements depends on vue-i18n to style numbers, dates, ...
 
-### Nuxt
-
-[FormKit-PrimeVue-Nuxt](https://github.com/sfxcode/formkit-primevue-nuxt) module available.
-
-Features:
-
-- add OpenVue Nuxt Module
-- add FormKit Nuxt Module
-- add i18n Nuxt Module
-- Default Configuration for FormKit (with OpenVue components) is provided (can be disabled if needed)
-- AutoImport of OpenVue Form Components
-- OpenIcons are loaded by Default
-- FormKit Styling of this package is loaded by default
-- AutoImport of Composables
-- AutoImport of Components
-
 ## Limitations
 
 Prefixing of the OpenVue component names is not supported.
