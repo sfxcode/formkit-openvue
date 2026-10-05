@@ -49,7 +49,7 @@ Migrating from `@sfxcode/formkit-primevue` to `@sfxcode/formkit-openvue`:
 
 5. Update custom CSS: selectors like `[data-type="primeCheckbox"]` become `[data-type="formCheckbox"]`.
 
-Also rename the `primeAttributes` prop to `formAttributes` (`prime-attributes` to `form-attributes` in templates). Rename the i18n keys `formkit.prime.true` / `formkit.prime.false` to `formkit.form.true` / `formkit.form.false`. Not changed: the `p-formkit` wrapper class. The stylesheet is now `formkit-openvue.scss` (update imports of `dist/sass/formkit-primevue.scss`).
+Also rename the i18n keys `formkit.prime.true` / `formkit.prime.false` to `formkit.form.true` / `formkit.form.false`. If you use `useInputEditor`, its data fields `prime`, `prime_key` and `prime_value` are now `form`, `form_key` and `form_value`. The stylesheet is now `formkit-openvue.scss` (update imports of `dist/sass/formkit-primevue.scss`). Not changed: the `p-formkit` wrapper class.
 
 ## Build
 
@@ -62,6 +62,64 @@ Also rename the `primeAttributes` prop to `formAttributes` (`prime-attributes` t
 [Docs](https://sfxcode.github.io/formkit-openvue/)
 
 [Demo/Playground](https://formkit-openvue.netlify.app/)
+
+## Getting Started
+
+Install the latest release of [`@sfxcode/formkit-openvue`](https://www.npmjs.com/package/@sfxcode/formkit-openvue) together with OpenVue:
+
+```bash
+pnpm add @sfxcode/formkit-openvue openvue @openvue/themes @openvue/openicons
+# or: npm install ... / yarn add ...
+```
+
+Set up OpenVue, FormKit and the form inputs in your *main.ts*:
+
+```typescript
+import Aura from '@openvue/themes/aura'
+import { defaultConfig, plugin } from '@formkit/vue'
+import { formInputs, useFormInputs } from '@sfxcode/formkit-openvue'
+import OpenVue from 'openvue/config'
+import { createApp } from 'vue'
+import App from './App.vue'
+import '@openvue/openicons/openicons.css'
+import '@sfxcode/formkit-openvue/dist/style.css'
+
+const app = createApp(App)
+
+// OpenVue with theme
+app.use(OpenVue, { theme: { preset: Aura } })
+
+// register the OpenVue components used by the form inputs
+const { registerInputs } = useFormInputs()
+registerInputs(app)
+
+// FormKit with the OpenVue inputs
+app.use(plugin, defaultConfig({ inputs: formInputs }))
+
+app.mount('#app')
+```
+
+Use the inputs in a FormKit schema (or as `<FormKit type="formInputText" ... />`):
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const data = ref({ email: '' })
+const schema = [
+  { $formkit: 'formInputText', name: 'email', label: 'Email', validation: 'required|email' },
+  { $formkit: 'formCheckbox', name: 'newsletter', label: 'Subscribe to the newsletter' },
+]
+</script>
+
+<template>
+  <FormKit v-model="data" type="form">
+    <FormKitSchema :schema="schema" :data="data" />
+  </FormKit>
+</template>
+```
+
+See [Usage](#usage) for outputs, i18n and more configuration.
 
 ## Usage
 
