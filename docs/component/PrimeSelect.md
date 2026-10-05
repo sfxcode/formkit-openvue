@@ -1,8 +1,8 @@
 # PrimeSelect
 
-A FormKit wrapper for PrimeVue's Select component.
+A FormKit wrapper for OpenVue's Select component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/select)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/select)
 
 ## Usage
 ```vue
@@ -53,6 +53,6 @@ const data = {}
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
 | size         | string    | Input size |
-| ...          | ...       | See PrimeVue docs for all props |
+| ...          | ...       | See OpenVue docs for all props |
 
-See [PrimeVue Select docs](https://primevue.org/select/) for more details.
+See [OpenVue Select docs](https://openvue.dev/select) for more details.

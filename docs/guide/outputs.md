@@ -1,6 +1,6 @@
 # Output Components
 
-formkit-primevue can also be used to output data.
+formkit-openvue can also be used to output data.
 
 Different types of data can be handled.
 
@@ -29,13 +29,13 @@ E.g. OutputText -> primeOutputText
 
 ## Supported Outputs
 
-Below is a list of all supported PrimeVue output components. Click on a component name to view its full documentation and usage examples. For live examples, see the [PrimeVue Outputs Demo](https://formkit-primevue.netlify.app/outputs/).
+Below is a list of all supported OpenVue output components. Click on a component name to view its full documentation and usage examples. For live examples, see the [OpenVue Outputs Demo](https://formkit-openvue.netlify.app/outputs/).
 
-- [PrimeOutputBoolean](../component/PrimeOutputBoolean.md) ([Live Example](https://formkit-primevue.netlify.app/outputs/outputboolean))
-- [PrimeOutputDate](../component/PrimeOutputDate.md) ([Live Example](https://formkit-primevue.netlify.app/outputs/outputdate))
-- [PrimeOutputDuration](../component/PrimeOutputDuration.md) ([Live Example](https://formkit-primevue.netlify.app/outputs/outputduration))
-- [PrimeOutputLink](../component/PrimeOutputLink.md) ([Live Example](https://formkit-primevue.netlify.app/outputs/outputlink))
-- [PrimeOutputList](../component/PrimeOutputList.md) ([Live Example](https://formkit-primevue.netlify.app/outputs/outputlist))
-- [PrimeOutputNumber](../component/PrimeOutputNumber.md) ([Live Example](https://formkit-primevue.netlify.app/outputs/outputnumber))
-- [PrimeOutputReference](../component/PrimeOutputReference.md) ([Live Example](https://formkit-primevue.netlify.app/outputs/outputreference))
-- [PrimeOutputText](../component/PrimeOutputText.md) ([Live Example](https://formkit-primevue.netlify.app/outputs/outputtext))
+- [PrimeOutputBoolean](../component/PrimeOutputBoolean.md) ([Live Example](https://formkit-openvue.netlify.app/outputs/outputboolean))
+- [PrimeOutputDate](../component/PrimeOutputDate.md) ([Live Example](https://formkit-openvue.netlify.app/outputs/outputdate))
+- [PrimeOutputDuration](../component/PrimeOutputDuration.md) ([Live Example](https://formkit-openvue.netlify.app/outputs/outputduration))
+- [PrimeOutputLink](../component/PrimeOutputLink.md) ([Live Example](https://formkit-openvue.netlify.app/outputs/outputlink))
+- [PrimeOutputList](../component/PrimeOutputList.md) ([Live Example](https://formkit-openvue.netlify.app/outputs/outputlist))
+- [PrimeOutputNumber](../component/PrimeOutputNumber.md) ([Live Example](https://formkit-openvue.netlify.app/outputs/outputnumber))
+- [PrimeOutputReference](../component/PrimeOutputReference.md) ([Live Example](https://formkit-openvue.netlify.app/outputs/outputreference))
+- [PrimeOutputText](../component/PrimeOutputText.md) ([Live Example](https://formkit-openvue.netlify.app/outputs/outputtext))

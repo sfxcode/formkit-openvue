@@ -1,8 +1,8 @@
 # PrimeSelectButton
 
-A FormKit wrapper for PrimeVue's SelectButton component.
+A FormKit wrapper for OpenVue's SelectButton component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/selectbutton)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/selectbutton)
 
 ## Usage
 ```vue
@@ -47,6 +47,6 @@ const data = {}
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
 | size         | string    | Input size |
-| ...          | ...       | See PrimeVue docs for all props |
+| ...          | ...       | See OpenVue docs for all props |
 
-See [PrimeVue SelectButton docs](https://primevue.org/selectbutton/) for more details.
+See [OpenVue SelectButton docs](https://openvue.dev/selectbutton) for more details.

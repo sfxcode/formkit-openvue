@@ -1,8 +1,8 @@
 # PrimeInputMask
 
-A FormKit wrapper for PrimeVue's InputMask component.
+A FormKit wrapper for OpenVue's InputMask component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/inputmask)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/inputmask)
 
 ## Usage
 ```vue
@@ -39,4 +39,4 @@ const data = {}
 | variant      | string    | Visual variant |
 | size         | string    | Input size |
 
-See [PrimeVue InputMask docs](https://primevue.org/inputmask/) for more details.
+See [OpenVue InputMask docs](https://openvue.dev/inputmask) for more details.

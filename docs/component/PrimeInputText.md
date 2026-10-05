@@ -1,8 +1,8 @@
 # PrimeInputText
 
-A FormKit wrapper for PrimeVue's InputText component.
+A FormKit wrapper for OpenVue's InputText component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/inputtext)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/inputtext)
 
 ## Usage
 ```vue
@@ -36,4 +36,4 @@ const data = { name: 'Harry Potter', iconLeft: 'Some Text ...', iconRight: 'Anot
 | inputType    | string    | Input type (e.g. text, tel) |
 | placeholder  | string    | Placeholder text |
 
-See [PrimeVue InputText docs](https://primevue.org/inputtext/) for more details.
+See [OpenVue InputText docs](https://openvue.dev/inputtext) for more details.

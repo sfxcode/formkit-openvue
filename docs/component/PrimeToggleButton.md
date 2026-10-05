@@ -1,8 +1,8 @@
 # PrimeToggleButton
 
-A FormKit wrapper for PrimeVue's ToggleButton component.
+A FormKit wrapper for OpenVue's ToggleButton component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/togglebutton)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/togglebutton)
 
 ## Usage
 ```vue
@@ -38,4 +38,4 @@ const data = {}
 | iconPos      | string    | Icon position |
 | size         | string    | Input size |
 
-See [PrimeVue ToggleButton docs](https://primevue.org/togglebutton/) for more details.
+See [OpenVue ToggleButton docs](https://openvue.dev/togglebutton) for more details.

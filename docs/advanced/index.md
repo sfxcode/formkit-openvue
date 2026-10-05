@@ -1,6 +1,6 @@
 # Advanced
 
-This section covers advanced usage and features of the FormKit PrimeVue integration. Explore the following topics for deeper insights and customization options:
+This section covers advanced usage and features of the FormKit OpenVue integration. Explore the following topics for deeper insights and customization options:
 
 ## Available Topics
 

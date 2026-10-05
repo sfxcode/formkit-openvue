@@ -1,8 +1,8 @@
 # PrimeOutputText
 
-A FormKit wrapper for PrimeVue's OutputText component.
+A FormKit wrapper for OpenVue's OutputText component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/outputs/outputtext)
+[Live Example on Website](https://formkit-openvue.netlify.app/outputs/outputtext)
 
 ## Usage
 ```vue
@@ -45,4 +45,4 @@ const data = { name: 'Harry Potter', toTranslate: 'sample', iconLeft: 'Some Text
 | suffix       | string    | Suffix text |
 | ...          | ...       | See PrimeOutputText source for all props |
 
-See [PrimeOutputText source](https://github.com/sfxcode/formkit-primevue/tree/main/src/components/PrimeOutputText.vue) for more details.
+See [PrimeOutputText source](https://github.com/sfxcode/formkit-openvue/tree/main/src/components/PrimeOutputText.vue) for more details.

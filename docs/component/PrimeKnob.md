@@ -1,8 +1,8 @@
 # PrimeKnob
 
-A FormKit wrapper for PrimeVue's Knob component.
+A FormKit wrapper for OpenVue's Knob component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/knob)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/knob)
 
 ## Usage
 ```vue
@@ -41,4 +41,4 @@ const data = {}
 | textColor    | string    | Text color |
 | valueTemplate| string    | Value template |
 
-See [PrimeVue Knob docs](https://primevue.org/knob/) for more details.
+See [OpenVue Knob docs](https://openvue.dev/knob) for more details.

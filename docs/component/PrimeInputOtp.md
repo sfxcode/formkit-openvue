@@ -1,8 +1,8 @@
 # PrimeInputOtp
 
-A FormKit wrapper for PrimeVue's InputOtp component.
+A FormKit wrapper for OpenVue's InputOtp component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/inputotp)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/inputotp)
 
 ## Usage
 ```vue
@@ -36,4 +36,4 @@ const data = {}
 | unstyled     | boolean   | Disable default styles |
 | size         | string    | Input size |
 
-See [PrimeVue InputOtp docs](https://primevue.org/inputotp/) for more details.
+See [OpenVue InputOtp docs](https://openvue.dev/inputotp) for more details.

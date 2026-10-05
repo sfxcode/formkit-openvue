@@ -1,8 +1,8 @@
 # PrimeOutputDate
 
-A FormKit wrapper for PrimeVue's OutputDate component.
+A FormKit wrapper for OpenVue's OutputDate component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/outputs/outputdate)
+[Live Example on Website](https://formkit-openvue.netlify.app/outputs/outputdate)
 
 ## Usage
 ```vue
@@ -34,4 +34,4 @@ const data = { date1: new Date(), date2: new Date(), date3: new Date() }
 | suffix       | string    | Suffix text |
 | ...          | ...       | See PrimeOutputDate source for all props |
 
-See [PrimeOutputDate source](https://github.com/sfxcode/formkit-primevue/tree/main/src/components/PrimeOutputDate.vue) for more details.
+See [PrimeOutputDate source](https://github.com/sfxcode/formkit-openvue/tree/main/src/components/PrimeOutputDate.vue) for more details.

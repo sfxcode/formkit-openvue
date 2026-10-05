@@ -1,6 +1,6 @@
 # Styling
 
-PrimeVue has a lot of styling possiblities and the structure of a formkit form gives you all possibilities needed for advanced styling.
+OpenVue has a lot of styling possiblities and the structure of a formkit form gives you all possibilities needed for advanced styling.
 
 ## Basic Styling
 
@@ -14,7 +14,7 @@ Features:
 
 You can use it or take it as base for your own styling.
 
-## PrimeVue Tailwind / Unstyled mode
+## OpenVue Tailwind / Unstyled mode
 
 Make sure to add a class selector for **p-invalid**.
 
@@ -53,14 +53,14 @@ const formkitItems = [
 - Use *outerClass*, *wrapperClass*, *innerClass* to add additional styleclasses to formkit generated classes
 - Most Prime Components have access to class / styles attributes
 - Some Components have addtional properties for the rendered inputs (eg: optionClass, labelClass in primeRadioButton)
-- PT and PTOptions are available ([https://primevue.org/passthrough/](https://primevue.org/passthrough/))
-- [Styling](https://formkit-primevue.netlify.app/demo/styling), [Grid](https://formkit-primevue.netlify.app/demo/grid) and [PT](https://formkit-primevue.netlify.app/demo/passThrough) demo available
+- PT and PTOptions are available ([https://github.com/openvi-foundation/openvue](https://github.com/openvi-foundation/openvue))
+- [Styling](https://formkit-openvue.netlify.app/demo/styling), [Grid](https://formkit-openvue.netlify.app/demo/grid) and [PT](https://formkit-openvue.netlify.app/demo/passThrough) demo available
 
 ## Advanced Styling Examples
 
 ### Styling by Class and Style Attribute
 
-You can apply custom classes or direct style attributes to your FormKit PrimeVue components:
+You can apply custom classes or direct style attributes to your FormKit OpenVue components:
 
 ```js
 const schema = [
@@ -172,7 +172,7 @@ const schema = [
 
 ### PassThrough Styling
 
-You can use the `pt` property to pass styles or classes directly to PrimeVue components:
+You can use the `pt` property to pass styles or classes directly to OpenVue components:
 
 ```js
 const pt_content = {

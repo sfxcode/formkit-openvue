@@ -37,19 +37,19 @@ Use properties **:debug-schema="true"** and / or **:debug-data="true"** for debu
 | formClass      | String  | Add additional classes to the form          |
 | actionsClass   | String  | Add additional classes to the action div    |
 | submitClass    | String  | Add additional classes to the submit button |
-| submitSeverity | String  | PrimeVue Button severity                    |
+| submitSeverity | String  | OpenVue Button severity                    |
 | submitLabel    | String  | Default: Save                               |
-| submitIcon     | String  | PrimeVue Button icon                        |
+| submitIcon     | String  | OpenVue Button icon                        |
 | resetClass     | String  | Add additional classes to the reset button  |
-| resetSeverity  | String  | PrimeVue Button severity                    |
+| resetSeverity  | String  | OpenVue Button severity                    |
 | resetLabel    | String  | Default: Reset                              |
-| resetIcon     | String  | PrimeVue Button icon                        |
+| resetIcon     | String  | OpenVue Button icon                        |
 
 ### Example
 
 ```vue
 <script setup lang='ts'>
-import { FormKitDataEdit } from '@sfxcode/formkit-primevue/components'
+import { FormKitDataEdit } from '@sfxcode/formkit-openvue/components'
 
 const formSchema = ref({}) // some schema should be provided
 const formData = ref({}) // some data

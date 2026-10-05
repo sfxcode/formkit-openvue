@@ -1,8 +1,8 @@
 # PrimeCheckbox
 
-A FormKit wrapper for PrimeVue's Checkbox component.
+A FormKit wrapper for OpenVue's Checkbox component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/checkbox)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/checkbox)
 
 ## Usage
 ```vue
@@ -30,4 +30,4 @@ const data = { readonly: true }
 
 ## Props
 // ...existing code...
-See [PrimeVue Checkbox docs](https://primevue.org/checkbox/) for more details.
+See [OpenVue Checkbox docs](https://openvue.dev/checkbox) for more details.

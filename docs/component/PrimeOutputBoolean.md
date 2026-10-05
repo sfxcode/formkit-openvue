@@ -1,8 +1,8 @@
 # PrimeOutputBoolean
 
-A FormKit wrapper for PrimeVue's OutputBoolean component.
+A FormKit wrapper for OpenVue's OutputBoolean component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/outputs/outputboolean)
+[Live Example on Website](https://formkit-openvue.netlify.app/outputs/outputboolean)
 
 ## Usage
 ```vue
@@ -39,4 +39,4 @@ const data = { trueValue: true, falseValue: false }
 | iconPrefix   | string    | Icon for prefix |
 | iconSuffix   | string    | Icon for suffix |
 
-See [PrimeOutputBoolean source](https://github.com/sfxcode/formkit-primevue/tree/main/src/components/PrimeOutputBoolean.vue) for more details.
+See [PrimeOutputBoolean source](https://github.com/sfxcode/formkit-openvue/tree/main/src/components/PrimeOutputBoolean.vue) for more details.

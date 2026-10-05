@@ -1,8 +1,8 @@
 # PrimeToggleSwitch
 
-A FormKit wrapper for PrimeVue's ToggleSwitch component.
+A FormKit wrapper for OpenVue's ToggleSwitch component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/toggleswitch)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/toggleswitch)
 
 ## Usage
 ```vue
@@ -36,4 +36,4 @@ const data = { readonly: true }
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
 
-See [PrimeVue ToggleSwitch docs](https://primevue.org/toggleswitch/) for more details.
+See [OpenVue ToggleSwitch docs](https://openvue.dev/toggleswitch) for more details.

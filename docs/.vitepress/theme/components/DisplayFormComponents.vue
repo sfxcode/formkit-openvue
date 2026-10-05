@@ -10,7 +10,7 @@ const names = ref(primeOutputNames.sort((a, b) => a.localeCompare(b)))
   <div>
     <div class="pb-6 grid grid-cols-3 gap-4 content-start ...">
       <div v-for="name in names" :key="name" class="">
-        <a :href="`https://formkit-primevue.netlify.app/data/${name}`" target="_new">FormKitData{{ name }}</a>
+        <a :href="`https://formkit-openvue.netlify.app/data/${name}`" target="_new">FormKitData{{ name }}</a>
       </div>
     </div>
   </div>

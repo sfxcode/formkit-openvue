@@ -1,8 +1,8 @@
 # PrimeDatePicker
 
-A FormKit wrapper for PrimeVue's DatePicker component.
+A FormKit wrapper for OpenVue's DatePicker component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/datepicker)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/datepicker)
 
 ## Usage
 ```vue
@@ -37,6 +37,6 @@ const data = {}
 | icon         | string    | Custom icon |
 | showIcon     | boolean   | Show calendar icon |
 | manualInput  | boolean   | Allow manual input |
-| ...          | ...       | See PrimeVue docs for all props |
+| ...          | ...       | See OpenVue docs for all props |
 
-See [PrimeVue DatePicker docs](https://primevue.org/datepicker/) for more details.
+See [OpenVue DatePicker docs](https://openvue.dev/datepicker) for more details.

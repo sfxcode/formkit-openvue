@@ -1,8 +1,8 @@
 # PrimeInputNumber
 
-A FormKit wrapper for PrimeVue's InputNumber component.
+A FormKit wrapper for OpenVue's InputNumber component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/inputnumber)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/inputnumber)
 
 ## Usage
 ```vue
@@ -49,4 +49,4 @@ const data = {}
 | placeholder       | string    | Placeholder text |
 | size              | string    | Input size |
 
-See [PrimeVue InputNumber docs](https://primevue.org/inputnumber/) for more details.
+See [OpenVue InputNumber docs](https://openvue.dev/inputnumber) for more details.

@@ -1,8 +1,8 @@
 # PrimeRating
 
-A FormKit wrapper for PrimeVue's Rating component.
+A FormKit wrapper for OpenVue's Rating component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/rating)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/rating)
 
 ## Usage
 ```vue
@@ -37,4 +37,4 @@ const data = {}
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
 
-See [PrimeVue Rating docs](https://primevue.org/rating/) for more details.
+See [OpenVue Rating docs](https://openvue.dev/rating) for more details.

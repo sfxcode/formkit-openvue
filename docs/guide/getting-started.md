@@ -5,12 +5,12 @@ Getting Started
 ### Install depenendencies
 
 ```sh
-$ pnpm add -D @sfxcode/formkit-primevue
+$ pnpm add -D @sfxcode/formkit-openvue
 ```
 
-### PrimeVue
+### OpenVue
 
-Make sure all components of PrimeVue you want to use are enabled in your configuration.
+Make sure all components of OpenVue you want to use are enabled in your configuration.
 
 ### Formkit Config
 
@@ -21,7 +21,7 @@ Sample:
 ```ts
 // formkit.config.ts
 import type { DefaultConfigOptions } from '@formkit/vue'
-import { primeInputs } from '@sfxcode/formkit-primevue'
+import { primeInputs } from '@sfxcode/formkit-openvue'
 
 const config: DefaultConfigOptions = {
   inputs: primeInputs
@@ -36,7 +36,7 @@ export default config
 
 This example takes parts of the FormKit validation demo and replace the formkit library elements with the one found in this framework.
 
-The working version can be found at the [formkit-primevue-demo](https://formkit-primevue.netlify.app/). There are also some samples for all wrapped PrimeVue form elements.
+The working version can be found at the [formkit-openvue-demo](https://formkit-openvue.netlify.app/). There are also some samples for all wrapped OpenVue form elements.
 
 ```vue
 <script setup lang='ts'>

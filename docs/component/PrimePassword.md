@@ -1,8 +1,8 @@
 # PrimePassword
 
-A FormKit wrapper for PrimeVue's Password component.
+A FormKit wrapper for OpenVue's Password component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/password)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/password)
 
 ## Usage
 ```vue
@@ -43,4 +43,4 @@ const data = {}
 | toggleMask   | boolean   | Show toggle mask button |
 | size         | string    | Input size |
 
-See [PrimeVue Password docs](https://primevue.org/password/) for more details.
+See [OpenVue Password docs](https://openvue.dev/password) for more details.

@@ -1,8 +1,8 @@
 # PrimeCascadeSelect
 
-A FormKit wrapper for PrimeVue's CascadeSelect component.
+A FormKit wrapper for OpenVue's CascadeSelect component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/cascadeselect)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/cascadeselect)
 
 ## Usage
 ```vue
@@ -76,4 +76,4 @@ const schema = [
 | unstyled          | boolean | Disable default styles |
 | size              | string  | Input size |
 
-See [PrimeVue CascadeSelect docs](https://primevue.org/cascadeselect/) for more details.
+See [OpenVue CascadeSelect docs](https://openvue.dev/cascadeselect) for more details.

@@ -1,8 +1,8 @@
 # PrimeRadioButton
 
-A FormKit wrapper for PrimeVue's RadioButton component.
+A FormKit wrapper for OpenVue's RadioButton component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/radiobutton)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/radiobutton)
 
 ## Usage
 ```vue
@@ -44,6 +44,6 @@ const data = { basic: 'refresh' }
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
 | size         | string    | Input size |
-| ...          | ...       | See PrimeVue docs for all props |
+| ...          | ...       | See OpenVue docs for all props |
 
-See [PrimeVue RadioButton docs](https://primevue.org/radiobutton/) for more details.
+See [OpenVue RadioButton docs](https://openvue.dev/radiobutton) for more details.

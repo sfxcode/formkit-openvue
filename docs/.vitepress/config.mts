@@ -3,19 +3,19 @@ import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
 
 export default defineConfig({
-  title: 'FormKit-PrimeVue',
-  description: 'Formkit PrimeVue Integration',
-  base: '/formkit-primevue/',
+  title: 'FormKit-OpenVue',
+  description: 'FormKit OpenVue Integration',
+  base: '/formkit-openvue/',
   themeConfig: {
     footer: {
-      message: 'FormKit PrimeVue Module',
+      message: 'FormKit OpenVue Module',
       copyright: 'Copyright © 2024 SFXCode',
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/sfxcode/formkit-primevue' },
+      { icon: 'github', link: 'https://github.com/sfxcode/formkit-openvue' },
     ],
     editLink: {
-      pattern: 'https://github.com/sfxcode/formkit-primevue/edit/main/docs/:path',
+      pattern: 'https://github.com/sfxcode/formkit-openvue/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
     nav: nav(),
@@ -49,14 +49,14 @@ function nav() {
     { text: 'Components', link: '/component/', activeMatch: '/component/' },
     {
       text: 'Playground',
-      link: 'https://formkit-primevue.netlify.app',
+      link: 'https://formkit-openvue.netlify.app',
     },
     {
       text: 'External Docs',
       items: [
         {
-          text: 'PrimeVue',
-          link: 'https://primevue.org/',
+          text: 'OpenVue',
+          link: 'https://openvue.dev/',
         },
         {
           text: 'Formkit',
@@ -69,7 +69,7 @@ function nav() {
       items: [
         {
           text: 'Changelog',
-          link: 'https://github.com/sfxcode/formkit-primevue/blob/main/CHANGELOG.md',
+          link: 'https://github.com/sfxcode/formkit-openvue/blob/main/CHANGELOG.md',
         },
       ],
     },

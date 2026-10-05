@@ -1,8 +1,8 @@
 # PrimeOutputLink
 
-A FormKit wrapper for PrimeVue's OutputLink component.
+A FormKit wrapper for OpenVue's OutputLink component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/outputs/outputlink)
+[Live Example on Website](https://formkit-openvue.netlify.app/outputs/outputlink)
 
 ## Usage
 ```vue
@@ -16,7 +16,7 @@ const schema = [
   { $formkit: 'primeOutputLink', name: 'link1', label: 'External Link' },
   { $formkit: 'primeOutputLink', name: 'link2', label: 'Ensure protocol and use custom title', title: 'Click me' },
 ]
-const data = { link1: 'https://github.com/sfxcode', link2: 'sfxcode.github.io/formkit-primevue' }
+const data = { link1: 'https://github.com/sfxcode', link2: 'sfxcode.github.io/formkit-openvue' }
 </script>
 
 <template>
@@ -34,4 +34,4 @@ const data = { link1: 'https://github.com/sfxcode', link2: 'sfxcode.github.io/fo
 | suffix       | string    | Suffix text |
 | ...          | ...       | See PrimeOutputLink source for all props |
 
-See [PrimeOutputLink source](https://github.com/sfxcode/formkit-primevue/tree/main/src/components/PrimeOutputLink.vue) for more details.
+See [PrimeOutputLink source](https://github.com/sfxcode/formkit-openvue/tree/main/src/components/PrimeOutputLink.vue) for more details.

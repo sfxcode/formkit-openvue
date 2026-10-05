@@ -1,8 +1,8 @@
 # PrimeMultiSelect
 
-A FormKit wrapper for PrimeVue's MultiSelect component.
+A FormKit wrapper for OpenVue's MultiSelect component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/multiselect)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/multiselect)
 
 ## Usage
 ```vue
@@ -42,6 +42,6 @@ const data = {}
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
 | size         | string    | Input size |
-| ...          | ...       | See PrimeVue docs for all props |
+| ...          | ...       | See OpenVue docs for all props |
 
-See [PrimeVue MultiSelect docs](https://primevue.org/multiselect/) for more details.
+See [OpenVue MultiSelect docs](https://openvue.dev/multiselect) for more details.

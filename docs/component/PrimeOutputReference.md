@@ -1,8 +1,8 @@
 # PrimeOutputReference
 
-A FormKit wrapper for PrimeVue's OutputReference component.
+A FormKit wrapper for OpenVue's OutputReference component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/outputs/outputreference)
+[Live Example on Website](https://formkit-openvue.netlify.app/outputs/outputreference)
 
 ## Usage
 ```vue
@@ -18,7 +18,7 @@ const schema = [
   { $formkit: 'primeOutputReference', name: 'internalLink', label: 'Internal Link', internal: true, reference: '/outputs/{{value}}' },
   { $formkit: 'primeOutputReference', name: 'internalLink', label: 'Internal Link with custom title', internal: true, title: 'Show: {{value}}', reference: '/outputs/{{value}}' },
 ]
-const data = { externalId: 42, externalValue: 'formkit-primevue', internalLink: 'outputLink' }
+const data = { externalId: 42, externalValue: 'formkit-openvue', internalLink: 'outputLink' }
 </script>
 
 <template>
@@ -38,4 +38,4 @@ const data = { externalId: 42, externalValue: 'formkit-primevue', internalLink: 
 | suffix       | string    | Suffix text |
 | ...          | ...       | See PrimeOutputReference source for all props |
 
-See [PrimeOutputReference source](https://github.com/sfxcode/formkit-primevue/tree/main/src/components/PrimeOutputReference.vue) for more details.
+See [PrimeOutputReference source](https://github.com/sfxcode/formkit-openvue/tree/main/src/components/PrimeOutputReference.vue) for more details.

@@ -19,7 +19,7 @@ Install the module to your Nuxt application with one command:
 npx nuxi module add @sfxcode/formkit-primevue-nuxt
 ```
 
-That's it! You can now use FormKit PrimeVue Nuxt Module in your Nuxt app ✨
+That's it! You can now use FormKit OpenVue Nuxt Module in your Nuxt app ✨
 
 ### Module Options
 

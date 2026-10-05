@@ -1,8 +1,8 @@
 # PrimeTreeSelect
 
-A FormKit wrapper for PrimeVue's TreeSelect component.
+A FormKit wrapper for OpenVue's TreeSelect component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/treeselect)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/treeselect)
 
 ## Usage
 ```vue
@@ -72,6 +72,6 @@ const data = {}
 | pt           | object    | Pass-through options |
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
-| ...          | ...       | See PrimeVue docs for all props |
+| ...          | ...       | See OpenVue docs for all props |
 
-See [PrimeVue TreeSelect docs](https://primevue.org/treeselect/) for more details.
+See [OpenVue TreeSelect docs](https://openvue.dev/treeselect) for more details.

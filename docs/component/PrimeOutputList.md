@@ -1,8 +1,8 @@
 # PrimeOutputList
 
-A FormKit wrapper for PrimeVue's OutputList component.
+A FormKit wrapper for OpenVue's OutputList component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/outputs/outputlist)
+[Live Example on Website](https://formkit-openvue.netlify.app/outputs/outputlist)
 
 ## Usage
 ```vue
@@ -34,7 +34,7 @@ const schema = [
   { $formkit: 'primeOutputList', name: 'list2', label: 'Use listStyle: ul', listStyle: 'ul' },
   { $formkit: 'primeOutputList', name: 'list2', label: 'Use listStyle: ol', listStyle: 'ol' },
 ]
-const data = { list1: ['Hello', 'World'], list2: ['FormKit', 'meets', 'PrimeVue'] }
+const data = { list1: ['Hello', 'World'], list2: ['FormKit', 'meets', 'OpenVue'] }
 </script>
 
 <template>
@@ -55,4 +55,4 @@ const data = { list1: ['Hello', 'World'], list2: ['FormKit', 'meets', 'PrimeVue'
 | suffix       | string    | Suffix text |
 | ...          | ...       | See PrimeOutputList source for all props |
 
-See [PrimeOutputList source](https://github.com/sfxcode/formkit-primevue/tree/main/src/components/PrimeOutputList.vue) for more details.
+See [PrimeOutputList source](https://github.com/sfxcode/formkit-openvue/tree/main/src/components/PrimeOutputList.vue) for more details.

@@ -1,8 +1,8 @@
 # PrimeSlider
 
-A FormKit wrapper for PrimeVue's Slider component.
+A FormKit wrapper for OpenVue's Slider component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/slider)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/slider)
 
 ## Usage
 ```vue
@@ -36,4 +36,4 @@ const data = {}
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
 
-See [PrimeVue Slider docs](https://primevue.org/slider/) for more details.
+See [OpenVue Slider docs](https://openvue.dev/slider) for more details.

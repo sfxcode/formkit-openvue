@@ -1,6 +1,6 @@
-# PrimeVue FormKit Components
+# OpenVue FormKit Components
 
-This section documents the available FormKit wrappers for PrimeVue components. Each component has its own dedicated documentation file with usage examples, props, and more details.
+This section documents the available FormKit wrappers for OpenVue components. Each component has its own dedicated documentation file with usage examples, props, and more details.
 
 ## Available Components
 

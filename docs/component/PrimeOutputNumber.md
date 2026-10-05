@@ -1,8 +1,8 @@
 # PrimeOutputNumber
 
-A FormKit wrapper for PrimeVue's OutputNumber component.
+A FormKit wrapper for OpenVue's OutputNumber component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/outputs/outputnumber)
+[Live Example on Website](https://formkit-openvue.netlify.app/outputs/outputnumber)
 
 ## Usage
 ```vue
@@ -35,4 +35,4 @@ const data = { mumber1: 12.2, number2: 42.0, number3: 20000 }
 | suffix       | string    | Suffix text |
 | ...          | ...       | See PrimeOutputNumber source for all props |
 
-See [PrimeOutputNumber source](https://github.com/sfxcode/formkit-primevue/tree/main/src/components/PrimeOutputNumber.vue) for more details.
+See [PrimeOutputNumber source](https://github.com/sfxcode/formkit-openvue/tree/main/src/components/PrimeOutputNumber.vue) for more details.

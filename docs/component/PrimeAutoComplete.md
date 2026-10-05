@@ -1,8 +1,8 @@
 # PrimeAutoComplete
 
-A FormKit wrapper for PrimeVue's AutoComplete component.
+A FormKit wrapper for OpenVue's AutoComplete component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/autocomplete)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/autocomplete)
 
 ## Usage
 ```vue
@@ -61,4 +61,4 @@ const schema = [
 | fluid        | boolean   | Full width input |
 | separators   | array     | Separators for multiple values |
 
-See [PrimeVue AutoComplete docs](https://primevue.org/autocomplete/) for more details.
+See [OpenVue AutoComplete docs](https://openvue.dev/autocomplete) for more details.

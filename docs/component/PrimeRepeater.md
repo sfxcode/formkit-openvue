@@ -2,7 +2,7 @@
 
 A FormKit component for repeating groups of inputs with add, remove, clone, and reorder functionality.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/repeater)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/repeater)
 
 ## Usage
 ```vue

@@ -1,8 +1,8 @@
 # PrimeColorPicker
 
-A FormKit wrapper for PrimeVue's ColorPicker component.
+A FormKit wrapper for OpenVue's ColorPicker component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/colorpicker)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/colorpicker)
 
 ## Usage
 ```vue
@@ -35,4 +35,4 @@ const data = {}
 | ptOptions    | object    | Pass-through options |
 | unstyled     | boolean   | Disable default styles |
 
-See [PrimeVue ColorPicker docs](https://primevue.org/colorpicker/) for more details.
+See [OpenVue ColorPicker docs](https://openvue.dev/colorpicker) for more details.

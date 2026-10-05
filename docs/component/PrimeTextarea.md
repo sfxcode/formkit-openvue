@@ -1,8 +1,8 @@
 # PrimeTextarea
 
-A FormKit wrapper for PrimeVue's Textarea component.
+A FormKit wrapper for OpenVue's Textarea component.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/textarea)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/textarea)
 
 ## Usage
 ```vue
@@ -37,4 +37,4 @@ const data = {}
 | placeholder  | string    | Placeholder text |
 | rows         | number    | Number of rows |
 
-See [PrimeVue Textarea docs](https://primevue.org/textarea/) for more details.
+See [OpenVue Textarea docs](https://openvue.dev/textarea) for more details.

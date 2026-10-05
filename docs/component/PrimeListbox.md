@@ -1,10 +1,10 @@
 # PrimeListbox
 
-A FormKit wrapper for PrimeVue's Listbox component with optional Transfer List functionality.
+A FormKit wrapper for OpenVue's Listbox component with optional Transfer List functionality.
 
-[Live Example on Website](https://formkit-primevue.netlify.app/inputs/listbox)
+[Live Example on Website](https://formkit-openvue.netlify.app/inputs/listbox)
 
-[Comprehensive Transfer Mode Examples](https://formkit-primevue.netlify.app/samples/listboxtransfer)
+[Comprehensive Transfer Mode Examples](https://formkit-openvue.netlify.app/samples/listboxtransfer)
 
 ## Usage
 ```vue
@@ -168,4 +168,4 @@ Use `transferButtonSeverity` to control the button color theme:
 - `transferButtonClass` - Custom class for transfer buttons
 - `transferHeaderClass` - Custom class for header text
 
-See [PrimeVue Listbox docs](https://primevue.org/listbox/) for more details.
+See [OpenVue Listbox docs](https://openvue.dev/listbox) for more details.
