@@ -102,6 +102,7 @@
     "@formkit/vue": "^2.1.2",
     "@intlify/core": "^11.4.13",
     "@openvue/openicons-vue": "^1.0.0",
+    "@openvue/openicons": "^1.0.0",
     "openvue": "1.0.0",
     "vue-i18n": "^11.4.13"
   },

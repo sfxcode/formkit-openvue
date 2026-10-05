@@ -39,6 +39,9 @@ importers:
       '@intlify/core':
         specifier: ^11.4.13
         version: 11.4.13
+      '@openvue/openicons':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@openvue/openicons-vue':
         specifier: ^1.0.0
         version: 1.0.0(vue@3.5.43(typescript@6.0.3))
@@ -978,6 +981,9 @@ packages:
     resolution: {integrity: sha512-xM6GmT4Hdk0ktqjsRGWvXALM/b3IJYJEp8pDWKwr6AFr7qwalOtpJJvXD0udCiRKQitGvwpFpVgwUwR/avybaQ==}
     peerDependencies:
       vue: ^3.0.0
+
+  '@openvue/openicons@1.0.0':
+    resolution: {integrity: sha512-ZRV8Xt8y7oIYPQjtFiBf2UfxSzsjXcbPEZvvI9364T+F5BGxcP8EboO9ZLMxMRl2RCfFyBYs3XYiYGMLUMlNvA==}
 
   '@openvue/themes@1.0.0':
     resolution: {integrity: sha512-YiLHzoa+0ic5yz/+vljDaH3UWNofgu5JLENq2FPMY+rPJD9L2F+/QumvUj7vUHvPIFexnb35FwM6fpetw6BfiA==}
@@ -5264,6 +5270,8 @@ snapshots:
   '@openvue/openicons-vue@1.0.0(vue@3.5.43(typescript@6.0.3))':
     dependencies:
       vue: 3.5.43(typescript@6.0.3)
+
+  '@openvue/openicons@1.0.0': {}
 
   '@openvue/themes@1.0.0':
     dependencies:
