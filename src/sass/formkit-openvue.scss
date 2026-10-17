@@ -314,7 +314,8 @@ $grid-breakpoints: (
   align-items: stretch;
   gap: 1rem;
   width: 100%;
-  min-width: 600px;
+  // never wider than the container it is in
+  min-width: min(600px, 100%);
 }
 
 .p-formkit-transfer-list-container {
@@ -331,6 +332,36 @@ $grid-breakpoints: (
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+// Repeater: the bar that offers to put back a deleted row
+.formkit-repeater-undo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--p-content-border-color);
+  border-radius: var(--p-content-border-radius);
+  background: var(--p-content-hover-background);
+  font-size: 0.875rem;
+}
+
+// Narrow screens: the lists are stacked, the buttons sit between them in a row and their arrows point down and up.
+@media (max-width: 640px) {
+  .p-formkit-transfer {
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .p-formkit-transfer-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .oi {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .p-formkit-transfer-option {
