@@ -31,7 +31,7 @@ const schema
     {
       $formkit: 'formInputText',
       name: 'iconRight',
-      label: 'Icon Right (Disabled) - smize: small',
+      label: 'Icon Right (Disabled) - size: small',
       help: 'Right Icon Demo',
       iconSuffix: 'oi oi-check',
       disabled: true,

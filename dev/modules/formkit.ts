@@ -1,11 +1,11 @@
 import type { FormKitExtendableSchemaRoot, FormKitNode } from '@formkit/core'
 import type { UserModule } from '@/types'
-import { createAutoAnimatePlugin, createMultiStepPlugin } from '@formkit/addons'
+import { createMultiStepPlugin } from '@formkit/addons'
 
 import { de, en } from '@formkit/i18n'
 import { defaultConfig, plugin } from '@formkit/vue'
 import { formInputs, formOutputs } from 'my-library/definitions'
-import { addFormAsteriskPlugin } from '../../src/plugins'
+import { addFormAsteriskPlugin, createAutoAnimatePlugin } from '../../src/plugins'
 import '@formkit/addons/css/multistep'
 
 export function addFormLabelPlugin(node: FormKitNode): void {

@@ -1,0 +1,79 @@
+<script setup lang='ts'>
+import { useFormKitSchema } from 'my-library'
+import { ref } from 'vue'
+
+const { addElement } = useFormKitSchema()
+
+const options = [
+  { label: 'Every page load', value: 'refresh' },
+  { label: 'Every hour', value: 'hourly' },
+  { label: 'Every day', value: 'daily' },
+]
+
+const schema = reactive(
+  [
+    addElement('h2', ['Register ', '$email']),
+    addElement('h3', 'Header Text H3'),
+    {
+      $formkit: 'formInputText',
+      name: 'email',
+      label: 'Email',
+      help: 'This will be used for your account.',
+      validation: 'required|email',
+      outerClass: 'col-6',
+    },
+    {
+      $formkit: 'formTextarea',
+      name: 'myText',
+      label: 'Text',
+      validation: '',
+      rows: '3',
+    },
+    {
+      $formkit: 'formPassword',
+      name: 'password',
+      label: 'Password',
+      help: 'Enter your new password.',
+      validation: 'required|length:5,16',
+      feedback: true,
+      outerClass: 'col-6',
+    },
+    {
+      $formkit: 'formPassword',
+      name: 'password_confirm',
+      label: 'Confirm password',
+      help: 'Enter your new password again.',
+      validation: 'required|confirm',
+      validationLabel: 'password confirmation',
+      outerClass: 'col-6',
+    },
+    {
+      $formkit: 'formCheckbox',
+      name: 'eu_citizen',
+      id: 'eu',
+      prefix: 'Are you a european citizen?',
+    },
+    {
+      $formkit: 'formSelect',
+      if: '$get(eu).value', // 👀 Oooo, conditionals!
+      name: 'cookie_notice',
+      label: 'Cookie notice frequency',
+      optionLabel: 'label',
+      optionValue: 'value',
+      options,
+      help: 'How often should we display a cookie notice?',
+      outerClass: 'col-6',
+    },
+  ],
+)
+
+const data = ref({ email: 'tom@sfxcode.com' })
+</script>
+
+<template>
+  <div>
+    <OpenVueInput
+      header="Register Form" :schema="schema" :data="data"
+    />
+  </div>
+</template>

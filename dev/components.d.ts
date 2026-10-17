@@ -11,8 +11,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AppBreadcrumb: typeof import('./components/app/AppBreadcrumb.vue')['default']
     AppFooter: typeof import('./components/app/AppFooter.vue')['default']
     AppTopbar: typeof import('./components/app/AppTopbar.vue')['default']
+    JsonEditor: typeof import('./components/demo/JsonEditor.vue')['default']
     OpenVueData: typeof import('./components/demo/OpenVueData.vue')['default']
     OpenVueInput: typeof import('./components/demo/OpenVueInput.vue')['default']
     OpenVueLabel: typeof import('./components/demo/OpenVueLabel.vue')['default']

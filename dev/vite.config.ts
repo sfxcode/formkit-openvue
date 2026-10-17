@@ -11,6 +11,9 @@ import pkg from '../package.json'
 process.env.VITE_APP_BUILD_EPOCH = Date.now().toString()
 // eslint-disable-next-line node/prefer-global/process
 process.env.VITE_APP_VERSION = pkg.version
+// the versions the demo shows in its footer are the ones the library depends on, without the range prefix
+// eslint-disable-next-line node/prefer-global/process
+process.env.VITE_APP_FORMKIT_VERSION = pkg.dependencies['@formkit/vue'].replace(/^[\^~]/, '')
 
 /**
  * @type {import('vite').UserConfig}
@@ -21,11 +24,6 @@ export default defineConfig({
       port: false,
       path: '/ws',
     },
-  },
-  // https://github.com/antfu/vite-ssg
-  ssgOptions: {
-    script: 'async',
-    formatting: 'minify',
   },
   test: {
     globals: true,
@@ -44,13 +42,24 @@ export default defineConfig({
     ],
   },
   build: {
-    // Rolldown's automatic chunk-splitting can place shared runtime helpers
-    // (e.g. __exportAll) in a chunk that circularly imports back from another
-    // chunk, leaving the helper undefined at call time ("e is not a function").
-    // Disabling code-splitting avoids that class of bug for this demo build.
+    // The two big chunks are vendor code: OpenVue with its theme (about 0.9 MB) and the JSON editor (about 1 MB),
+    // which is only loaded by the pages that show an editor. The code of the demo itself is a small chunk.
+    chunkSizeWarningLimit: 1100,
+    // Rolldown's automatic chunk-splitting placed its runtime helpers
+    // (e.g. __exportAll) into the json-editor-vue chunk, which itself imports
+    // Vue from the shared components chunk -> circular chunk dependency
+    // ("e is not a function" at runtime). Pin runtime and vendors to their own
+    // chunks so the chunk graph stays acyclic.
     rolldownOptions: {
       output: {
-        codeSplitting: false,
+        codeSplitting: {
+          groups: [
+            { name: 'rolldown-runtime', test: /rolldown[\\/]runtime/, priority: 100 },
+            { name: 'vue', test: /node_modules[\\/](?:\.pnpm[\\/])?(?:@vue|vue)[\\/@]/, priority: 50 },
+            { name: 'openvue', test: /node_modules[\\/].*(?:openvue|@openvue)[\\/]/, priority: 40 },
+            { name: 'formkit', test: /node_modules[\\/].*@formkit[\\/]/, priority: 30 },
+          ],
+        },
       },
     },
   },
@@ -72,7 +81,6 @@ export default defineConfig({
         'vue',
         'vue-router',
         'vue-i18n',
-        '@vueuse/head',
       ],
       exclude: [
         '**/dist/**',

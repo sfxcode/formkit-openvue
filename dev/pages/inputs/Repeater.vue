@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 const formAttributes = 'N/A'
-const customAttributes = 'insertButtonLabel, insertButtonClass, insertButtonSize, alwaysDisplayInsertButton, newItem, listClass, listItemClass, groupClass, hideButtonGroup, hideMoveButtons, buttonGroupClass, buttonGroupItemClass, buttonSize, displayCloneButton, displayAddButton, displayDeleteButton, displayDragHandle, dragHandleClass, dragHandleIconClass'
+const customAttributes = 'insertButtonLabel, insertButtonClass, insertButtonSize, alwaysDisplayInsertButton, newItem, listClass, listItemClass, groupClass, hideButtonGroup, hideMoveButtons, buttonGroupClass, buttonGroupItemClass, buttonSize, displayCloneButton, displayAddButton, displayDeleteButton, moveUpLabel, moveDownLabel, deleteLabel, cloneLabel, addLabel, undoDelete, undoLabel, deletedLabel, undoTimeout, displayDragHandle, dragHandleClass, dragHandleIconClass'
 
 function createDefaultValue(): object {
   return { name: '', damage: '' }
@@ -21,14 +21,15 @@ const schema
       label: 'Attacks List',
       help: 'Add, clone, move, and delete attacks using the buttons',
       listClass: 'grid gap-2',
-      listItemClass: 'flex gap-2',
-      buttonGroupClass: 'buttonGroupClass mt-6 flex gap-1',
+      listItemClass: 'flex flex-wrap sm:flex-nowrap gap-2',
+      buttonGroupClass: 'buttonGroupClass mb-4 sm:mb-0 sm:mt-6 flex gap-1',
       buttonGroupItemClass: 'buttonGroupItemClass',
       hideButtonGroup: false,
       hideMoveButtons: false,
       displayCloneButton: true,
       displayAddButton: true,
       displayDeleteButton: true,
+      undoDelete: true,
       draggable: true,
       displayDragHandle: true,
       insertButtonLabel: 'Add Attack',
@@ -59,8 +60,8 @@ const schema
       label: 'Inventory (Minimal Buttons but large)',
       help: 'Repeater with only add and delete buttons',
       listClass: 'grid gap-2',
-      listItemClass: 'flex gap-2',
-      buttonGroupClass: 'mt-4 flex gap-1',
+      listItemClass: 'flex flex-wrap sm:flex-nowrap gap-2',
+      buttonGroupClass: 'mb-4 sm:mb-0 sm:mt-4 flex gap-1',
       buttonSize: 'large',
       hideButtonGroup: false,
       hideMoveButtons: true,
