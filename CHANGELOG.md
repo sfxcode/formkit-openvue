@@ -1,4 +1,35 @@
 
+## v0.9.0
+
+[compare changes](https://github.com/sfxcode/formkit-openvue/compare/v0.8.1...v0.9.0)
+
+### 🚀 Enhancements
+
+- Sync repeater, auto-animate plugin and transfer styles with formkit-primevue 4.5.0 ([2e75d37](https://github.com/sfxcode/formkit-openvue/commit/2e75d37))
+- **dev:** Sync demo app and trim dependencies with formkit-primevue 4.5.0 ([c75b318](https://github.com/sfxcode/formkit-openvue/commit/c75b318))
+
+### 🩹 Fixes
+
+- Update version numbers in AppFooter for Formkit and OpenVue ([72a9e64](https://github.com/sfxcode/formkit-openvue/commit/72a9e64))
+- Update release script to use major version bump ([e7de45c](https://github.com/sfxcode/formkit-openvue/commit/e7de45c))
+
+### 📖 Documentation
+
+- Add getting started and PrimeVue migration sections to readme ([62c519e](https://github.com/sfxcode/formkit-openvue/commit/62c519e))
+
+### 🏡 Chore
+
+- Prune stale entries from pnpm lockfile ([eff3d28](https://github.com/sfxcode/formkit-openvue/commit/eff3d28))
+
+### 🤖 CI
+
+- Add CI workflow and rename deploy workflow to deploy-docs ([9fb0fd1](https://github.com/sfxcode/formkit-openvue/commit/9fb0fd1))
+- Enhance deploy workflow ([0feca15](https://github.com/sfxcode/formkit-openvue/commit/0feca15))
+
+### ❤️ Contributors
+
+- Sfxcode ([@sfxcode](https://github.com/sfxcode))
+
 ## v0.8.1
 
 
