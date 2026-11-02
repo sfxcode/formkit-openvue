@@ -5,7 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
-import pkg from '../package.json'
+import pkg from '../package.json' with { type: 'json' }
 
 // eslint-disable-next-line node/prefer-global/process
 process.env.VITE_APP_BUILD_EPOCH = Date.now().toString()
@@ -107,10 +107,10 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '.'),
-      '~': path.resolve(__dirname, 'node_modules/'),
-      'my-library': path.resolve(__dirname, '../src'),
-      'my-library-components': path.resolve(__dirname, '../src/components'),
+      '@': path.resolve(import.meta.dirname, '.'),
+      '~': path.resolve(import.meta.dirname, 'node_modules/'),
+      'my-library': path.resolve(import.meta.dirname, '../src'),
+      'my-library-components': path.resolve(import.meta.dirname, '../src/components'),
 
     },
   },
