@@ -1,4 +1,22 @@
 
+## v0.9.1
+
+[compare changes](https://github.com/sfxcode/formkit-openvue/compare/v0.9.0...v0.9.1)
+
+### 🩹 Fixes
+
+- Update release script to use patch version bump ([d8f5014](https://github.com/sfxcode/formkit-openvue/commit/d8f5014))
+- Update dependencies in package.json for compatibility and improvements ([9af224a](https://github.com/sfxcode/formkit-openvue/commit/9af224a))
+- Update import paths in vite.config.ts to use import.meta.dirname ([a96a315](https://github.com/sfxcode/formkit-openvue/commit/a96a315))
+
+### 🎨 Styles
+
+- Format object literals for improved readability ([a618767](https://github.com/sfxcode/formkit-openvue/commit/a618767))
+
+### ❤️ Contributors
+
+- Sfxcode ([@sfxcode](https://github.com/sfxcode))
+
 ## v0.9.0
 
 [compare changes](https://github.com/sfxcode/formkit-openvue/compare/v0.8.1...v0.9.0)
