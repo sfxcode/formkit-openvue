@@ -18,11 +18,17 @@ function pageFileRoutes(directory: string = pagesDir): string[] {
     if (!entry.name.endsWith('.vue'))
       return []
     const route = `/${relative(pagesDir, path).replace(/\.vue$/, '').replaceAll('\\', '/')}`.toLowerCase()
-    return [route === '/index' ? HOME_ROUTE : route]
+    return [
+      route === '/index'
+        ? HOME_ROUTE
+        : route,
+    ]
   })
 }
 
-const icons = new Set([...readFileSync(join(root, 'node_modules/@openvue/openicons/openicons.css'), 'utf8').matchAll(/\.oi-([a-z0-9-]+):before/g)].map(match => match[1]))
+const icons = new Set([
+  ...readFileSync(join(root, 'node_modules/@openvue/openicons/openicons.css'), 'utf8').matchAll(/\.oi-([a-z0-9-]+):before/g),
+].map(match => match[1]))
 
 describe('menu pages', () => {
   it('lists every page once', () => {

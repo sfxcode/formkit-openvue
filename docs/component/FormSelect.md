@@ -26,11 +26,53 @@ const cities = [
 ]
 const stringArray = ['refresh', 'hourly', 'daily']
 const schema = [
-  { $formkit: 'formSelect', name: 'selectValue', label: 'Cookie notice Select', value: 'hourly', optionLabel: 'label', optionValue: 'value', options, help: 'Cookie notice frequency ?' },
-  { $formkit: 'formSelect', name: 'selectObjectByLabel', label: 'Select Object', optionLabel: 'name', options: cities },
-  { $formkit: 'formSelect', name: 'selectString', label: 'Simple String Array Select', options: stringArray },
-  { $formkit: 'formSelect', name: 'styled', label: 'Styled', value: 'hourly', style: { background: 'gray' }, class: 'customClass', optionLabel: 'label', optionValue: 'value', options, disabled: true },
-  { $formkit: 'formSelect', name: 'custom', label: 'With Clear and Filter', showClear: true, filter: true, placeholder: 'Please select', optionLabel: 'label', optionValue: 'value', options, validation: 'required' },
+  {
+    $formkit: 'formSelect',
+    name: 'selectValue',
+    label: 'Cookie notice Select',
+    value: 'hourly',
+    optionLabel: 'label',
+    optionValue: 'value',
+    options,
+    help: 'Cookie notice frequency ?'
+  },
+  {
+    $formkit: 'formSelect',
+    name: 'selectObjectByLabel',
+    label: 'Select Object',
+    optionLabel: 'name',
+    options: cities
+  },
+  {
+    $formkit: 'formSelect',
+    name: 'selectString',
+    label: 'Simple String Array Select',
+    options: stringArray
+  },
+  {
+    $formkit: 'formSelect',
+    name: 'styled',
+    label: 'Styled',
+    value: 'hourly',
+    style: { background: 'gray' },
+    class: 'customClass',
+    optionLabel: 'label',
+    optionValue: 'value',
+    options,
+    disabled: true
+  },
+  {
+    $formkit: 'formSelect',
+    name: 'custom',
+    label: 'With Clear and Filter',
+    showClear: true,
+    filter: true,
+    placeholder: 'Please select',
+    optionLabel: 'label',
+    optionValue: 'value',
+    options,
+    validation: 'required'
+  },
 ]
 const data = {}
 </script>

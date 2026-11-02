@@ -38,7 +38,13 @@ export function useOutputDuration() {
 
     if (minutes === 0)
       return '0'
-    return `${hours > 0 ? `${hours}h` : ''}${hours > 0 && remainingMinutes > 0 ? ' ' : ''}${remainingMinutes > 0 ? `${remainingMinutes}m` : ''}`
+    return `${hours > 0
+      ? `${hours}h`
+      : ''}${hours > 0 && remainingMinutes > 0
+      ? ' '
+      : ''}${remainingMinutes > 0
+      ? `${remainingMinutes}m`
+      : ''}`
   }
 
   return { durationToMinutes, formattedDuration }

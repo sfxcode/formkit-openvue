@@ -14,8 +14,21 @@ A FormKit wrapper for OpenVue's Rating component.
 <script setup>
 const schema = [
   { $formkit: 'formRating', label: 'Select Rating', name: 'rating' },
-  { $formkit: 'formRating', label: 'Select Rating', name: 'ratingDisabled', value: 3, disabled: true },
-  { $formkit: 'formRating', label: 'Select Rating', name: 'ratingCancel', value: 7, stars: 10, cancel: true },
+  {
+    $formkit: 'formRating',
+    label: 'Select Rating',
+    name: 'ratingDisabled',
+    value: 3,
+    disabled: true
+  },
+  {
+    $formkit: 'formRating',
+    label: 'Select Rating',
+    name: 'ratingCancel',
+    value: 7,
+    stars: 10,
+    cancel: true
+  },
 ]
 const data = {}
 </script>

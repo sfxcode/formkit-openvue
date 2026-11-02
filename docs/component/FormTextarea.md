@@ -13,10 +13,35 @@ A FormKit wrapper for OpenVue's Textarea component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formTextarea', id: 'basic', name: 'name', placeholder: 'Basic', label: 'Basic', help: 'Required.', validation: 'required' },
-  { $formkit: 'formTextarea', name: 'name', label: '5 Rows', rows: 5, autoResize: true },
-  { $formkit: 'formTextarea', name: 'name', placeholder: 'Styled', style: { background: 'gray' }, class: 'customClass' },
-  { $formkit: 'formTextarea', name: 'name', placeholder: 'Read Only', readonly: true },
+  {
+    $formkit: 'formTextarea',
+    id: 'basic',
+    name: 'name',
+    placeholder: 'Basic',
+    label: 'Basic',
+    help: 'Required.',
+    validation: 'required'
+  },
+  {
+    $formkit: 'formTextarea',
+    name: 'name',
+    label: '5 Rows',
+    rows: 5,
+    autoResize: true
+  },
+  {
+    $formkit: 'formTextarea',
+    name: 'name',
+    placeholder: 'Styled',
+    style: { background: 'gray' },
+    class: 'customClass'
+  },
+  {
+    $formkit: 'formTextarea',
+    name: 'name',
+    placeholder: 'Read Only',
+    readonly: true
+  },
 ]
 const data = {}
 </script>

@@ -79,7 +79,9 @@ export function createAutoAnimatePlugin(options: Partial<AutoAnimateOptions> = {
       const originalSchema = node.props.definition.schema
       node.props.definition.schema = (extensions) => {
         const schema = originalSchema(extensions)
-        const finalSchema = (Array.isArray(schema) ? schema[0] : schema) as FormKitSchemaDefinition
+        const finalSchema = (Array.isArray(schema)
+          ? schema[0]
+          : schema) as FormKitSchemaDefinition
         let marked = false
 
         eachSection(finalSchema, (section) => {
@@ -92,7 +94,10 @@ export function createAutoAnimatePlugin(options: Partial<AutoAnimateOptions> = {
             key = DEFAULT_KEY
             if (typeof meta.autoAnimate === 'object') {
               key = `${node.props.id}-${meta.section ?? 'section'}`
-              optionsByKey.set(key, { ...options, ...meta.autoAnimate })
+              optionsByKey.set(key, {
+                ...options,
+                ...meta.autoAnimate,
+              })
             }
           }
           else {

@@ -41,7 +41,10 @@ export const install: UserModule = ({ app }) => {
     locales: { de, en },
     // Define the active locale
     locale: 'en',
-    inputs: { ...formInputs, ...formOutputs },
+    inputs: {
+      ...formInputs,
+      ...formOutputs,
+    },
     plugins: [
       createAutoAnimatePlugin(
         {

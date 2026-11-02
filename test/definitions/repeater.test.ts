@@ -75,7 +75,9 @@ describe('formRepeaterDefinition', () => {
     expect(node.context.getListItemClass(1)).toBe('formkit-item custom-item')
 
     node.context.dragNodeStart({}, 0)()
-    node.context.dragNodeOver(1)({ preventDefault: vi.fn() })
+    node.context.dragNodeOver(1)({
+      preventDefault: vi.fn(),
+    })
     expect(node.context.getListItemClass(1)).toContain('formkit-repeater-drop-target')
 
     node.context.dragNodeLeave(1)()
@@ -91,8 +93,12 @@ describe('formRepeaterDefinition', () => {
     }
 
     node.context.dragNodeStart(parentNode, 1)()
-    node.context.dragNodeOver(1)({ preventDefault: vi.fn() })
-    node.context.dropNode(parentNode, 1)({ preventDefault: vi.fn() })
+    node.context.dragNodeOver(1)({
+      preventDefault: vi.fn(),
+    })
+    node.context.dropNode(parentNode, 1)({
+      preventDefault: vi.fn(),
+    })
 
     expect(parentNode.input).not.toHaveBeenCalled()
     expect(node.context.getListItemClass(1)).toBe('formkit-item')
@@ -105,11 +111,15 @@ describe('formRepeaterDefinition', () => {
     expect(itemClass.value).toBe('formkit-item')
 
     node.context.dragNodeStart({}, 0)()
-    node.context.dragNodeOver(1)({ preventDefault: vi.fn() })
+    node.context.dragNodeOver(1)({
+      preventDefault: vi.fn(),
+    })
     expect(itemClass.value).toContain('formkit-repeater-drop-target')
 
     node.context.dragNodeEnd()
-    node.context.dragNodeOver(1)({ preventDefault: vi.fn() })
+    node.context.dragNodeOver(1)({
+      preventDefault: vi.fn(),
+    })
     node.context.dragNodeLeave(1)()
     expect(itemClass.value).toBe('formkit-item')
   })
@@ -129,7 +139,13 @@ describe('formRepeaterDefinition', () => {
 
     it('cloneNode inserts a copy of the item', () => {
       const node = createRepeaterNode()
-      const parentNode = createParent([{ name: 'Sword', tags: ['sharp'] }, { name: 'Dagger', tags: [] }])
+      const parentNode = createParent([
+        {
+          name: 'Sword',
+          tags: ['sharp'],
+        },
+        { name: 'Dagger', tags: [] },
+      ])
 
       node.context.cloneNode(parentNode, 0)()
 
@@ -141,13 +157,18 @@ describe('formRepeaterDefinition', () => {
 
       clone.name = 'CLONE'
       clone.tags.push('edited')
-      expect(original).toEqual({ name: 'Sword', tags: ['sharp'] })
+      expect(original).toEqual({
+        name: 'Sword',
+        tags: ['sharp'],
+      })
     })
 
     it('addNode inserts a copy of newItem, a new one on every call', () => {
       const newItem = { name: '', damage: '' }
       const node = createRepeaterNode({ newItem })
-      const parentNode = createParent([{ name: 'Sword', damage: '2D6' }])
+      const parentNode = createParent([
+        { name: 'Sword', damage: '2D6' },
+      ])
 
       node.context.addNode(parentNode, 0)()
       node.context.addNode(parentNode, 0)()
@@ -163,7 +184,10 @@ describe('formRepeaterDefinition', () => {
     })
 
     it('insertNode inserts a deep copy of newItem', () => {
-      const newItem = { item: '', stats: { quantity: 1 } }
+      const newItem = {
+        item: '',
+        stats: { quantity: 1 },
+      }
       const node = createRepeaterNode({ newItem })
       const parentNode = createParent([])
 
@@ -178,7 +202,9 @@ describe('formRepeaterDefinition', () => {
   })
 
   it('reads newItem on every insert, so a change after mount reaches new rows', () => {
-    const context = reactive<Record<string, any>>({ newItem: { name: 'old' } })
+    const context = reactive<Record<string, any>>({
+      newItem: { name: 'old' },
+    })
     const node = createRepeaterNode(context)
     const parentNode: any = {
       _value: [],
@@ -194,7 +220,11 @@ describe('formRepeaterDefinition', () => {
     node.context.insertNode(parentNode)()
     node.context.addNode(parentNode, 0)()
 
-    expect(parentNode.value).toEqual([{ name: 'new' }, { name: 'new' }, { name: 'old' }])
+    expect(parentNode.value).toEqual([
+      { name: 'new' },
+      { name: 'new' },
+      { name: 'old' },
+    ])
   })
 
   it('does not copy class instances in new and cloned rows', () => {
@@ -202,7 +232,9 @@ describe('formRepeaterDefinition', () => {
       constructor(public amount: number) {}
     }
     const price = new Money(5)
-    const node = createRepeaterNode({ newItem: { price } })
+    const node = createRepeaterNode({
+      newItem: { price },
+    })
     const parentNode: any = {
       _value: [],
       value: [],
@@ -250,19 +282,25 @@ describe('formRepeaterDefinition', () => {
 
       expect(node.context.minItems).toBe(0)
       expect(node.context.maxItems).toBe(Number.POSITIVE_INFINITY)
-      expect(node.context.repeaterValidation).toEqual([['+length', 0, Number.POSITIVE_INFINITY]])
+      expect(node.context.repeaterValidation).toEqual([
+        ['+length', 0, Number.POSITIVE_INFINITY],
+      ])
     })
 
     it('build a length rule from minItems and maxItems', () => {
       const node = createRepeaterNode({ minItems: 1, maxItems: 4 })
 
-      expect(node.context.repeaterValidation).toEqual([['+length', 1, 4]])
+      expect(node.context.repeaterValidation).toEqual([
+        ['+length', 1, 4],
+      ])
     })
 
     it('keep a minItems of 0 and a maxItems of 0 instead of falling back to the defaults', () => {
       const node = createRepeaterNode({ minItems: 0, maxItems: 0 })
 
-      expect(node.context.repeaterValidation).toEqual([['+length', 0, 0]])
+      expect(node.context.repeaterValidation).toEqual([
+        ['+length', 0, 0],
+      ])
     })
 
     it('fail an empty list below minItems, which FormKit would otherwise skip as empty', async () => {
@@ -273,7 +311,11 @@ describe('formRepeaterDefinition', () => {
           type: 'list',
           props: { type: 'list', validation },
           plugins: defaultConfig().plugins,
-          children: value.map(row => createNode({ type: 'group', props: { type: 'group' }, value: row })),
+          children: value.map(row => createNode({
+            type: 'group',
+            props: { type: 'group' },
+            value: row,
+          })),
         })
         await list.settled
         // validation runs a tick after the node settles
@@ -282,11 +324,22 @@ describe('formRepeaterDefinition', () => {
       }
 
       expect(await hasBlockingError([], repeaterValidation)).toBe(true)
-      expect(await hasBlockingError([{ a: 1 }], repeaterValidation)).toBe(false)
-      expect(await hasBlockingError([{ a: 1 }, { a: 2 }], repeaterValidation)).toBe(false)
-      expect(await hasBlockingError([{ a: 1 }, { a: 2 }, { a: 3 }], repeaterValidation)).toBe(true)
+      expect(await hasBlockingError([
+        { a: 1 },
+      ], repeaterValidation)).toBe(false)
+      expect(await hasBlockingError([
+        { a: 1 },
+        { a: 2 },
+      ], repeaterValidation)).toBe(false)
+      expect(await hasBlockingError([
+        { a: 1 },
+        { a: 2 },
+        { a: 3 },
+      ], repeaterValidation)).toBe(true)
       // control: without the `+` the empty list passes
-      expect(await hasBlockingError([], [['length', 1, 2]])).toBe(false)
+      expect(await hasBlockingError([], [
+        ['length', 1, 2],
+      ])).toBe(false)
     })
 
     it('are bound to the list node as its validation', () => {
@@ -320,7 +373,13 @@ describe('formRepeaterDefinition', () => {
     })
 
     it('keeps the labels that are set', () => {
-      const node = createRepeaterNode({ moveUpLabel: 'Hoch', moveDownLabel: 'Runter', deleteLabel: 'Löschen', cloneLabel: 'Duplizieren', addLabel: 'Einfügen' })
+      const node = createRepeaterNode({
+        moveUpLabel: 'Hoch',
+        moveDownLabel: 'Runter',
+        deleteLabel: 'Löschen',
+        cloneLabel: 'Duplizieren',
+        addLabel: 'Einfügen',
+      })
 
       expect(node.context.moveUpLabel).toBe('Hoch')
       expect(node.context.moveDownLabel).toBe('Runter')
@@ -332,7 +391,13 @@ describe('formRepeaterDefinition', () => {
     it('accepts the label props', () => {
       const props = (formRepeaterDefinition as any).props as string[]
 
-      expect(props).toEqual(expect.arrayContaining(['moveUpLabel', 'moveDownLabel', 'deleteLabel', 'cloneLabel', 'addLabel']))
+      expect(props).toEqual(expect.arrayContaining([
+        'moveUpLabel',
+        'moveDownLabel',
+        'deleteLabel',
+        'cloneLabel',
+        'addLabel',
+      ]))
     })
 
     it('gives each action button its label and the number of its row as name and tooltip', () => {
@@ -392,36 +457,66 @@ describe('formRepeaterDefinition', () => {
     it('accepts its props', () => {
       const props = (formRepeaterDefinition as any).props as string[]
 
-      expect(props).toEqual(expect.arrayContaining(['undoDelete', 'undoLabel', 'deletedLabel', 'undoTimeout']))
+      expect(props).toEqual(expect.arrayContaining([
+        'undoDelete',
+        'undoLabel',
+        'deletedLabel',
+        'undoTimeout',
+      ]))
     })
 
     it('does not keep a deleted row when it is off', () => {
       const node = createRepeaterNode()
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+      ])
 
       node.context.removeNode(parentNode, 0)()
 
-      expect(parentNode.value).toEqual([{ name: 'b' }])
+      expect(parentNode.value).toEqual([
+        { name: 'b' },
+      ])
       expect(node.context.removedItem).toBeUndefined()
     })
 
     it('keeps the deleted row and puts it back at its place', () => {
       const node = createRepeaterNode({ undoDelete: true })
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }, { name: 'c' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+        { name: 'c' },
+      ])
 
       node.context.removeNode(parentNode, 1)()
-      expect(parentNode.value).toEqual([{ name: 'a' }, { name: 'c' }])
-      expect(node.context.removedItem).toEqual({ index: 1, item: { name: 'b' } })
+      expect(parentNode.value).toEqual([
+        { name: 'a' },
+        { name: 'c' },
+      ])
+      expect(node.context.removedItem).toEqual({
+        index: 1,
+        item: { name: 'b' },
+      })
 
       node.context.undoRemoveNode(parentNode)()
-      expect(parentNode.value).toEqual([{ name: 'a' }, { name: 'b' }, { name: 'c' }])
+      expect(parentNode.value).toEqual([
+        { name: 'a' },
+        { name: 'b' },
+        { name: 'c' },
+      ])
       expect(node.context.removedItem).toBeUndefined()
     })
 
     it('puts back a copy that shares nothing with the deleted row', () => {
       const node = createRepeaterNode({ undoDelete: true })
-      const original = { name: 'b', tags: ['x'] }
-      const parentNode = createParent([{ name: 'a' }, original])
+      const original = {
+        name: 'b',
+        tags: ['x'],
+      }
+      const parentNode = createParent([
+        { name: 'a' },
+        original,
+      ])
 
       node.context.removeNode(parentNode, 1)()
       node.context.undoRemoveNode(parentNode)()
@@ -433,47 +528,75 @@ describe('formRepeaterDefinition', () => {
 
     it('puts the row at the end when the list became shorter than its place', () => {
       const node = createRepeaterNode({ undoDelete: true })
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }, { name: 'c' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+        { name: 'c' },
+      ])
 
       node.context.removeNode(parentNode, 2)()
-      expect(node.context.removedItem).toEqual({ index: 2, item: { name: 'c' } })
+      expect(node.context.removedItem).toEqual({
+        index: 2,
+        item: { name: 'c' },
+      })
       // other rows are deleted without the undo being used, so the list has only one row, the place 2 does not exist
-      parentNode.value = [{ name: 'a' }]
+      parentNode.value = [
+        { name: 'a' },
+      ]
       parentNode._value = parentNode.value
       node.context.undoRemoveNode(parentNode)()
 
-      expect(parentNode.value).toEqual([{ name: 'a' }, { name: 'c' }])
+      expect(parentNode.value).toEqual([
+        { name: 'a' },
+        { name: 'c' },
+      ])
     })
 
     it('does nothing when there is nothing to put back', () => {
       const node = createRepeaterNode({ undoDelete: true })
-      const parentNode = createParent([{ name: 'a' }])
+      const parentNode = createParent([
+        { name: 'a' },
+      ])
 
       node.context.undoRemoveNode(parentNode)()
 
       expect(parentNode.input).not.toHaveBeenCalled()
-      expect(parentNode.value).toEqual([{ name: 'a' }])
+      expect(parentNode.value).toEqual([
+        { name: 'a' },
+      ])
     })
 
     it('does not put the row back above maxItems', () => {
       const node = createRepeaterNode({ undoDelete: true, maxItems: 2 })
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+      ])
 
       node.context.removeNode(parentNode, 0)()
-      parentNode.value = [{ name: 'b' }, { name: 'new' }]
+      parentNode.value = [
+        { name: 'b' },
+        { name: 'new' },
+      ]
       parentNode._value = parentNode.value
       parentNode.input.mockClear()
       node.context.undoRemoveNode(parentNode)()
 
       expect(parentNode.input).not.toHaveBeenCalled()
-      expect(parentNode.value).toEqual([{ name: 'b' }, { name: 'new' }])
+      expect(parentNode.value).toEqual([
+        { name: 'b' },
+        { name: 'new' },
+      ])
       expect(node.context.removedItem).toBeUndefined()
     })
 
     it('forgets the row when the timeout is over', () => {
       vi.useFakeTimers()
       const node = createRepeaterNode({ undoDelete: true })
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+      ])
 
       node.context.removeNode(parentNode, 0)()
       vi.advanceTimersByTime(7999)
@@ -489,7 +612,10 @@ describe('formRepeaterDefinition', () => {
     it('uses the timeout that is set', () => {
       vi.useFakeTimers()
       const node = createRepeaterNode({ undoDelete: true, undoTimeout: 1000 })
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+      ])
 
       node.context.removeNode(parentNode, 0)()
       vi.advanceTimersByTime(1000)
@@ -500,36 +626,59 @@ describe('formRepeaterDefinition', () => {
     it('keeps the row until another one is deleted when the timeout is 0', () => {
       vi.useFakeTimers()
       const node = createRepeaterNode({ undoDelete: true, undoTimeout: 0 })
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }, { name: 'c' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+        { name: 'c' },
+      ])
 
       node.context.removeNode(parentNode, 0)()
       vi.advanceTimersByTime(60 * 60 * 1000)
-      expect(node.context.removedItem).toEqual({ index: 0, item: { name: 'a' } })
+      expect(node.context.removedItem).toEqual({
+        index: 0,
+        item: { name: 'a' },
+      })
 
       node.context.removeNode(parentNode, 0)()
-      expect(node.context.removedItem).toEqual({ index: 0, item: { name: 'b' } })
+      expect(node.context.removedItem).toEqual({
+        index: 0,
+        item: { name: 'b' },
+      })
     })
 
     it('offers the row of the latest delete and starts its timeout again', () => {
       vi.useFakeTimers()
       const node = createRepeaterNode({ undoDelete: true })
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }, { name: 'c' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+        { name: 'c' },
+      ])
 
       node.context.removeNode(parentNode, 0)()
       vi.advanceTimersByTime(5000)
       node.context.removeNode(parentNode, 0)()
-      expect(node.context.removedItem).toEqual({ index: 0, item: { name: 'b' } })
+      expect(node.context.removedItem).toEqual({
+        index: 0,
+        item: { name: 'b' },
+      })
 
       // 10 seconds after the first delete, 5 after the second
       vi.advanceTimersByTime(5000)
-      expect(node.context.removedItem).toEqual({ index: 0, item: { name: 'b' } })
+      expect(node.context.removedItem).toEqual({
+        index: 0,
+        item: { name: 'b' },
+      })
       vi.advanceTimersByTime(3000)
       expect(node.context.removedItem).toBeUndefined()
     })
 
     it('re-renders when the context is reactive', () => {
       const node = createRepeaterNode(reactive({ undoDelete: true }))
-      const parentNode = createParent([{ name: 'a' }, { name: 'b' }])
+      const parentNode = createParent([
+        { name: 'a' },
+        { name: 'b' },
+      ])
       const offered = computed(() => node.context.removedItem !== undefined)
 
       expect(offered.value).toBe(false)

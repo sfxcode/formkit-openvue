@@ -85,7 +85,14 @@ const schema
 
   ]
 
-const data = { name: 'Harry Potter', toTranslate: 'sample', iconLeft: 'Some Text ...', iconRight: 'Another Text ...', html: '<b style="color: gold">Bold Hello World</b>', longText: 'This is a very long text that will be truncated when maxLength is applied to demonstrate the functionality.' }
+const data = {
+  name: 'Harry Potter',
+  toTranslate: 'sample',
+  iconLeft: 'Some Text ...',
+  iconRight: 'Another Text ...',
+  html: '<b style="color: gold">Bold Hello World</b>',
+  longText: 'This is a very long text that will be truncated when maxLength is applied to demonstrate the functionality.',
+}
 </script>
 
 <template>

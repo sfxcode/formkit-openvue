@@ -13,10 +13,34 @@ A FormKit wrapper for OpenVue's OutputReference component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formOutputReference', name: 'externalId', label: 'External Link', reference: 'https://github.com/sfxcode/{{value}}' },
-  { $formkit: 'formOutputReference', name: 'externalValue', label: 'External Link with custom title', title: 'Show on GitHub', reference: 'https://github.com/sfxcode/{{valueNameNotImportant}}' },
-  { $formkit: 'formOutputReference', name: 'internalLink', label: 'Internal Link', internal: true, reference: '/outputs/{{value}}' },
-  { $formkit: 'formOutputReference', name: 'internalLink', label: 'Internal Link with custom title', internal: true, title: 'Show: {{value}}', reference: '/outputs/{{value}}' },
+  {
+    $formkit: 'formOutputReference',
+    name: 'externalId',
+    label: 'External Link',
+    reference: 'https://github.com/sfxcode/{{value}}'
+  },
+  {
+    $formkit: 'formOutputReference',
+    name: 'externalValue',
+    label: 'External Link with custom title',
+    title: 'Show on GitHub',
+    reference: 'https://github.com/sfxcode/{{valueNameNotImportant}}'
+  },
+  {
+    $formkit: 'formOutputReference',
+    name: 'internalLink',
+    label: 'Internal Link',
+    internal: true,
+    reference: '/outputs/{{value}}'
+  },
+  {
+    $formkit: 'formOutputReference',
+    name: 'internalLink',
+    label: 'Internal Link with custom title',
+    internal: true,
+    title: 'Show: {{value}}',
+    reference: '/outputs/{{value}}'
+  },
 ]
 const data = { externalId: 42, externalValue: 'formkit-openvue', internalLink: 'outputLink' }
 </script>

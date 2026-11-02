@@ -18,7 +18,13 @@ function prefixClicked() {
 const schema = [
   { $formkit: 'formOutputDuration', name: 'duration1', label: 'Duration' },
   { $formkit: 'formOutputDuration', name: 'duration2', label: 'Another Duration' },
-  { $formkit: 'formOutputDuration', name: 'duration3', label: 'Another Duration', iconPrefix: 'oi oi-check', onIconPrefixClicked: prefixClicked },
+  {
+    $formkit: 'formOutputDuration',
+    name: 'duration3',
+    label: 'Another Duration',
+    iconPrefix: 'oi oi-check',
+    onIconPrefixClicked: prefixClicked
+  },
 ]
 const data = { duration1: '142', duration2: '4h35m', duration3: '3:47' }
 </script>

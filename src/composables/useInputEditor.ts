@@ -1,9 +1,44 @@
 export function useInputEditor() {
-  const formInputWithOptionNames = ['CascadeSelect', 'Listbox', 'MultiSelect', 'RadioButton', 'Select', 'SelectButton', 'TreeSelect']
+  const formInputWithOptionNames = [
+    'CascadeSelect',
+    'Listbox',
+    'MultiSelect',
+    'RadioButton',
+    'Select',
+    'SelectButton',
+    'TreeSelect',
+  ]
 
-  const formInputNames = [...formInputWithOptionNames, 'AutoComplete', 'Checkbox', 'ColorPicker', 'DatePicker', 'Editor', 'InputMask', 'InputNumber', 'InputOtp', 'InputText', 'Knob', 'Password', 'Rating', 'Slider', 'Textarea', 'ToggleButton', 'ToggleSwitch'].sort()
+  const formInputNames = [
+    ...formInputWithOptionNames,
+    'AutoComplete',
+    'Checkbox',
+    'ColorPicker',
+    'DatePicker',
+    'Editor',
+    'InputMask',
+    'InputNumber',
+    'InputOtp',
+    'InputText',
+    'Knob',
+    'Password',
+    'Rating',
+    'Slider',
+    'Textarea',
+    'ToggleButton',
+    'ToggleSwitch',
+  ].sort()
 
-  const formOutputNames = ['OutputBoolean', 'OutputDate', 'OutputDuration', 'OutputLink', 'OutputList', 'OutputNumber', 'OutputReference', 'OutputText']
+  const formOutputNames = [
+    'OutputBoolean',
+    'OutputDate',
+    'OutputDuration',
+    'OutputLink',
+    'OutputList',
+    'OutputNumber',
+    'OutputReference',
+    'OutputText',
+  ]
 
   function editorDataToSchema(data: any): any {
     if (!data)
@@ -25,12 +60,20 @@ export function useInputEditor() {
           return [key, value] as [string, any]
         })
 
-      tempData = { ...Object.fromEntries(mapped) }
+      tempData = {
+        ...Object.fromEntries(mapped),
+      }
     }
 
-    const readonlyValue = data.readonly === true ? true : undefined
-    const disabledValue = data.disabled === true ? true : undefined
-    const preserveValue = data.preserve === true ? true : undefined
+    const readonlyValue = data.readonly === true
+      ? true
+      : undefined
+    const disabledValue = data.disabled === true
+      ? true
+      : undefined
+    const preserveValue = data.preserve === true
+      ? true
+      : undefined
 
     const defaultObject = {
       readonly: readonlyValue,
@@ -118,7 +161,9 @@ export function useInputEditor() {
 
     if (schema?.options && Array.isArray(schema.options)) {
       const options = schema.options.map((o: object) =>
-        o ? JSON.parse(JSON.stringify(o)) : {})
+        o
+          ? JSON.parse(JSON.stringify(o))
+          : {})
       return { ...schema, options }
     }
     else {

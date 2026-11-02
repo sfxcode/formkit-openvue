@@ -14,8 +14,21 @@ A FormKit wrapper for OpenVue's ColorPicker component.
 <script setup>
 const schema = [
   { $formkit: 'formColorPicker', label: 'Select Color', name: 'color' },
-  { $formkit: 'formColorPicker', name: 'styled', label: 'Styled + Disabled', style: { background: 'gray' }, class: 'customClass', disabled: true },
-  { $formkit: 'formColorPicker', name: 'inline', label: 'Inline - Format RGB', inline: true, format: 'rgb' },
+  {
+    $formkit: 'formColorPicker',
+    name: 'styled',
+    label: 'Styled + Disabled',
+    style: { background: 'gray' },
+    class: 'customClass',
+    disabled: true
+  },
+  {
+    $formkit: 'formColorPicker',
+    name: 'inline',
+    label: 'Inline - Format RGB',
+    inline: true,
+    format: 'rgb'
+  },
 ]
 const data = {}
 </script>

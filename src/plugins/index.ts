@@ -9,14 +9,17 @@ export function addFormAsteriskPlugin(node: FormKitNode): void {
       const schemaFn = node.props.definition?.schema as FormKitExtendableSchemaRoot
       node.props.definition!.schema = (sectionsSchema = {}) => {
         sectionsSchema.label = {
-          children: ['$label', {
-            $el: 'span',
-            if: '$state.required',
-            attrs: {
-              class: 'p-formkit-asterisk',
+          children: [
+            '$label',
+            {
+              $el: 'span',
+              if: '$state.required',
+              attrs: {
+                class: 'p-formkit-asterisk',
+              },
+              children: ['*'],
             },
-            children: ['*'],
-          }],
+          ],
         }
 
         return schemaFn(sectionsSchema)
@@ -34,22 +37,25 @@ export function addLabelPlugin(node: FormKitNode): void {
       const schemaFn = node.props.definition?.schema as FormKitExtendableSchemaRoot
       node.props.definition!.schema = (sectionsSchema = {}) => {
         sectionsSchema.label = {
-          children: [{
-            $el: 'span',
-            attrs: {
-              title: '$help',
-              class: 'p-formkit-label',
+          children: [
+            {
+              $el: 'span',
+              attrs: {
+                title: '$help',
+                class: 'p-formkit-label',
+              },
+              children: ['$label'],
             },
-            children: ['$label'],
-          }, {
-            $el: 'span',
-            if: '$state.required',
-            attrs: {
-              class: 'p-formkit-required',
-              title: '$help',
+            {
+              $el: 'span',
+              if: '$state.required',
+              attrs: {
+                class: 'p-formkit-required',
+                title: '$help',
+              },
+              children: ['*'],
             },
-            children: ['*'],
-          }],
+          ],
         }
         sectionsSchema.help = {
           children: [],

@@ -26,7 +26,9 @@ export function clonePlain<T>(value: T, seen: WeakMap<object, unknown> = new Wea
   }
   if (!isPlainObject(value))
     return value
-  const copy: Record<string, unknown> = Object.getPrototypeOf(value) === null ? Object.create(null) : {}
+  const copy: Record<string, unknown> = Object.getPrototypeOf(value) === null
+    ? Object.create(null)
+    : {}
   seen.set(value, copy)
   for (const key of Object.keys(value))
     copy[key] = clonePlain((value as Record<string, unknown>)[key], seen)

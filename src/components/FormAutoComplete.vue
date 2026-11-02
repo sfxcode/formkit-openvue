@@ -81,7 +81,10 @@ function handlePaste(event: ClipboardEvent) {
       .filter(item => item.length > 0)
     // Use a local ref, never mutate context._value directly
     if (Array.isArray(modelValue.value)) {
-      modelValue.value = [...modelValue.value, ...items]
+      modelValue.value = [
+        ...modelValue.value,
+        ...items,
+      ]
     }
     else {
       modelValue.value = items
@@ -92,10 +95,15 @@ function handlePaste(event: ClipboardEvent) {
     event.preventDefault()
     // If no separators, just set the value directly
     if (Array.isArray(modelValue.value)) {
-      modelValue.value = [...modelValue.value, pastedText.trim()]
+      modelValue.value = [
+        ...modelValue.value,
+        pastedText.trim(),
+      ]
     }
     else {
-      modelValue.value = [pastedText.trim()]
+      modelValue.value = [
+        pastedText.trim(),
+      ]
     }
   }
 }

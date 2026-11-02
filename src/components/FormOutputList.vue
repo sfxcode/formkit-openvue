@@ -30,7 +30,9 @@ const listStyle = computed(() => {
 const { hasPrefix, hasPrefixIcon, hasSuffix, hasSuffixIcon } = useFormKitSection(props.context)
 
 const getListValues = computed(() => {
-  const values = Array.isArray(props.context?._value) ? props.context._value : []
+  const values = Array.isArray(props.context?._value)
+    ? props.context._value
+    : []
   if (props.context?.options && props.context?.optionValue) {
     const key: string = `${props.context.optionValue}`
     return values.map((value) => {

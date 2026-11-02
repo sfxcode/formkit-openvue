@@ -17,7 +17,12 @@ const options = [
     name: 'Australia',
     code: 'AU',
     states: [
-      { name: 'New South Wales', cities: [{ cname: 'Sydney', code: 'A-SY' }] },
+      {
+        name: 'New South Wales',
+        cities: [
+          { cname: 'Sydney', code: 'A-SY' }
+        ]
+      },
     ],
   },
   // ...more countries
@@ -48,7 +53,12 @@ const schema = [
         name: 'Australia',
         code: 'AU',
         states: [
-          { name: 'New South Wales', cities: [{ cname: 'Sydney', code: 'A-SY' }] },
+          {
+            name: 'New South Wales',
+            cities: [
+              { cname: 'Sydney', code: 'A-SY' }
+            ]
+          },
         ],
       },
       // ...more countries

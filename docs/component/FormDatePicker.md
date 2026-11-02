@@ -13,11 +13,44 @@ A FormKit wrapper for OpenVue's DatePicker component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formDatePicker', id: 'basic', name: 'basic', label: 'Basic', placeholder: 'MM/DD/YYYY', validation: 'required' },
-  { $formkit: 'formDatePicker', name: 'styled', label: 'Styled', style: { background: 'gray' }, class: 'customClass', showIcon: true },
-  { $formkit: 'formDatePicker', name: 'icon', label: 'Custom Icon', dateFormat: 'yy-mm', showIcon: true, icon: 'oi oi-question' },
-  { $formkit: 'formDatePicker', name: 'range', label: 'Date Range', selectionMode: 'range', manualInput: false },
-  { $formkit: 'formDatePicker', name: 'multiple', label: 'Multiple Dates', selectionMode: 'multiple', manualInput: false },
+  {
+    $formkit: 'formDatePicker',
+    id: 'basic',
+    name: 'basic',
+    label: 'Basic',
+    placeholder: 'MM/DD/YYYY',
+    validation: 'required'
+  },
+  {
+    $formkit: 'formDatePicker',
+    name: 'styled',
+    label: 'Styled',
+    style: { background: 'gray' },
+    class: 'customClass',
+    showIcon: true
+  },
+  {
+    $formkit: 'formDatePicker',
+    name: 'icon',
+    label: 'Custom Icon',
+    dateFormat: 'yy-mm',
+    showIcon: true,
+    icon: 'oi oi-question'
+  },
+  {
+    $formkit: 'formDatePicker',
+    name: 'range',
+    label: 'Date Range',
+    selectionMode: 'range',
+    manualInput: false
+  },
+  {
+    $formkit: 'formDatePicker',
+    name: 'multiple',
+    label: 'Multiple Dates',
+    selectionMode: 'multiple',
+    manualInput: false
+  },
 ]
 const data = {}
 </script>

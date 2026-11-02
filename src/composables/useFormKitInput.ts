@@ -28,7 +28,13 @@ export function useFormKitInput(context: any) {
     return context?.unstyled ?? isGlobalUnstyledMode()
   })
 
-  const formKitCreateInputSlots = new Set(['label', 'help', 'messages', 'message', 'input'])
+  const formKitCreateInputSlots = new Set([
+    'label',
+    'help',
+    'messages',
+    'message',
+    'input',
+  ])
 
   // FormKit slots added by createInput() and should be passed to FormKit not to the wrapped component.
   const validSlotNames = computed(() =>
@@ -58,5 +64,15 @@ export function useFormKitInput(context: any) {
     },
   })
 
-  return { isInvalid, validSlotNames, styleClass, unstyled, handleBlur, handleChange, handleInput, handleSelect, modelValue }
+  return {
+    isInvalid,
+    validSlotNames,
+    styleClass,
+    unstyled,
+    handleBlur,
+    handleChange,
+    handleInput,
+    handleSelect,
+    modelValue,
+  }
 }

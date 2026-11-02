@@ -90,7 +90,10 @@ const schema = reactive(
   ],
 )
 
-const data = ref({ date: new Date(), text: 'Lorem Ipsum' })
+const data = ref({
+  date: new Date(),
+  text: 'Lorem Ipsum',
+})
 
 const { showSuccessMessage } = useMessages()
 async function submitHandler(data: any) {

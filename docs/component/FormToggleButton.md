@@ -14,8 +14,22 @@ A FormKit wrapper for OpenVue's ToggleButton component.
 <script setup>
 const schema = [
   { $formkit: 'formToggleButton', label: 'ToggleButton', name: 'toggleButton' },
-  { $formkit: 'formToggleButton', label: 'Second ToggleButton', name: 'toggleButtonRight', iconPos: 'right' },
-  { $formkit: 'formToggleButton', label: 'Custom ToggleButton', name: 'toggleButtonCustom', iconPos: 'right', onIcon: 'oi oi-plus', offIcon: 'oi oi-minus', onLabel: 'plus', offLabel: 'minus' },
+  {
+    $formkit: 'formToggleButton',
+    label: 'Second ToggleButton',
+    name: 'toggleButtonRight',
+    iconPos: 'right'
+  },
+  {
+    $formkit: 'formToggleButton',
+    label: 'Custom ToggleButton',
+    name: 'toggleButtonCustom',
+    iconPos: 'right',
+    onIcon: 'oi oi-plus',
+    offIcon: 'oi oi-minus',
+    onLabel: 'plus',
+    offLabel: 'minus'
+  },
 ]
 const data = {}
 </script>

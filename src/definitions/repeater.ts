@@ -10,7 +10,17 @@ function addButtonGroup(buttonGroupClass: string = '', buttonGroupItemClass: str
   // with the number of its row (`Delete item 2`), as the rows have the same buttons.
   const addActionButtonComponent = (onClick: string = '', icon: string = '', severity: string = '', render: string = 'true', disabled: string = 'false', label: string = ''): object => {
     const name = `${label} + " " + ($index + 1)`
-    return addElement('div', [addComponent('Button', { 'onClick': onClick, icon, severity, disabled, 'size': buttonSize, 'aria-label': name, 'title': name })], { class: buttonGroupItemClass }, render)
+    return addElement('div', [
+      addComponent('Button', {
+        'onClick': onClick,
+        icon,
+        severity,
+        disabled,
+        'size': buttonSize,
+        'aria-label': name,
+        'title': name,
+      }),
+    ], { class: buttonGroupItemClass }, render)
   }
 
   return addElement('div', [
@@ -24,7 +34,13 @@ function addButtonGroup(buttonGroupClass: string = '', buttonGroupItemClass: str
 
 function addInsertButton(label: string = 'Add Item', icon: string = 'i-lucide-plus', styleClass: string = '', buttonSize: string, render: string = 'true') {
   return addElement('div', [
-    addComponent('Button', { onClick: '$insertNode($node)', label, icon, size: buttonSize, disabled: '$node.value.length > $maxItems -1' }),
+    addComponent('Button', {
+      onClick: '$insertNode($node)',
+      label,
+      icon,
+      size: buttonSize,
+      disabled: '$node.value.length > $maxItems -1',
+    }),
   ], { class: styleClass }, render)
 }
 
@@ -34,7 +50,12 @@ function addUndoBar(render: string = 'true') {
   return addElement('div', [
     addElement('div', [
       addElement('span', ['$deletedLabel']),
-      addComponent('Button', { onClick: '$undoRemoveNode($node)', label: '$undoLabel', size: 'small', variant: 'text' }),
+      addComponent('Button', {
+        onClick: '$undoRemoveNode($node)',
+        label: '$undoLabel',
+        size: 'small',
+        variant: 'text',
+      }),
     ], { class: 'formkit-repeater-undo' }, '$removedItem'),
   ], { 'role': 'status', 'aria-live': 'polite' }, render)
 }
@@ -72,7 +93,38 @@ export const formRepeaterDefinition: FormKitTypeDefinition = createInput(
     ], true, 'true', { value: '$value', validation: '$repeaterValidation' }),
   ], { class: '$internalListClass', id: '$internalListId' }, true),
   {
-    props: ['insertButtonLabel', 'insertButtonClass', 'insertButtonSize', 'alwaysDisplayInsertButton', 'newItem', 'listClass', 'listItemClass', 'hideButtonGroup', 'hideMoveButtons', 'buttonGroupClass', 'buttonGroupItemClass', 'buttonSize', 'displayCloneButton', 'displayAddButton', 'displayDeleteButton', 'minItems', 'maxItems', 'moveUpLabel', 'moveDownLabel', 'deleteLabel', 'cloneLabel', 'addLabel', 'undoDelete', 'undoLabel', 'deletedLabel', 'undoTimeout', 'displayDragHandle', 'draggable', 'dragHandleClass', 'dragHandleIconClass'],
+    props: [
+      'insertButtonLabel',
+      'insertButtonClass',
+      'insertButtonSize',
+      'alwaysDisplayInsertButton',
+      'newItem',
+      'listClass',
+      'listItemClass',
+      'hideButtonGroup',
+      'hideMoveButtons',
+      'buttonGroupClass',
+      'buttonGroupItemClass',
+      'buttonSize',
+      'displayCloneButton',
+      'displayAddButton',
+      'displayDeleteButton',
+      'minItems',
+      'maxItems',
+      'moveUpLabel',
+      'moveDownLabel',
+      'deleteLabel',
+      'cloneLabel',
+      'addLabel',
+      'undoDelete',
+      'undoLabel',
+      'deletedLabel',
+      'undoTimeout',
+      'displayDragHandle',
+      'draggable',
+      'dragHandleClass',
+      'dragHandleIconClass',
+    ],
     features: [addRepeaterHandler],
   },
 )
@@ -116,9 +168,15 @@ function addRepeaterHandler(node: FormKitNode): void {
       node.context.draggable = !!node.context.draggable
       node.context.renderDragHandle = !!node.context.displayDragHandle
       node.context.dragHandleIconClass = node.context.dragHandleIconClass || 'oi oi-bars'
-      node.context.internalDragHandleClass = node.context.dragHandleClass ? `formkit-repeater-drag-handle ${node.context.dragHandleClass}` : 'formkit-repeater-drag-handle'
-      node.context.internalListClass = node.context.listClass ? `formkit-items ${node.context.listClass}` : 'formkit-items'
-      node.context.internalListItemClass = node.context.listItemClass ? `formkit-item ${node.context.listItemClass}` : 'formkit-item'
+      node.context.internalDragHandleClass = node.context.dragHandleClass
+        ? `formkit-repeater-drag-handle ${node.context.dragHandleClass}`
+        : 'formkit-repeater-drag-handle'
+      node.context.internalListClass = node.context.listClass
+        ? `formkit-items ${node.context.listClass}`
+        : 'formkit-items'
+      node.context.internalListItemClass = node.context.listItemClass
+        ? `formkit-item ${node.context.listItemClass}`
+        : 'formkit-item'
       node.context.moveUpLabel = node.context.moveUpLabel || 'Move item up'
       node.context.moveDownLabel = node.context.moveDownLabel || 'Move item down'
       node.context.deleteLabel = node.context.deleteLabel || 'Delete item'
@@ -127,13 +185,21 @@ function addRepeaterHandler(node: FormKitNode): void {
       node.context.undoDelete = !!node.context.undoDelete
       node.context.undoLabel = node.context.undoLabel || 'Undo'
       node.context.deletedLabel = node.context.deletedLabel || 'Item deleted'
-      node.context.undoTimeout = node.context.undoTimeout !== undefined ? Number(node.context.undoTimeout) : 8000
+      node.context.undoTimeout = node.context.undoTimeout !== undefined
+        ? Number(node.context.undoTimeout)
+        : 8000
       node.context.removedItem = undefined
-      node.context.minItems = node.context.minItems !== undefined ? node.context.minItems : 0
-      node.context.maxItems = node.context.maxItems !== undefined ? node.context.maxItems : Number.POSITIVE_INFINITY
+      node.context.minItems = node.context.minItems !== undefined
+        ? node.context.minItems
+        : 0
+      node.context.maxItems = node.context.maxItems !== undefined
+        ? node.context.maxItems
+        : Number.POSITIVE_INFINITY
       // `+` keeps the rule running on an empty list: FormKit skips every other rule on an empty
       // value, so a repeater below its `minItems` would otherwise pass as valid.
-      node.context.repeaterValidation = [['+length', node.context.minItems, node.context.maxItems]]
+      node.context.repeaterValidation = [
+        ['+length', node.context.minItems, node.context.maxItems],
+      ]
       node.context.internalListId = `formkit-items-${instanceId}`
 
       node.context.getListItemClass = (index: number): string => {
@@ -148,7 +214,10 @@ function addRepeaterHandler(node: FormKitNode): void {
 
       node.context.insertNode = (parentNode: any) => (): void => {
         if (parentNode && Array.isArray(parentNode._value)) {
-          const newArray: any[] = [makeNewItem(), ...parentNode.value]
+          const newArray: any[] = [
+            makeNewItem(),
+            ...parentNode.value,
+          ]
           parentNode.input(newArray, false)
         }
       }
@@ -161,7 +230,9 @@ function addRepeaterHandler(node: FormKitNode): void {
             context.removedItem = { index, item: removed }
             // a timeout of 0 keeps the undo until another row is deleted or it is used
             const timeout = Number(context.undoTimeout)
-            undoTimer = timeout > 0 ? setTimeout(forgetRemoved, timeout) : undefined
+            undoTimer = timeout > 0
+              ? setTimeout(forgetRemoved, timeout)
+              : undefined
           }
         }
       }
@@ -225,7 +296,9 @@ function addRepeaterHandler(node: FormKitNode): void {
         }
 
         const sourceFromEvent = Number.parseInt(event?.dataTransfer?.getData('text/plain') || '', 10)
-        const sourceIndex = Number.isInteger(sourceFromEvent) ? sourceFromEvent : dragStartIndex
+        const sourceIndex = Number.isInteger(sourceFromEvent)
+          ? sourceFromEvent
+          : dragStartIndex
 
         if (sourceIndex === null || sourceIndex === targetIndex) {
           context.dragOverIndex = null

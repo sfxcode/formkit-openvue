@@ -32,39 +32,45 @@ export const sections: MenuSection[] = [
     label: 'Components',
     icon: 'objects-column',
     columns: [
-      [{
-        label: 'Text',
-        pages: [
-          { label: 'InputText', icon: 'pencil', route: '/inputs/inputText' },
-          { label: 'Textarea', icon: 'align-left', route: '/inputs/textArea' },
-          { label: 'Password', icon: 'lock', route: '/inputs/password' },
-          { label: 'InputMask', icon: 'id-card', route: '/inputs/inputMask' },
-          { label: 'InputOtp', icon: 'shield', route: '/inputs/inputOtp' },
-          { label: 'AutoComplete', icon: 'search', route: '/inputs/autoComplete' },
-        ],
-      }],
-      [{
-        label: 'Number & Date',
-        pages: [
-          { label: 'InputNumber', icon: 'hashtag', route: '/inputs/inputNumber' },
-          { label: 'DatePicker', icon: 'calendar', route: '/inputs/datePicker' },
-          { label: 'Slider', icon: 'sliders-h', route: '/inputs/slider' },
-          { label: 'Knob', icon: 'sync', route: '/inputs/knob' },
-          { label: 'Rating', icon: 'star', route: '/inputs/rating' },
-        ],
-      }],
-      [{
-        label: 'Choice',
-        pages: [
-          { label: 'Select', icon: 'chevron-down', route: '/inputs/select' },
-          { label: 'MultiSelect', icon: 'list-check', route: '/inputs/multiSelect' },
-          { label: 'Listbox', icon: 'list', route: '/inputs/listbox' },
-          { label: 'CascadeSelect', icon: 'share-alt', route: '/inputs/cascadeSelect' },
-          { label: 'TreeSelect', icon: 'sitemap', route: '/inputs/treeSelect' },
-          { label: 'RadioButton', icon: 'circle', route: '/inputs/radioButton' },
-          { label: 'SelectButton', icon: 'stop', route: '/inputs/selectButton' },
-        ],
-      }],
+      [
+        {
+          label: 'Text',
+          pages: [
+            { label: 'InputText', icon: 'pencil', route: '/inputs/inputText' },
+            { label: 'Textarea', icon: 'align-left', route: '/inputs/textArea' },
+            { label: 'Password', icon: 'lock', route: '/inputs/password' },
+            { label: 'InputMask', icon: 'id-card', route: '/inputs/inputMask' },
+            { label: 'InputOtp', icon: 'shield', route: '/inputs/inputOtp' },
+            { label: 'AutoComplete', icon: 'search', route: '/inputs/autoComplete' },
+          ],
+        },
+      ],
+      [
+        {
+          label: 'Number & Date',
+          pages: [
+            { label: 'InputNumber', icon: 'hashtag', route: '/inputs/inputNumber' },
+            { label: 'DatePicker', icon: 'calendar', route: '/inputs/datePicker' },
+            { label: 'Slider', icon: 'sliders-h', route: '/inputs/slider' },
+            { label: 'Knob', icon: 'sync', route: '/inputs/knob' },
+            { label: 'Rating', icon: 'star', route: '/inputs/rating' },
+          ],
+        },
+      ],
+      [
+        {
+          label: 'Choice',
+          pages: [
+            { label: 'Select', icon: 'chevron-down', route: '/inputs/select' },
+            { label: 'MultiSelect', icon: 'list-check', route: '/inputs/multiSelect' },
+            { label: 'Listbox', icon: 'list', route: '/inputs/listbox' },
+            { label: 'CascadeSelect', icon: 'share-alt', route: '/inputs/cascadeSelect' },
+            { label: 'TreeSelect', icon: 'sitemap', route: '/inputs/treeSelect' },
+            { label: 'RadioButton', icon: 'circle', route: '/inputs/radioButton' },
+            { label: 'SelectButton', icon: 'stop', route: '/inputs/selectButton' },
+          ],
+        },
+      ],
       [
         {
           label: 'Toggle',
@@ -88,29 +94,33 @@ export const sections: MenuSection[] = [
     label: 'More',
     icon: 'ellipsis-h',
     columns: [
-      [{
-        label: 'Output Components',
-        pages: [
-          { label: 'Output Text', icon: 'align-left', route: '/outputs/outputText' },
-          { label: 'Output Number', icon: 'hashtag', route: '/outputs/outputNumber' },
-          { label: 'Output Date', icon: 'calendar', route: '/outputs/outputDate' },
-          { label: 'Output Link', icon: 'link', route: '/outputs/outputLink' },
-          { label: 'Output List', icon: 'list', route: '/outputs/outputList' },
-          { label: 'Output Boolean', icon: 'check', route: '/outputs/outputBoolean' },
-          { label: 'Output Duration', icon: 'clock', route: '/outputs/outputDuration' },
-          { label: 'Output Reference', icon: 'bookmark', route: '/outputs/outputReference' },
-        ],
-      }],
-      [{
-        label: 'Styling',
-        pages: [
-          { label: 'Basic', icon: 'palette', route: '/styling/base' },
-          { label: 'Pass Through', icon: 'cog', route: '/styling/passThrough' },
-          { label: 'FormKit Class', icon: 'code', route: '/styling/class' },
-          { label: 'Grid', icon: 'th-large', route: '/styling/grid' },
-          { label: 'Horizontal', icon: 'arrows-h', route: '/styling/horizontal' },
-        ],
-      }],
+      [
+        {
+          label: 'Output Components',
+          pages: [
+            { label: 'Output Text', icon: 'align-left', route: '/outputs/outputText' },
+            { label: 'Output Number', icon: 'hashtag', route: '/outputs/outputNumber' },
+            { label: 'Output Date', icon: 'calendar', route: '/outputs/outputDate' },
+            { label: 'Output Link', icon: 'link', route: '/outputs/outputLink' },
+            { label: 'Output List', icon: 'list', route: '/outputs/outputList' },
+            { label: 'Output Boolean', icon: 'check', route: '/outputs/outputBoolean' },
+            { label: 'Output Duration', icon: 'clock', route: '/outputs/outputDuration' },
+            { label: 'Output Reference', icon: 'bookmark', route: '/outputs/outputReference' },
+          ],
+        },
+      ],
+      [
+        {
+          label: 'Styling',
+          pages: [
+            { label: 'Basic', icon: 'palette', route: '/styling/base' },
+            { label: 'Pass Through', icon: 'cog', route: '/styling/passThrough' },
+            { label: 'FormKit Class', icon: 'code', route: '/styling/class' },
+            { label: 'Grid', icon: 'th-large', route: '/styling/grid' },
+            { label: 'Horizontal', icon: 'arrows-h', route: '/styling/horizontal' },
+          ],
+        },
+      ],
       [
         {
           label: 'Data',
@@ -190,8 +200,14 @@ export function searchPages(query: string, limit = 12): Page[] {
     if (!words.every(word => haystack.includes(word) || haystackCompact.includes(word)))
       return []
     const labelCompact = label.replace(/ /g, '')
-    const rank = label.startsWith(search) || labelCompact.startsWith(compact) ? 0 : label.includes(search) || labelCompact.includes(compact) ? 1 : 2
-    return [{ page, rank }]
+    const rank = label.startsWith(search) || labelCompact.startsWith(compact)
+      ? 0
+      : label.includes(search) || labelCompact.includes(compact)
+        ? 1
+        : 2
+    return [
+      { page, rank },
+    ]
   })
 
   return ranked

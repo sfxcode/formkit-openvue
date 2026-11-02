@@ -20,9 +20,40 @@ const options = [
   { label: 'Every day', value: 'daily' },
 ]
 const schema = [
-  { $formkit: 'formListbox', name: 'cookie_notice', label: 'Cookie notice', value: 'hourly', optionLabel: 'label', optionValue: 'value', options, help: 'Cookie notice frequency ?' },
-  { $formkit: 'formListbox', name: 'styled', label: 'Styled and Disabled', value: 'hourly', style: { background: 'gray' }, class: 'customClass', optionLabel: 'label', optionValue: 'value', options, disabled: true },
-  { $formkit: 'formListbox', name: 'custom', label: 'With Multiple Select and Filter', multiple: true, filter: true, placeholder: 'Please select', optionLabel: 'label', optionValue: 'value', options, validation: 'required' },
+  {
+    $formkit: 'formListbox',
+    name: 'cookie_notice',
+    label: 'Cookie notice',
+    value: 'hourly',
+    optionLabel: 'label',
+    optionValue: 'value',
+    options,
+    help: 'Cookie notice frequency ?'
+  },
+  {
+    $formkit: 'formListbox',
+    name: 'styled',
+    label: 'Styled and Disabled',
+    value: 'hourly',
+    style: { background: 'gray' },
+    class: 'customClass',
+    optionLabel: 'label',
+    optionValue: 'value',
+    options,
+    disabled: true
+  },
+  {
+    $formkit: 'formListbox',
+    name: 'custom',
+    label: 'With Multiple Select and Filter',
+    multiple: true,
+    filter: true,
+    placeholder: 'Please select',
+    optionLabel: 'label',
+    optionValue: 'value',
+    options,
+    validation: 'required'
+  },
 ]
 const data = {}
 </script>

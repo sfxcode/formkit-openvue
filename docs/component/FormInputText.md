@@ -13,10 +13,38 @@ A FormKit wrapper for OpenVue's InputText component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formInputText', name: 'name', label: 'Basic', validation: 'required', help: 'Some Help Text' },
-  { $formkit: 'formInputText', name: 'telephone', placeholder: 'telephone', help: 'Input Type: tel', label: 'Telephone', inputType: 'tel' },
-  { $formkit: 'formInputText', id: 'icon', name: 'iconLeft', label: 'Icon Left', placeholder: 'icon', iconPrefix: 'oi oi-check' },
-  { $formkit: 'formInputText', name: 'iconRight', label: 'Icon Right (Disabled) - smize: small', help: 'Right Icon Demo', iconSuffix: 'oi oi-check', disabled: true, size: 'small' },
+  {
+    $formkit: 'formInputText',
+    name: 'name',
+    label: 'Basic',
+    validation: 'required',
+    help: 'Some Help Text'
+  },
+  {
+    $formkit: 'formInputText',
+    name: 'telephone',
+    placeholder: 'telephone',
+    help: 'Input Type: tel',
+    label: 'Telephone',
+    inputType: 'tel'
+  },
+  {
+    $formkit: 'formInputText',
+    id: 'icon',
+    name: 'iconLeft',
+    label: 'Icon Left',
+    placeholder: 'icon',
+    iconPrefix: 'oi oi-check'
+  },
+  {
+    $formkit: 'formInputText',
+    name: 'iconRight',
+    label: 'Icon Right (Disabled) - smize: small',
+    help: 'Right Icon Demo',
+    iconSuffix: 'oi oi-check',
+    disabled: true,
+    size: 'small'
+  },
 ]
 const data = { name: 'Harry Potter', iconLeft: 'Some Text ...', iconRight: 'Another Text ...' }
 </script>

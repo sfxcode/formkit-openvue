@@ -9,7 +9,10 @@ const data = reactive(schemaToEditorData(
   {
     $formkit: 'formInputText',
     name: 'field',
-    options: [{ label: 'Option 1', value: 'option1' }, { label: 'Option 2', value: 'option2' }],
+    options: [
+      { label: 'Option 1', value: 'option1' },
+      { label: 'Option 2', value: 'option2' },
+    ],
   },
 ))
 

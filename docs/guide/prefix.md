@@ -12,7 +12,12 @@ To prevent the behavior for this framework the property names are switched to **
 
 ```ts
 export const formOutputTextDefinition: FormKitTypeDefinition = createInput(FormOutputText, {
-  props: ['prefix', 'suffix', 'iconPrefix', 'iconSuffix'],
+  props: [
+    'prefix',
+    'suffix',
+    'iconPrefix',
+    'iconSuffix'
+  ],
 })
 ```
 

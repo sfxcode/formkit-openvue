@@ -12,7 +12,10 @@ const routes = generatedRoutes
 initTheme()
 
 const app = createApp(App)
-const router = createRouter({ history: createWebHistory(import.meta.env.BASE_URL), routes })
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+})
 app.use(router)
 
 // every page gets its own document title

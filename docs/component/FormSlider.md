@@ -13,8 +13,26 @@ A FormKit wrapper for OpenVue's Slider component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formSlider', name: 'slider', label: 'Use Slider', class: 'mt-2 w-72', min: 5, max: 100, step: 5, value: 10, validation: 'min:20|max:80' },
-  { $formkit: 'formSlider', name: 'sliderVertical', label: 'Use Slider', min: 1, max: 10, value: 4, orientation: 'vertical' },
+  {
+    $formkit: 'formSlider',
+    name: 'slider',
+    label: 'Use Slider',
+    class: 'mt-2 w-72',
+    min: 5,
+    max: 100,
+    step: 5,
+    value: 10,
+    validation: 'min:20|max:80'
+  },
+  {
+    $formkit: 'formSlider',
+    name: 'sliderVertical',
+    label: 'Use Slider',
+    min: 1,
+    max: 10,
+    value: 4,
+    orientation: 'vertical'
+  },
 ]
 const data = {}
 </script>

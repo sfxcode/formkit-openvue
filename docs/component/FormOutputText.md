@@ -20,13 +20,43 @@ function suffixClicked() {
 }
 const schema = [
   { $formkit: 'formOutputText', name: 'name', label: 'Basic' },
-  { $formkit: 'formOutputText', name: 'toTranslate', isTranslationKey: true, label: 'Translated' },
+  {
+    $formkit: 'formOutputText',
+    name: 'toTranslate',
+    isTranslationKey: true,
+    label: 'Translated'
+  },
   { $formkit: 'formOutputText', name: 'html', label: 'HTML as Text (Default)' },
-  { $formkit: 'formOutputText', name: 'html', html: true, label: 'HTML Output (v-html)', help: 'Only use on trusted content or sanitize after input !' },
-  { $formkit: 'formOutputText', id: 'icon', name: 'iconLeft', label: 'Icon Left', iconPrefix: 'oi oi-check', onIconPrefixClicked: prefixClicked },
-  { $formkit: 'formOutputText', name: 'iconRight', label: 'Icon Right', iconSuffix: 'oi oi-check text-yellow-500', onIconSuffixClicked: suffixClicked },
+  {
+    $formkit: 'formOutputText',
+    name: 'html',
+    html: true,
+    label: 'HTML Output (v-html)',
+    help: 'Only use on trusted content or sanitize after input !'
+  },
+  {
+    $formkit: 'formOutputText',
+    id: 'icon',
+    name: 'iconLeft',
+    label: 'Icon Left',
+    iconPrefix: 'oi oi-check',
+    onIconPrefixClicked: prefixClicked
+  },
+  {
+    $formkit: 'formOutputText',
+    name: 'iconRight',
+    label: 'Icon Right',
+    iconSuffix: 'oi oi-check text-yellow-500',
+    onIconSuffixClicked: suffixClicked
+  },
 ]
-const data = { name: 'Harry Potter', toTranslate: 'sample', iconLeft: 'Some Text ...', iconRight: 'Another Text ...', html: '<b style="color: gold">Bold Hello World</b>' }
+const data = {
+  name: 'Harry Potter',
+  toTranslate: 'sample',
+  iconLeft: 'Some Text ...',
+  iconRight: 'Another Text ...',
+  html: '<b style="color: gold">Bold Hello World</b>'
+}
 </script>
 
 <template>

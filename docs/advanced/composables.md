@@ -14,7 +14,13 @@ Sometimes it provides a little more concise syntax or provide the needed helper 
 const { addComponent } = useFormKitSchema()
 
 function addButtonComponent(onClick: string = '', label: string = '', icon: string = '', severity: string = '', render: string = 'true', styleClass: string = 'p-button-sm ml-2'): object {
-  return addComponent('Button', { onClick, label, icon, class: styleClass, severity }, render)
+  return addComponent('Button', {
+    onClick,
+    label,
+    icon,
+    class: styleClass,
+    severity
+  }, render)
 }
 ```
 

@@ -106,7 +106,10 @@ const schema
 
   ]
 
-const data = { list1: ['Hello', 'World'], list2: ['FormKit', 'meets', 'OpenVue'] }
+const data = {
+  list1: ['Hello', 'World'],
+  list2: ['FormKit', 'meets', 'OpenVue'],
+}
 </script>
 
 <template>

@@ -19,7 +19,9 @@ const { hasPrefix, hasPrefixIcon, hasSuffix, hasSuffixIcon } = useFormKitSection
 
 const reference = computed(() => {
   const value = props.context?._value ?? ''
-  let result = props.context?.reference ? `${props.context?.reference}` : 'reference-must-be-set'
+  let result = props.context?.reference
+    ? `${props.context?.reference}`
+    : 'reference-must-be-set'
   if (!props.context?.internal && !result.includes('http'))
     result = `https://${result}`
   return result.replace(/\{\{.*\}\}/, value)

@@ -13,8 +13,21 @@ A FormKit wrapper for OpenVue's InputOtp component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formInputOtp', name: 'firstInput', label: 'Input OTP', length: 6, integerOnly: true, mask: true, variant: 'outlined' },
-  { $formkit: 'formInputOtp', name: 'secondInput', label: 'Input OTP', length: 3 },
+  {
+    $formkit: 'formInputOtp',
+    name: 'firstInput',
+    label: 'Input OTP',
+    length: 6,
+    integerOnly: true,
+    mask: true,
+    variant: 'outlined'
+  },
+  {
+    $formkit: 'formInputOtp',
+    name: 'secondInput',
+    label: 'Input OTP',
+    length: 3
+  },
 ]
 const data = {}
 </script>

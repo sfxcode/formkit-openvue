@@ -29,7 +29,10 @@ export function useInputEditorSchema() {
     { label: 'Submit', value: 'submit' },
   ]
 
-  function editorSchema(inputOptions: any[] = formInputOptions([...formInputNames, ...formOutputNames])) {
+  function editorSchema(inputOptions: any[] = formInputOptions([
+    ...formInputNames,
+    ...formOutputNames,
+  ])) {
     return [
       {
         $formkit: 'formSelect',

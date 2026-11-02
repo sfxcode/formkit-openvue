@@ -8,7 +8,12 @@ export function useFormKitRepeater() {
 
   function addInsertButton(label: string = 'Add', innerClass: string = '', outerClass: string = '', buttonClass: string = 'p-button-sm', iconClass: string = 'oi oi-plus') {
     return addElementsInOuterDiv([
-      addComponent('Button', { onClick: '$addNode($node)', label, class: buttonClass, icon: iconClass }, '$node.children.length == 0'),
+      addComponent('Button', {
+        onClick: '$addNode($node)',
+        label,
+        class: buttonClass,
+        icon: iconClass,
+      }, '$node.children.length == 0'),
     ], innerClass, outerClass)
   }
 
@@ -41,14 +46,23 @@ export function useFormKitRepeater() {
     }
     data.copyNode = (parentNode: any, index: number) => (): void => {
       const obj: any = parentNode.value[index]
-      const newArray: any[] = [...parentNode.value, { ...obj }]
+      const newArray: any[] = [
+        ...parentNode.value,
+        { ...obj },
+      ]
       parentNode.input(newArray, false)
     }
   }
 
   function addGroupButtons(innerClass: string = '', outerClass: string = 'col-4', label: string = 'Actions', help: string = '', render: string = 'true') {
     const addButtonComponent = (onClick: string = '', label: string = '', icon: string = '', severity: string = '', render: string = 'true', styleClass: string = 'p-button-sm'): object => {
-      return addComponent('Button', { onClick, label, icon, class: styleClass, severity }, render)
+      return addComponent('Button', {
+        onClick,
+        label,
+        icon,
+        class: styleClass,
+        severity,
+      }, render)
     }
 
     return addElementsInOuterDiv([

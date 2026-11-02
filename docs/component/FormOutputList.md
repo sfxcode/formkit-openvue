@@ -23,18 +23,74 @@ function convertValuesSortedReverse(value) {
 }
 const schema = [
   { $formkit: 'formOutputList', name: 'list1', label: 'Default Divider' },
-  { $formkit: 'formOutputList', name: 'list1', label: 'Custom Divider', divider: ' ' },
-  { $formkit: 'formOutputList', name: 'list2', label: 'Custom Divider with Prefix Icon', iconPrefix: 'oi oi-list', divider: ' - ' },
-  { $formkit: 'formOutputList', name: 'list1', label: 'Converter Function', convertValue: convertValues, divider: ' - ' },
-  { $formkit: 'formOutputList', name: 'list2', label: 'Converter Function - Char Count', convertValue: convertValuesCharCount },
-  { $formkit: 'formOutputList', name: 'list2', label: 'Converter Function - Sorted Reverse', convertValue: convertValuesSortedReverse },
-  { $formkit: 'formOutputList', name: 'list2', label: 'Use Chip Item Class', itemClass: 'p-chip-item', divider: ' ' },
-  { $formkit: 'formOutputList', name: 'list1', label: 'Use listStyle: span', listStyle: 'span' },
-  { $formkit: 'formOutputList', name: 'list2', label: 'Use listStyle: div', listStyle: 'div' },
-  { $formkit: 'formOutputList', name: 'list2', label: 'Use listStyle: ul', listStyle: 'ul' },
-  { $formkit: 'formOutputList', name: 'list2', label: 'Use listStyle: ol', listStyle: 'ol' },
+  {
+    $formkit: 'formOutputList',
+    name: 'list1',
+    label: 'Custom Divider',
+    divider: ' '
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list2',
+    label: 'Custom Divider with Prefix Icon',
+    iconPrefix: 'oi oi-list',
+    divider: ' - '
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list1',
+    label: 'Converter Function',
+    convertValue: convertValues,
+    divider: ' - '
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list2',
+    label: 'Converter Function - Char Count',
+    convertValue: convertValuesCharCount
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list2',
+    label: 'Converter Function - Sorted Reverse',
+    convertValue: convertValuesSortedReverse
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list2',
+    label: 'Use Chip Item Class',
+    itemClass: 'p-chip-item',
+    divider: ' '
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list1',
+    label: 'Use listStyle: span',
+    listStyle: 'span'
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list2',
+    label: 'Use listStyle: div',
+    listStyle: 'div'
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list2',
+    label: 'Use listStyle: ul',
+    listStyle: 'ul'
+  },
+  {
+    $formkit: 'formOutputList',
+    name: 'list2',
+    label: 'Use listStyle: ol',
+    listStyle: 'ol'
+  },
 ]
-const data = { list1: ['Hello', 'World'], list2: ['FormKit', 'meets', 'OpenVue'] }
+const data = {
+  list1: ['Hello', 'World'],
+  list2: ['FormKit', 'meets', 'OpenVue']
+}
 </script>
 
 <template>

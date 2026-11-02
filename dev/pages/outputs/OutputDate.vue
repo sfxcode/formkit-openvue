@@ -29,7 +29,11 @@ const schema
 
   ]
 
-const data = { date1: new Date(), date2: new Date(), date3: new Date() }
+const data = {
+  date1: new Date(),
+  date2: new Date(),
+  date3: new Date(),
+}
 </script>
 
 <template>

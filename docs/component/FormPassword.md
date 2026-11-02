@@ -13,8 +13,22 @@ A FormKit wrapper for OpenVue's Password component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formPassword', name: 'password', label: 'Password', help: 'Enter your new password', feedback: true },
-  { $formkit: 'formPassword', name: 'password_confirm', label: 'Confirm password', help: 'Enter your new password again.', validation: 'required|confirm', toggleMask: true, validationLabel: 'password confirmation' },
+  {
+    $formkit: 'formPassword',
+    name: 'password',
+    label: 'Password',
+    help: 'Enter your new password',
+    feedback: true
+  },
+  {
+    $formkit: 'formPassword',
+    name: 'password_confirm',
+    label: 'Confirm password',
+    help: 'Enter your new password again.',
+    validation: 'required|confirm',
+    toggleMask: true,
+    validationLabel: 'password confirmation'
+  },
 ]
 const data = {}
 </script>

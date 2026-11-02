@@ -13,11 +13,54 @@ A FormKit wrapper for OpenVue's InputNumber component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formInputNumber', name: 'firstNumber', label: 'Input Number', value: 1234, validation: 'max:10000', useGrouping: true, minFractionDigits: 2 },
-  { $formkit: 'formInputNumber', name: 'secondNumber', label: 'Input Number', value: 999, validation: 'min:900', useGrouping: false, minFractionDigits: 0 },
-  { $formkit: 'formInputNumber', name: 'fixedNumber', label: 'Input Number', value: 1234, class: 'customClass', style: { background: 'gray' }, readonly: true },
-  { $formkit: 'formInputNumber', name: 'numberInputWithMinNumber', label: 'Number Input with Min Value', min: 10 },
-  { $formkit: 'formInputNumber', name: 'customizedInputNumber', label: 'Customized Input Number', placeholder: 'Enter currency', useGrouping: true, minFractionDigits: 2, maxFractionDigits: 4, mode: 'currency', currency: 'USD', locale: 'en-US', showButtons: true, buttonLayout: 'horizontal', step: 0.01 },
+  {
+    $formkit: 'formInputNumber',
+    name: 'firstNumber',
+    label: 'Input Number',
+    value: 1234,
+    validation: 'max:10000',
+    useGrouping: true,
+    minFractionDigits: 2
+  },
+  {
+    $formkit: 'formInputNumber',
+    name: 'secondNumber',
+    label: 'Input Number',
+    value: 999,
+    validation: 'min:900',
+    useGrouping: false,
+    minFractionDigits: 0
+  },
+  {
+    $formkit: 'formInputNumber',
+    name: 'fixedNumber',
+    label: 'Input Number',
+    value: 1234,
+    class: 'customClass',
+    style: { background: 'gray' },
+    readonly: true
+  },
+  {
+    $formkit: 'formInputNumber',
+    name: 'numberInputWithMinNumber',
+    label: 'Number Input with Min Value',
+    min: 10
+  },
+  {
+    $formkit: 'formInputNumber',
+    name: 'customizedInputNumber',
+    label: 'Customized Input Number',
+    placeholder: 'Enter currency',
+    useGrouping: true,
+    minFractionDigits: 2,
+    maxFractionDigits: 4,
+    mode: 'currency',
+    currency: 'USD',
+    locale: 'en-US',
+    showButtons: true,
+    buttonLayout: 'horizontal',
+    step: 0.01
+  },
 ]
 const data = {}
 </script>

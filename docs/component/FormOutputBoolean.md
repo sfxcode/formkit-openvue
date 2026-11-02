@@ -16,10 +16,34 @@ const schema = [
   { $formkit: 'formOutputBoolean', name: 'trueValue', label: 'Default' },
   { $formkit: 'formOutputBoolean', name: 'trueValue', prefix: 'Boolean Value:' },
   { $formkit: 'formOutputBoolean', name: 'falseValue', label: 'False Example' },
-  { $formkit: 'formOutputBoolean', name: 'trueValue', label: 'True with custom Text', trueValue: 'Sure' },
-  { $formkit: 'formOutputBoolean', name: 'falseValue', label: 'False with custom Text', falseValue: 'Never' },
-  { $formkit: 'formOutputBoolean', name: 'trueValue', label: 'Conditional true - only Icon', if: '$trueValue', trueValue: '', iconSuffix: 'oi oi-check' },
-  { $formkit: 'formOutputBoolean', name: 'falseValue', label: 'Conditional false - only Icon', if: '!$falseValue', falseValue: '', iconSuffix: 'oi oi-minus' },
+  {
+    $formkit: 'formOutputBoolean',
+    name: 'trueValue',
+    label: 'True with custom Text',
+    trueValue: 'Sure'
+  },
+  {
+    $formkit: 'formOutputBoolean',
+    name: 'falseValue',
+    label: 'False with custom Text',
+    falseValue: 'Never'
+  },
+  {
+    $formkit: 'formOutputBoolean',
+    name: 'trueValue',
+    label: 'Conditional true - only Icon',
+    if: '$trueValue',
+    trueValue: '',
+    iconSuffix: 'oi oi-check'
+  },
+  {
+    $formkit: 'formOutputBoolean',
+    name: 'falseValue',
+    label: 'Conditional false - only Icon',
+    if: '!$falseValue',
+    falseValue: '',
+    iconSuffix: 'oi oi-minus'
+  },
 ]
 const data = { trueValue: true, falseValue: false }
 </script>

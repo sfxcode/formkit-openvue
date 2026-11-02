@@ -13,8 +13,23 @@ A FormKit wrapper for OpenVue's Knob component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formKnob', name: 'knob', label: 'Use Knob', value: 50, validation: 'min:20|max:80' },
-  { $formkit: 'formKnob', name: 'custom', label: 'Customized Knob', min: 42, max: 98, step: 4, value: 58, showValue: false },
+  {
+    $formkit: 'formKnob',
+    name: 'knob',
+    label: 'Use Knob',
+    value: 50,
+    validation: 'min:20|max:80'
+  },
+  {
+    $formkit: 'formKnob',
+    name: 'custom',
+    label: 'Customized Knob',
+    min: 42,
+    max: 98,
+    step: 4,
+    value: 58,
+    showValue: false
+  },
 ]
 const data = {}
 </script>

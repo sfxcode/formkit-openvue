@@ -3,7 +3,12 @@ import { cloneJson, parseJson } from '../dev/utils/json'
 
 describe('parseJson', () => {
   it('parses the text of the editor', () => {
-    expect(parseJson('{"a":[1,2]}')).toEqual({ ok: true, value: { a: [1, 2] } })
+    expect(parseJson('{"a":[1,2]}')).toEqual({
+      ok: true,
+      value: {
+        a: [1, 2],
+      },
+    })
     expect(parseJson('[]')).toEqual({ ok: true, value: [] })
     expect(parseJson('"text"')).toEqual({ ok: true, value: 'text' })
     expect(parseJson('0')).toEqual({ ok: true, value: 0 })
@@ -15,7 +20,10 @@ describe('parseJson', () => {
     expect(parseJson(value)).toEqual({ ok: true, value })
     expect((parseJson(value) as { value: unknown }).value).toBe(value)
     expect(parseJson(null)).toEqual({ ok: true, value: null })
-    expect(parseJson([1])).toEqual({ ok: true, value: [1] })
+    expect(parseJson([1])).toEqual({
+      ok: true,
+      value: [1],
+    })
   })
 
   it('reports invalid text with the reason instead of throwing', () => {
@@ -36,7 +44,13 @@ describe('parseJson', () => {
 
 describe('cloneJson', () => {
   it('copies without sharing anything with the original', () => {
-    const original = { name: 'Sword', tags: ['sharp'], stats: { damage: [1, 2] } }
+    const original = {
+      name: 'Sword',
+      tags: ['sharp'],
+      stats: {
+        damage: [1, 2],
+      },
+    }
     const copy = cloneJson(original)
 
     expect(copy).toEqual(original)
@@ -48,7 +62,13 @@ describe('cloneJson', () => {
   })
 
   it('copies arrays and primitives', () => {
-    expect(cloneJson([1, { a: 2 }])).toEqual([1, { a: 2 }])
+    expect(cloneJson([
+      1,
+      { a: 2 },
+    ])).toEqual([
+      1,
+      { a: 2 },
+    ])
     expect(cloneJson('text')).toBe('text')
     expect(cloneJson(5)).toBe(5)
   })

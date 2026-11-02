@@ -11,10 +11,18 @@ export function parseJson(value: unknown): JsonParseResult {
     return { ok: true, value }
 
   try {
-    return { ok: true, value: JSON.parse(value) }
+    return {
+      ok: true,
+      value: JSON.parse(value),
+    }
   }
   catch (error) {
-    return { ok: false, message: error instanceof Error ? error.message : String(error) }
+    return {
+      ok: false,
+      message: error instanceof Error
+        ? error.message
+        : String(error),
+    }
   }
 }
 

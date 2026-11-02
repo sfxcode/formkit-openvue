@@ -13,9 +13,26 @@ A FormKit wrapper for OpenVue's OutputNumber component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formOutputNumber', name: 'mumber1', format: 'decimal', label: 'Basic' },
-  { $formkit: 'formOutputNumber', name: 'number2', label: 'Icon Left', iconPrefix: 'oi oi-check' },
-  { $formkit: 'formOutputNumber', name: 'number3', format: 'currency', label: 'Icon Right', help: 'Right Icon Demo', iconSuffix: 'oi oi-check' },
+  {
+    $formkit: 'formOutputNumber',
+    name: 'mumber1',
+    format: 'decimal',
+    label: 'Basic'
+  },
+  {
+    $formkit: 'formOutputNumber',
+    name: 'number2',
+    label: 'Icon Left',
+    iconPrefix: 'oi oi-check'
+  },
+  {
+    $formkit: 'formOutputNumber',
+    name: 'number3',
+    format: 'currency',
+    label: 'Icon Right',
+    help: 'Right Icon Demo',
+    iconSuffix: 'oi oi-check'
+  },
 ]
 const data = { mumber1: 12.2, number2: 42.0, number3: 20000 }
 </script>

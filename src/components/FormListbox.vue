@@ -79,7 +79,9 @@ const transferSlotNames = computed(() => {
 // Transfer List functionality
 const optionValueKey = computed(() => {
   const key = props.context.optionValue
-  return typeof key === 'string' ? key : null
+  return typeof key === 'string'
+    ? key
+    : null
 })
 
 // Helper function to convert values to full objects
@@ -95,7 +97,9 @@ function valuesToObjects(values: any[]): any[] {
 }
 
 // Initialize targetItems by converting any values to full objects
-const initialTargetItems = Array.isArray(modelValue.value) ? valuesToObjects(modelValue.value) : []
+const initialTargetItems = Array.isArray(modelValue.value)
+  ? valuesToObjects(modelValue.value)
+  : []
 const targetItems = ref<any[]>(initialTargetItems)
 const sourceSelection = ref<any[]>([])
 const targetSelection = ref<any[]>([])
@@ -110,9 +114,13 @@ const sourceItems = computed(() => {
     return []
 
   return options.filter((item: any) => {
-    const itemValue = optionValueKey.value && typeof item === 'object' ? item[optionValueKey.value] : item
+    const itemValue = optionValueKey.value && typeof item === 'object'
+      ? item[optionValueKey.value]
+      : item
     return !targetItems.value.some((t: any) => {
-      const targetValue = optionValueKey.value && typeof t === 'object' ? t[optionValueKey.value] : t
+      const targetValue = optionValueKey.value && typeof t === 'object'
+        ? t[optionValueKey.value]
+        : t
       return targetValue === itemValue
     })
   })
@@ -127,7 +135,9 @@ const dragOverIndex = ref<number | null>(null)
 
 function getComparableValue(item: any): any {
   const valueKey = optionValueKey.value
-  return valueKey && typeof item === 'object' ? item?.[valueKey] : item
+  return valueKey && typeof item === 'object'
+    ? item?.[valueKey]
+    : item
 }
 
 function isSameOption(left: any, right: any): boolean {
@@ -139,16 +149,23 @@ function getUniqueItems(items: any[]): any[] {
 }
 
 function mergeUniqueItems(base: any[], toAdd: any[]): any[] {
-  return [...base, ...toAdd.filter(item => !base.some(candidate => isSameOption(candidate, item)))]
+  return [
+    ...base,
+    ...toAdd.filter(item => !base.some(candidate => isSameOption(candidate, item))),
+  ]
 }
 
 function getDraggableItems(origin: TransferList, option: any): any[] {
-  const selection = origin === 'source' ? sourceSelection.value : targetSelection.value
+  const selection = origin === 'source'
+    ? sourceSelection.value
+    : targetSelection.value
   if (!selection.length)
     return [option]
 
   const hasOptionSelected = selection.some(item => isSameOption(item, option))
-  return hasOptionSelected ? getUniqueItems(selection) : [option]
+  return hasOptionSelected
+    ? getUniqueItems(selection)
+    : [option]
 }
 
 function clearDragState() {
@@ -294,14 +311,20 @@ function transferSelected() {
   if (sourceSelection.value.length === 0)
     return
   // Use splice-based approach for better performance
-  targetItems.value = [...targetItems.value, ...sourceSelection.value]
+  targetItems.value = [
+    ...targetItems.value,
+    ...sourceSelection.value,
+  ]
   sourceSelection.value = []
 }
 
 function transferAll() {
   if (sourceItems.value.length === 0)
     return
-  targetItems.value = [...targetItems.value, ...sourceItems.value]
+  targetItems.value = [
+    ...targetItems.value,
+    ...sourceItems.value,
+  ]
   sourceSelection.value = []
 }
 
@@ -312,9 +335,13 @@ function removeSelected() {
   // Filter out selected items using splice-inspired logic
   const valueKey = optionValueKey.value
   targetItems.value = targetItems.value.filter((item: any) => {
-    const itemValue = valueKey && typeof item === 'object' ? item[valueKey] : item
+    const itemValue = valueKey && typeof item === 'object'
+      ? item[valueKey]
+      : item
     return !targetSelection.value.some((sel: any) => {
-      const selValue = valueKey && typeof sel === 'object' ? sel[valueKey] : sel
+      const selValue = valueKey && typeof sel === 'object'
+        ? sel[valueKey]
+        : sel
       return selValue === itemValue
     })
   })

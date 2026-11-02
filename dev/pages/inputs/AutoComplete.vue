@@ -4,12 +4,18 @@ const formAttributes = 'placeholder, multiple, typeahead, optionLabel, size, min
 const list = ['Hello', 'Hero', 'House', 'World']
 
 function search(query: string) {
-  return [...list.filter(i => i.toLowerCase().includes(query.toLowerCase())), query]
+  return [
+    ...list.filter(i => i.toLowerCase().includes(query.toLowerCase())),
+    query,
+  ]
 }
 
 async function asyncSearch(query: string) {
   await new Promise(resolve => setTimeout(resolve, 1000))
-  return [...list.filter(i => i.toLowerCase().includes(query.toLowerCase())), query]
+  return [
+    ...list.filter(i => i.toLowerCase().includes(query.toLowerCase())),
+    query,
+  ]
 }
 
 const userList = [
@@ -66,7 +72,9 @@ const schema
     },
   ]
 
-const data = { id: { id: '1', name: 'Tom', value: '123' } }
+const data = {
+  id: { id: '1', name: 'Tom', value: '123' },
+}
 </script>
 
 <template>

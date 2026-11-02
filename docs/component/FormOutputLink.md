@@ -14,7 +14,12 @@ A FormKit wrapper for OpenVue's OutputLink component.
 <script setup>
 const schema = [
   { $formkit: 'formOutputLink', name: 'link1', label: 'External Link' },
-  { $formkit: 'formOutputLink', name: 'link2', label: 'Ensure protocol and use custom title', title: 'Click me' },
+  {
+    $formkit: 'formOutputLink',
+    name: 'link2',
+    label: 'Ensure protocol and use custom title',
+    title: 'Click me'
+  },
 ]
 const data = { link1: 'https://github.com/sfxcode', link2: 'sfxcode.github.io/formkit-openvue' }
 </script>

@@ -18,10 +18,14 @@ const props = defineProps({
 const { hasPrefix, hasPrefixIcon, hasSuffix, hasSuffixIcon } = useFormKitSection(props.context)
 
 const url = computed(() => {
-  if (props.context?._value)
-    return props.context?._value.indexOf('http') > -1 ? props.context?._value : `https://${props.context?._value}`
-  else
+  if (props.context?._value) {
+    return props.context?._value.indexOf('http') > -1
+      ? props.context?._value
+      : `https://${props.context?._value}`
+  }
+  else {
     return ''
+  }
 })
 
 const title = computed(() => {

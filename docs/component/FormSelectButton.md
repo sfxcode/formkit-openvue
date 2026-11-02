@@ -23,8 +23,25 @@ const selectOptions2 = [
   { label: 'Chat', value: 'chat' },
 ]
 const schema = [
-  { $formkit: 'formSelectButton', label: 'SelectButton', name: 'selectButton', options: selectOptions, optionLabel: 'label', optionValue: 'value', value: 'MAYBE', unselectable: false },
-  { $formkit: 'formSelectButton', label: 'Contact options', name: 'selectButtonMultiple', optionLabel: 'label', optionValue: 'value', options: selectOptions2, multiple: true },
+  {
+    $formkit: 'formSelectButton',
+    label: 'SelectButton',
+    name: 'selectButton',
+    options: selectOptions,
+    optionLabel: 'label',
+    optionValue: 'value',
+    value: 'MAYBE',
+    unselectable: false
+  },
+  {
+    $formkit: 'formSelectButton',
+    label: 'Contact options',
+    name: 'selectButtonMultiple',
+    optionLabel: 'label',
+    optionValue: 'value',
+    options: selectOptions2,
+    multiple: true
+  },
 ]
 const data = {}
 </script>

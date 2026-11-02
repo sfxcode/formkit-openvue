@@ -59,5 +59,12 @@ export function useFormKitSchema() {
     return addElement('div', [wrapperDiv, helpDiv], { class: outerClass, style: 'position: relative;' }, render)
   }
 
-  return { addComponent, addElement, addGroup, addList, addListGroup, addElementsInOuterDiv }
+  return {
+    addComponent,
+    addElement,
+    addGroup,
+    addList,
+    addListGroup,
+    addElementsInOuterDiv,
+  }
 }

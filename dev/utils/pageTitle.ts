@@ -11,14 +11,20 @@ export interface RouteParts {
  * The home page (`index`) and a route without a name have no parts.
  */
 export function routeParts(routeName: string | symbol | null | undefined): RouteParts | undefined {
-  const segments = typeof routeName === 'string' ? routeName.split('-').filter(Boolean) : []
+  const segments = typeof routeName === 'string'
+    ? routeName.split('-').filter(Boolean)
+    : []
   if (segments.length === 0 || routeName === 'index')
     return undefined
 
-  const section = segments.length > 1 ? (segments.at(-2) as string) : undefined
+  const section = segments.length > 1
+    ? (segments.at(-2) as string)
+    : undefined
   return {
     page: segments.at(-1) as string,
-    section: section ? `${section.charAt(0).toUpperCase()}${section.slice(1)}` : undefined,
+    section: section
+      ? `${section.charAt(0).toUpperCase()}${section.slice(1)}`
+      : undefined,
   }
 }
 

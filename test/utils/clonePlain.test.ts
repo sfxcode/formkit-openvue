@@ -10,7 +10,13 @@ describe('clonePlain', () => {
   })
 
   it('deep-copies plain objects and arrays', () => {
-    const source = { name: 'Sword', tags: ['sharp'], stats: { damage: [1, 2] } }
+    const source = {
+      name: 'Sword',
+      tags: ['sharp'],
+      stats: {
+        damage: [1, 2],
+      },
+    }
     const copy = clonePlain(source)
 
     expect(copy).toEqual(source)
@@ -29,7 +35,9 @@ describe('clonePlain', () => {
     }
     const money = new Money(5)
     const date = new Date(0)
-    const map = new Map([['a', 1]])
+    const map = new Map([
+      ['a', 1],
+    ])
     const copy = clonePlain({ money, date, map })
 
     expect(copy.money).toBe(money)
@@ -39,7 +47,9 @@ describe('clonePlain', () => {
   })
 
   it('copies null-prototype objects as null-prototype objects', () => {
-    const source = Object.assign(Object.create(null), { a: { b: 1 } })
+    const source = Object.assign(Object.create(null), {
+      a: { b: 1 },
+    })
     const copy = clonePlain(source)
 
     expect(Object.getPrototypeOf(copy)).toBeNull()

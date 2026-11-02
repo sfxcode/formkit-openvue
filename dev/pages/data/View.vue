@@ -40,13 +40,33 @@ const outputSchema = ref(
     ], { class: 'grid grid-cols-1 md:grid-cols-2 : xl:grid-cols-3 gap-1' }),
   ],
 )
-const data = ref({ name: 'Tom', date: new Date(), number: 2222.33, text1: 'Ein Text', text2: 'Lorem Ipsum' })
+const data = ref({
+  name: 'Tom',
+  date: new Date(),
+  number: 2222.33,
+  text1: 'Ein Text',
+  text2: 'Lorem Ipsum',
+})
 
 function updateData() {
-  if (data.value.name === 'Tom')
-    data.value = { name: 'Tim', date: new Date(), number: 42, text1: 'Some Text', text2: 'Lorem Ipsum' }
-  else
-    data.value = { name: 'Tom', date: new Date(), number: 2222.33, text1: 'Hello', text2: 'World' }
+  if (data.value.name === 'Tom') {
+    data.value = {
+      name: 'Tim',
+      date: new Date(),
+      number: 42,
+      text1: 'Some Text',
+      text2: 'Lorem Ipsum',
+    }
+  }
+  else {
+    data.value = {
+      name: 'Tom',
+      date: new Date(),
+      number: 2222.33,
+      text1: 'Hello',
+      text2: 'World',
+    }
+  }
 }
 </script>
 

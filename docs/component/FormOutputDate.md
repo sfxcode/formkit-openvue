@@ -14,10 +14,26 @@ A FormKit wrapper for OpenVue's OutputDate component.
 <script setup>
 const schema = [
   { $formkit: 'formOutputDate', name: 'date1', label: 'Basic' },
-  { $formkit: 'formOutputDate', id: 'date2', name: 'date2', label: 'Icon Left', iconPrefix: 'oi oi-check' },
-  { $formkit: 'formOutputDate', name: 'date3', label: 'Icon Right', help: 'Right Icon Demo', iconSuffix: 'oi oi-check text-yellow-500' },
+  {
+    $formkit: 'formOutputDate',
+    id: 'date2',
+    name: 'date2',
+    label: 'Icon Left',
+    iconPrefix: 'oi oi-check'
+  },
+  {
+    $formkit: 'formOutputDate',
+    name: 'date3',
+    label: 'Icon Right',
+    help: 'Right Icon Demo',
+    iconSuffix: 'oi oi-check text-yellow-500'
+  },
 ]
-const data = { date1: new Date(), date2: new Date(), date3: new Date() }
+const data = {
+  date1: new Date(),
+  date2: new Date(),
+  date3: new Date()
+}
 </script>
 
 <template>

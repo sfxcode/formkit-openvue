@@ -31,5 +31,10 @@ export function useMessages() {
     showMessage(MessageSeverity.ERROR, summary, detail, life)
   }
 
-  return { showSuccessMessage, showInfoMessage, showWarnMessage, showErrorMessage }
+  return {
+    showSuccessMessage,
+    showInfoMessage,
+    showWarnMessage,
+    showErrorMessage,
+  }
 }

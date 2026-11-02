@@ -18,8 +18,16 @@ export function useFormKitSection(context: any) {
   })
 
   function generateId() {
-    return typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2)
+    return typeof crypto !== 'undefined' && crypto.randomUUID
+      ? crypto.randomUUID()
+      : Math.random().toString(36).slice(2)
   }
 
-  return { generateId, hasPrefix, hasPrefixIcon, hasSuffix, hasSuffixIcon }
+  return {
+    generateId,
+    hasPrefix,
+    hasPrefixIcon,
+    hasSuffix,
+    hasSuffixIcon,
+  }
 }

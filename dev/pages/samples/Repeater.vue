@@ -6,7 +6,14 @@ function createDefaultValue(): object {
 }
 
 onMounted(() => {
-  data.value = { name: 'Fighter', attacks: [{ name: 'Sword', damage: '2D6' }, { name: 'Dagger', damage: '1D6' }, { name: 'Spear', damage: '1D6+2' }] }
+  data.value = {
+    name: 'Fighter',
+    attacks: [
+      { name: 'Sword', damage: '2D6' },
+      { name: 'Dagger', damage: '1D6' },
+      { name: 'Spear', damage: '1D6+2' },
+    ],
+  }
 })
 
 const schema

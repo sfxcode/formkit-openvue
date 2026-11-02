@@ -81,7 +81,9 @@ const schema
     },
   ]
 
-const data = { selectedCities: ['PRS', 'BER'] }
+const data = {
+  selectedCities: ['PRS', 'BER'],
+}
 </script>
 
 <template>

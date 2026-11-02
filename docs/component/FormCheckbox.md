@@ -13,12 +13,33 @@ A FormKit wrapper for OpenVue's Checkbox component.
 ```vue
 <script setup>
 const schema = [
-  { $formkit: 'formCheckbox', id: 'basic', name: 'basic', label: 'Basic' },
+  {
+    $formkit: 'formCheckbox',
+    id: 'basic',
+    name: 'basic',
+    label: 'Basic'
+  },
   { $formkit: 'formCheckbox', id: 'eu', prefix: 'Are you a european citizen: ' },
   { $formkit: 'formCheckbox', id: 'taxes', suffix: 'Taxes includes ' },
-  { $formkit: 'formCheckbox', name: 'readonly', label: 'readonly', readonly: true },
-  { $formkit: 'formCheckbox', name: 'indeterminate', label: 'indeterminate', indeterminate: true },
-  { $formkit: 'formCheckbox', name: 'custom', label: 'custom values', trueValue: 'A', falseValue: 'B' },
+  {
+    $formkit: 'formCheckbox',
+    name: 'readonly',
+    label: 'readonly',
+    readonly: true
+  },
+  {
+    $formkit: 'formCheckbox',
+    name: 'indeterminate',
+    label: 'indeterminate',
+    indeterminate: true
+  },
+  {
+    $formkit: 'formCheckbox',
+    name: 'custom',
+    label: 'custom values',
+    trueValue: 'A',
+    falseValue: 'B'
+  },
 ]
 const data = { readonly: true }
 </script>
