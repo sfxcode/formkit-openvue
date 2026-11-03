@@ -1,4 +1,18 @@
 
+## v1.0.1
+
+[compare changes](https://github.com/sfxcode/formkit-openvue/compare/v0.9.1...v1.0.1)
+
+### 🩹 Fixes
+
+- Update FormKit version in AppFooter and upgrade dependencies to 2.2.0 ([f875286](https://github.com/sfxcode/formkit-openvue/commit/f875286))
+- Bump version to 1.0.0 in package.json ([e256a9b](https://github.com/sfxcode/formkit-openvue/commit/e256a9b))
+- Enable trustPolicy for no-downgrade in pnpm-workspace.yaml ([00b9c54](https://github.com/sfxcode/formkit-openvue/commit/00b9c54))
+
+### ❤️ Contributors
+
+- Sfxcode ([@sfxcode](https://github.com/sfxcode))
+
 ## v0.9.1
 
 [compare changes](https://github.com/sfxcode/formkit-openvue/compare/v0.9.0...v0.9.1)
